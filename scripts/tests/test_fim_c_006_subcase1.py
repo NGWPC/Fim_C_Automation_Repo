@@ -30,7 +30,7 @@ def test_execute_data_extraction_scripts():
             assert dir_contents ==directory_contents[i] , "Expected files not listed"
             logging.info("Expected files listed")
         except AssertionError as e:
-            logging.error("Assertion failed for:" +directory_contents[i])
+            logging.error("Assertion failed for:")
         
 
 if __name__ == "__main__":
