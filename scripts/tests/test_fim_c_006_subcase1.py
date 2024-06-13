@@ -14,7 +14,7 @@ def test_execute_data_extraction_scripts():
     directory_locations = []
     directory_contents = []
 
-    with open('/home/jyoti.mikkilineni/pw/scripts/tests/sample.json','r') as file:
+    with open('/home/jyoti.mikkilineni/pw/auto/scripts/tests/sample.json','r') as file:
         data = json.load(file)
 
         directory_locations = data['d_loc']
