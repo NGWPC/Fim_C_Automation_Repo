@@ -34,4 +34,4 @@ def test_execute_data_extraction_scripts():
         
 
 if __name__ == "__main__":
-    execute_data_extraction_scripts()
+    test_execute_data_extraction_scripts()
