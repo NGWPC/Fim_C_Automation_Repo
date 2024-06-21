@@ -1,0 +1,24 @@
+{
+
+     "d_loc" : [
+                "/efs/benchmark/high_water_marks/usgs/outputs",
+                "/efs/demonstrations/demo_data",
+                "/efs/fim-data/hand_fim/inputs/bathymetry",
+                "/efs/fim-data/hand_fim/inputs/landsea",
+                "/efs/fim-data/hand_fim/inputs/nld_vectors"
+                ],
+     "d_files":[
+                ["all_events.gpkg"],
+                ["ble_benchmark_huc8s_classic.gpkg","ble_benchmark_huc8s_expanded.gpkg"],
+                ["BANKFULL_CONUS.txt","bathymetry_adjustment_data.gpkg","nwm_flow_bieger_qreg.csv",
+                    "nwm_flows_bankfull_join.  gpkg","nwm_route_link_geom_BED.csv"],
+                ["gl_water_polygons.gpkg","input_mask_features.gpkg","readme_source_great_lakes.txt",
+                    "readme_source_ocean.txt","water_polygons_us.gpkg"],
+                ["3d_nld_preprocessed_230314.gpkg", "Levee_protected_areas.gpkg", 
+                "LeveedArea.geojson","Leveed_Areas_NLDFS_5070_230314.gpkg", "System_Routes_NLDFS_5070_230314.gpkg", "huc2_levee_lines", 
+                "huc2_levee_poly", "readme.txt"]
+             ]
+
+
+
+}
