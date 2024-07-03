@@ -1,7 +1,7 @@
 # tests/helpers.py
 
 import os
-from . import qgis_util
+from .utils import qgis_util
 import logging
 
 def run_commands(dir_path,output_file,expected_data_file):
