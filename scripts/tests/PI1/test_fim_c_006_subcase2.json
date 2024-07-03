@@ -5,7 +5,7 @@
            "shell_script": "/home/jyoti.mikkilineni/pw/auto/scripts/tests/utils/ana_run.sh",
            "base_directory":"/efs/translated_ras_libraries/temp/",
            "output_file":"output_ras2inundation.gpkg",
-           "expected_data_file" : "/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/test_fim_c_006_subcase3.json",
+           "expected_data_file" : "/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/test_fim_c_006_subcase2.json",
            "remove_file_shell_script": "/home/jyoti.mikkilineni/pw/auto/scripts/tests/utils/remove_run.sh"
  
         }
