@@ -1,4 +1,16 @@
 {
+    "additional_data":[
+ 
+        {
+           "shell_script": "/home/jyoti.mikkilineni/pw/auto/scripts/tests/ana_run.sh",
+           "base_directory":"/efs/translated_ras_libraries/temp/",
+           "output_file":"output_ras2inundation.gpkg",
+           "expected_data_file" : "/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/test_fim_c_006_subcase3.json",
+           "remove_file_shell_script": "/home/jyoti.mikkilineni/pw/auto/scripts/tests/remove_run.sh"
+ 
+        }
+ 
+    ] ,
 
     "geo_data" : [
                "1|GP|680.21|23798.17|8.839|usgs_fim|29.0|867.65|456018.0|883.9|264.46|1|456018_HUC_051002010307_883_mm.gpkg",
