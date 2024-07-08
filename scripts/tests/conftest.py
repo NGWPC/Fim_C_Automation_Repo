@@ -14,8 +14,10 @@ logging.basicConfig(level=logging.INFO,
 
 @pytest.fixture(scope="session")
 def scenarios():
-    with open(os.path.join(os.path.dirname(__file__), 'scenarios.json'), 'r') as file:
-        return json.load(file)
+    def _scenarios(folder_name,data_file):
+         with open(os.path.join(os.path.dirname(__file__), folder_name,data_file), 'r') as file:
+          return json.load(file)
+    return _scenarios
 
 @pytest.fixture
 def run_shell_script():
@@ -63,4 +65,12 @@ def remove_file():
             print("file_name_path1: "+file_name_path)
             result = subprocess.run(['bash',shell_script ,file_name_path ],stdout = subprocess.PIPE, universal_newlines = True)
             return result.stdout.strip()
-    return _remove_file        
+    return _remove_file   
+
+@pytest.fixture
+def read_csv():
+    def _read_csv(folder_name , data_file, scenarios):
+         scenario = scenarios(folder_name , data_file)
+         return scenario['additional_data'][0].get('csv_file') , scenario['additional_data'][0].get('output_csv_file')
+    return _read_csv 
+        

@@ -1,0 +1,24 @@
+{
+    "additional_data":[
+ 
+        {
+           "base_directory":"/efs/translated_ras_libraries/temp/",
+           "output_file":"output_ras2inundation.gpkg",
+           "expected_data_file" : "/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/test_fim_c_008_subcase1.json",
+           "csv_file":"/efs/benchmark/high_water_marks/usgs/inputs/FilteredHWMs.csv",
+           "output_csv_file":"/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/test_fim_c_008_subcase1.csv"
+
+ 
+        }
+ 
+    ] ,
+    "d_loc" : [
+               "/efs/benchmark/high_water_marks/usgs/inputs",
+               "/efs/benchmark/high_water_marks/usgs/outputs"
+               ],
+    "d_files":[
+               ["FilteredHWMs.csv"],
+               ["all_events.gpkg"]
+            ]
+
+}

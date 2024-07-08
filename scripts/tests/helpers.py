@@ -33,3 +33,5 @@ def validate_directories_files(directory_locations, directory_contents):
 #             scenario = json.load(file)
 #             shell_script = scenario['additional_data'][0].get('remove_file_shell_script')
 #             result = subprocess.run(['bash',shell_script ,file_name_path ],stdout = subprocess.PIPE, universal_newlines = True)
+
+
