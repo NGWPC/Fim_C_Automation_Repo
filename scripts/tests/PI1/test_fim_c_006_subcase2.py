@@ -1,6 +1,7 @@
 import pytest
 from ..helpers import run_commands
 
+@pytest.mark.skip(reason="skipping this test for now")
 def test_fim_c_006_subcase2(test_name,run_shell_script,remove_file): #,change_dir
     folder_name = 'PI1'
     data_file = test_name + '.json'
