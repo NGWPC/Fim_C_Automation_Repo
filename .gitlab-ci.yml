@@ -13,9 +13,7 @@ job_test:
     GIT_STRATEGY: none
   environment: test
   before_script:
-    - echo $SSH_KEY
-    - chmod 400 $SSH_KEY
-    - ssh-agent
+    - echo "before script"
   script:
     - echo "Deploying FIMC to TEST..."
     - mkdir -p reports
