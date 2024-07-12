@@ -17,7 +17,7 @@ job_test:
   script:
     - echo "Deploying FIMC to TEST..."
     - mkdir -p reports
-    - cp  fim_c_automation/report.html reports   
+    - cp  report.html reports   
     - echo "FIMC deployed to TEST"
   artifacts: 
     when: always
