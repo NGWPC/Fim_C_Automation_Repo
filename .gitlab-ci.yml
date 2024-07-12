@@ -19,11 +19,12 @@ job_test:
   script:
     - echo "Deploying FIMC to TEST..."
     - mkdir -p reports
-    - echo $GITLAB_USER_LOGIN
-    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY jyoti.mikkilineni@10.203.98.180 " cd ~ && 
-     git init && git checkout $CI_COMMIT_REF_NAME && ~/.local/bin/pytest ~/pw/auto/scripts/tests -s && git add report.html &&    git commit -m 'Adding report file' && git push && echo $GITLAB_USER_LOGIN && echo $PASS && git push" 
-    
+    - cp  fim_c_automation/report.html reports   
     - echo "FIMC deployed to TEST"
+  artifacts: 
+    when: always
+    paths:
+       - reports/
 
 
 
