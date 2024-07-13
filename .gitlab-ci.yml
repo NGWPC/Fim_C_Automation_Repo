@@ -16,13 +16,9 @@ job_test:
     - echo "before script"
   script:
     - echo "Deploying FIMC to TEST..."
-    - mkdir -p reports
-    - cp  report.html reports   
+    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY jyoti.mikkilineni@10.203.98.180 "
+     cd ~ && git init && git checkout $CI_COMMIT_REF_NAME &&  ~/.local/bin/pytest ~/pw/auto/scripts/tests -s && git add report.html && git commit -m 'Adding report file' "   
     - echo "FIMC deployed to TEST"
-  artifacts: 
-    when: always
-    paths:
-       - reports/
 
 
 
