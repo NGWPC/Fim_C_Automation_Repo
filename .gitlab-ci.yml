@@ -13,7 +13,9 @@ job_test:
     GIT_STRATEGY: none
   environment: test
   before_script:
-    - echo "before script"
+    - echo $SSH_KEY
+    - chmod 400 $SSH_KEY
+    - ssh-agent
   script:
     - echo "Deploying FIMC to TEST..."
     - ssh -o StrictHostKeyChecking=no -i $SSH_KEY jyoti.mikkilineni@10.203.98.180 "
