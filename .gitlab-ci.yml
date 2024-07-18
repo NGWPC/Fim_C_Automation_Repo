@@ -29,7 +29,7 @@ job_test:
      git clone -b $CI_COMMIT_REF_NAME --single-branch $GITLAB_REPO_URL $CLONE_DIR && 
      cd $CLONE_DIR && git checkout $CI_COMMIT_REF_NAME && git config --global user.name jyoti.mikkilineni && git config  --global user.email jyotipriya.mikkilineni@ertcorp.com &&
      ~/.local/bin/pytest ~/pw/auto/scripts/tests -s && 
-     git add report.html && git commit -m 'Adding report to the repo' && git push"   
+     git add report.html && git commit -m 'Adding report to the repo' && git config --global push.default matching && git push"   
     - echo "FIMC deployed to TEST"
 
 
