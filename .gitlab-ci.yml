@@ -16,6 +16,7 @@ job_test:
   environment: test
   before_script:
     - echo $SSH_KEY
+    - echo $CLONE_DIR
     - chmod 400 $SSH_KEY
     - ssh-agent
   script:
