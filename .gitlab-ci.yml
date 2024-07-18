@@ -22,7 +22,7 @@ job_test:
   script:
     - echo "Deploying FIMC to TEST..."
     - ssh -o StrictHostKeyChecking=no -i $SSH_KEY jyoti.mikkilineni@10.203.106.253 "
-     pip install pytest && pip install pytest-html && pip install geopandas && mkdir -p $CLONE_DIR && git clone -b $CI_COMMIT_REF_NAME --single-branch $GITLAB_REPO_URL $CLONE_DIR && cd ~ &&  ~/.local/bin/pytest ~/pw/auto/scripts/tests -s &&git add report.html && git commit -m 'Adding report to the repo' "   
+     pip install pytest && pip install pytest-html && pip install geopandas && mkdir -p $CLONE_DIR && git clone -b $CI_COMMIT_REF_NAME --single-branch $GITLAB_REPO_URL $CLONE_DIR && cd $CLONE_DIR && git checkout $CI_COMMIT_REF_NAME && ~/.local/bin/pytest ~/pw/auto/scripts/tests -s && git add report.html && git commit -m 'Adding report to the repo' "   
     - echo "FIMC deployed to TEST"
 
 
