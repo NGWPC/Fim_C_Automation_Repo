@@ -21,8 +21,8 @@ job_test:
     - ssh-agent
   script:
     - echo "Deploying FIMC to TEST..."
-    - git config --global url."https://oauth2:${GITLAB_TOKEN}@gitlab.sh.nextgenwaterprediction.com/".insteadOf "https://gitlab.sh.nextgenwaterprediction.com/"
-    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY jyoti.mikkilineni@10.203.106.253 "
+    # - git config --global url."https://oauth2:${GITLAB_TOKEN}@gitlab.sh.nextgenwaterprediction.com/".insteadOf "https://gitlab.sh.nextgenwaterprediction.com/"
+    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY jyoti.mikkilineni@10.203.108.157 "
      pip install pytest && pip install pytest-html && 
      pip install geopandas && rm -rf $CLONE_DIR && 
      mkdir -p $CLONE_DIR && 
