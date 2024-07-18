@@ -21,6 +21,7 @@ job_test:
     - ssh-agent
   script:
     - echo "Deploying FIMC to TEST..."
+    - echo ~
     - ssh -o StrictHostKeyChecking=no -i $SSH_KEY jyoti.mikkilineni@10.203.106.253 "
      pip install pytest && pip install pytest-html && 
      pip install geopandas && rm -rf $CLONE_DIR && 
