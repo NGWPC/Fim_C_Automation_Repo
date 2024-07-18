@@ -12,17 +12,17 @@ job_test:
   variables:
     GIT_STRATEGY: none
     CLONE_DIR: "~/pw/auto"
+    GITLAB_REPO_URL: "https://gitlab.sh.nextgenwaterprediction.com/Jyoti.Mikkilineni/fim_c_automation.git"
     
   environment: test
   before_script:
     - echo $SSH_KEY
-    - echo $CI_PROJECT_URL
     - chmod 400 $SSH_KEY
     - ssh-agent
   script:
     - echo "Deploying FIMC to TEST..."
     - ssh -o StrictHostKeyChecking=no -i $SSH_KEY jyoti.mikkilineni@10.203.106.253 "
-     pip install pytest && pip install pytest-html && pip install geopandas && mkdir -p $CLONE_DIR && git clone -b $CI_COMMIT_REF_NAME --single-branch $CI_PROJECT_URL $CLONE_DIR && cd ~ &&  ~/.local/bin/pytest ~/pw/auto/scripts/tests -s &&git add report.html && git commit -m 'Adding report to the repo' "   
+     pip install pytest && pip install pytest-html && pip install geopandas && mkdir -p $CLONE_DIR && git clone -b $CI_COMMIT_REF_NAME --single-branch $GITLAB_REPO_URL $CLONE_DIR && cd ~ &&  ~/.local/bin/pytest ~/pw/auto/scripts/tests -s &&git add report.html && git commit -m 'Adding report to the repo' "   
     - echo "FIMC deployed to TEST"
 
 
