@@ -73,4 +73,11 @@ def read_csv():
          scenario = scenarios(folder_name , data_file)
          return scenario['additional_data'][0].get('csv_file') , scenario['additional_data'][0].get('output_csv_file')
     return _read_csv 
+
+@pytest.fixture
+def fetch_data_file_details():
+    def _fetch_data_file_details(folder_name , data_file, scenarios):
+         scenario = scenarios(folder_name , data_file)
+         return scenario['additional_data'][0].get('base_directory') , scenario['additional_data'][0].get('output_file'), scenario['additional_data'][0].get('expected_data_file')
+    return _fetch_data_file_details 
         

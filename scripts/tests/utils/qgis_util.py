@@ -12,10 +12,12 @@ def test_run(file_name , output_file,expected_data_file):
     if result.returncode != 0:
         return none
     if result:
+        
+        result = result.stdout.strip().split('\n',-1)
 
         print(result)
 
-    command = f"SELECT * FROM {output_file.split('.')[0]};"
+    command = f"SELECT * FROM {result[0]};" #{output_file.split('.')[0]}
     result = subprocess.run(['sqlite3',file_path,command],stdout = subprocess.PIPE,universal_newlines = True)
 ###### Add this for extracting data in the form of a list #########
     result_list = result.stdout.strip().split('\n',-1)
