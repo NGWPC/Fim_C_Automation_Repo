@@ -18,6 +18,7 @@ def test_extract_csv_data(csv_file,output_csv_file):
          print("File is empty")
       else:
          records = len(df_output)
+         print("Number of records in the file:")
          print(records)
       is_equal = df_output.equals(df_refer)
       print(is_equal)

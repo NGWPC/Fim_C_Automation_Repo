@@ -21,9 +21,8 @@ def scenarios():
 
 @pytest.fixture
 def run_shell_script():
-    def _run_shell_script(folder_name,data_file):
-        with open(os.path.join(os.path.dirname(__file__),folder_name,data_file), 'r') as file:
-            scenario = json.load(file)
+    def _run_shell_script(folder_name,data_file, scenarios):
+        scenario = scenarios(folder_name , data_file)
     # print("Display param here " +request.param)
         shell_script = scenario['additional_data'][0].get('shell_script')
         result =  subprocess.run(['bash',shell_script],stdout = subprocess.PIPE , universal_newlines = True)
@@ -41,9 +40,8 @@ def change_dir(run_shell_script):
 
 @pytest.fixture
 def load_scenario_data():
-    def _load_scenario_data(folder_name,scenario_name):
-        with open(os.path.join(os.path.dirname(__file__),folder_name,scenario_name), 'r') as file:
-            data = json.load(file)
+    def _load_scenario_data(folder_name,scenario_name,scenarios):
+            data = scenarios(folder_name , scenario_name)
             directory_locations = data['d_loc']
             directory_contents = data['d_files']
             return directory_locations,directory_contents
@@ -56,15 +54,14 @@ def test_name(request):
 
 @pytest.fixture
 def remove_file():
-    def _remove_file(folder_name , data_file , file_name_path):
-      print("file_name_path: "+file_name_path)
+    def _remove_file(folder_name , data_file , file_name_path,scenarios):
+    #   print("file_name_path: "+file_name_path)
       assert os.path.exists(file_name_path)
-      with open(os.path.join(os.path.dirname(__file__),folder_name,data_file), 'r') as file:
-            scenario = json.load(file)
-            shell_script = scenario['additional_data'][0].get('remove_file_shell_script')
-            print("file_name_path1: "+file_name_path)
-            result = subprocess.run(['bash',shell_script ,file_name_path ],stdout = subprocess.PIPE, universal_newlines = True)
-            return result.stdout.strip()
+      scenario = scenarios(folder_name , data_file)
+      shell_script = scenario['additional_data'][0].get('remove_file_shell_script')
+    #   print("file_name_path1: "+file_name_path)
+      result = subprocess.run(['bash',shell_script ,file_name_path ],stdout = subprocess.PIPE, universal_newlines = True)
+      return result.stdout.strip()
     return _remove_file   
 
 @pytest.fixture
