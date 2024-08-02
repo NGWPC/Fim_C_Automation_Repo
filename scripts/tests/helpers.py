@@ -1,10 +1,10 @@
 # tests/helpers.py
 
 import os
-from .utils import qgis_util
+from .utils import qgis_util,gpkg_util
 import logging
 
-def run_commands(dir_path,output_file,expected_data_file):
+def validate_geo_data(dir_path,output_file,expected_data_file,data_file_location):
   
    assert os.path.isdir(dir_path) == True , "Directory1 does not exist"+dir_path
    assert os.path.exists(dir_path) == True , "Directory does not exist"+dir_path
@@ -15,7 +15,8 @@ def run_commands(dir_path,output_file,expected_data_file):
    file_path = os.path.join(dir_path,output_file)
    assert os.path.isfile(file_path) == True , "File does not exist"
   
-   qgis_util.test_run(dir_path, output_file,expected_data_file)
+   # qgis_util.test_run(dir_path, output_file,expected_data_file)
+   gpkg_util.compare_gpkgs(file_path,data_file_location)
 
 def validate_directories_files(directory_locations, directory_contents):
    for i,dir_location in enumerate(directory_locations):

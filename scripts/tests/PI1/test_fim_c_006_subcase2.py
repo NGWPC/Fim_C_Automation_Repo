@@ -1,10 +1,10 @@
 import pytest
-from ..helpers import run_commands
+from ..helpers import validate_geo_data
 
-@pytest.mark.skip(reason="skipping this test for now")
+# @pytest.mark.skip(reason="skipping this test for now")
 def test_fim_c_006_subcase2(test_name,run_shell_script,remove_file): #,change_dir
-    folder_name = 'PI1'
+    folder_name = 'PI1/data'
     data_file = test_name + '.json'
-    dir_path,output_file,expected_data_file = run_shell_script(folder_name,data_file)
-    run_commands(dir_path,output_file,expected_data_file)
+    dir_path,output_file,expected_data_file,data_file_location = run_shell_script(folder_name,data_file)
+    validate_geo_data(dir_path,output_file,expected_data_file,data_file_location)
     remove_file(folder_name,data_file,dir_path)

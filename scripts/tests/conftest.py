@@ -29,7 +29,7 @@ def run_shell_script():
         result =  subprocess.run(['bash',shell_script],stdout = subprocess.PIPE , universal_newlines = True)
         variable_value = result.stdout.strip()
         dir_path = scenario['additional_data'][0].get('base_directory')+ variable_value.split('\n',1)[0]
-        return dir_path,scenario['additional_data'][0].get('output_file'),scenario['additional_data'][0].get('expected_data_file')
+        return dir_path,scenario['additional_data'][0].get('output_file'),scenario['additional_data'][0].get('expected_data_file'),scenario['additional_data'][0].get('data_file_location')
     return _run_shell_script
 
 @pytest.fixture
@@ -78,6 +78,6 @@ def read_csv():
 def fetch_data_file_details():
     def _fetch_data_file_details(folder_name , data_file, scenarios):
          scenario = scenarios(folder_name , data_file)
-         return scenario['additional_data'][0].get('base_directory') , scenario['additional_data'][0].get('output_file'), scenario['additional_data'][0].get('expected_data_file')
+         return scenario['additional_data'][0].get('base_directory') , scenario['additional_data'][0].get('output_file'), scenario['additional_data'][0].get('expected_data_file'),scenario['additional_data'][0].get('data_file_location')
     return _fetch_data_file_details 
         
