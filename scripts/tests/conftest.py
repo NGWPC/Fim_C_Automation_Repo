@@ -78,3 +78,9 @@ def fetch_data_file_details():
          return scenario['additional_data'][0].get('base_directory') , scenario['additional_data'][0].get('output_file'), scenario['additional_data'][0].get('expected_data_file'),scenario['additional_data'][0].get('data_file_location')
     return _fetch_data_file_details 
         
+@pytest.fixture
+def read_txt():
+    def _read_txt(folder_name , data_file, scenarios):
+         scenario = scenarios(folder_name , data_file)
+         return scenario['additional_data'][0].get('text_file_location'),scenario['additional_data'][0].get('total_records'),scenario['additional_data'][0].get('expected_record_value')
+    return _read_txt 
