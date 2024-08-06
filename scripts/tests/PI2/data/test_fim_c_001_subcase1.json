@@ -1,0 +1,15 @@
+{
+
+    "d_loc" : [
+               "/efs/demonstrations/rs_stac_test",
+               "/home/jyoti.mikkilineni/dfo_event_4230"
+
+               ],
+    "d_files":[
+               ["dfo_event_list.txt","get_rs_item_assets.py","get_rs_stac_data.sh","gfm_data_readme.pdf","README"],
+               []           
+            ]
+
+
+
+}

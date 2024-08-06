@@ -6,7 +6,7 @@
            "output_file":"all_events.gpkg",
            "expected_data_file" : "/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/data/test_fim_c_008_subcase1.json",
            "csv_file":"/efs/benchmark/high_water_marks/usgs/inputs/FilteredHWMs.csv",
-           "output_csv_file":"/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/data/test_fim_c_008_subcase1.csv",
+           "output_csv_file":"/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/data/FilteredHWMs.csv",
            "data_file_location":"/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/data/all_events.gpkg"
 
  

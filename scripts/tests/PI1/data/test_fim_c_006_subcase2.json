@@ -2,11 +2,11 @@
     "additional_data":[
  
         {
-           "shell_script": "/home/jyoti.mikkilineni/pw/auto/scripts/tests/utils/ana_run.sh",
+           "shell_script": "/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/data/ana_run.sh",
            "base_directory":"/efs/translated_ras_libraries/temp/",
            "output_file":"output_ras2inundation.gpkg",
            "expected_data_file" : "/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/data/test_fim_c_006_subcase2.json",
-           "remove_file_shell_script": "/home/jyoti.mikkilineni/pw/auto/scripts/tests/utils/remove_run.sh",
+           "remove_file_shell_script": "/home/jyoti.mikkilineni/pw/auto/scripts/tests/utils/remove_file.sh",
            "data_file_location":"/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI1/data/output_ras2inundation.gpkg"
  
         }

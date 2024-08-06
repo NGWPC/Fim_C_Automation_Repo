@@ -55,11 +55,11 @@ def test_name(request):
 @pytest.fixture
 def remove_file():
     def _remove_file(folder_name , data_file , file_name_path,scenarios):
-    #   print("file_name_path: "+file_name_path)
+      print("file_name_path: "+file_name_path)
       assert os.path.exists(file_name_path)
       scenario = scenarios(folder_name , data_file)
       shell_script = scenario['additional_data'][0].get('remove_file_shell_script')
-    #   print("file_name_path1: "+file_name_path)
+      print("file_name_path1: "+file_name_path)
       result = subprocess.run(['bash',shell_script ,file_name_path ],stdout = subprocess.PIPE, universal_newlines = True)
       return result.stdout.strip()
     return _remove_file   
