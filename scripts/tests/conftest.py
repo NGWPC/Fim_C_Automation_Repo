@@ -55,7 +55,6 @@ def test_name(request):
 @pytest.fixture
 def remove_file():
     def _remove_file(folder_name , data_file , file_name_path,scenarios):
-      print("file_name_path: "+file_name_path)
       assert os.path.exists(file_name_path)
       scenario = scenarios(folder_name , data_file)
       shell_script = scenario['additional_data'][0].get('remove_file_shell_script')
@@ -91,3 +90,10 @@ def read_me():
          scenario = scenarios(folder_name , data_file)
          return scenario['additional_data'][0].get('source_read_me_location'),scenario['additional_data'][0].get('destination_read_me_location')
     return _read_me 
+
+@pytest.fixture
+def json_read():
+    def _json_read(folder_name , data_file, scenarios):
+         scenario = scenarios(folder_name , data_file)
+         return scenario['additional_data'][0].get('source_json_file_location'),scenario['additional_data'][0].get('destination_json_file_location')
+    return _json_read 

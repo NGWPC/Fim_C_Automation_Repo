@@ -3,16 +3,13 @@ import logging
 
 def validate_readme(source_file,destination_file):
     try:
-        file1 = '/home/jyoti.mikkilineni/dfo_event_4230/README'
-        file2  = '/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI2/data/README'
-
-        are_files_same = filecmp.cmp(file1, file2, shallow= False)
+        files_same = filecmp.cmp(source_file, destination_file, shallow= False)
         # print(f"Shallow comparison result: {'Identical' if are_files_same else 'Different'}")
-        assert are_files_same == True , "Files are not same"
-        logging.info("Files are same")
+        assert files_same == True , "README Files are not same"
+        logging.info(f"README Files are same: {source_file}")
     except Exception as e:
-        logging.error("Unexpected error/File Not found")
+        logging.error("Unexpected error/File Not found for README file")
         raise e  
     except AssertionError as e:
-        logging.error("Record not found")
+        logging.error("Assertion error for README files")
         raise e

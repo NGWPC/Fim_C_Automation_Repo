@@ -6,7 +6,12 @@
            "total_records":"58",
            "expected_record_value":"DFO-4230",
            "source_read_me_location":"/home/jyoti.mikkilineni/dfo_event_4230/README",
-           "destination_read_me_location":"/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI2/data/README"
+           "destination_read_me_location":"/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI2/data/README",
+           "source_json_file_location":"/home/jyoti.mikkilineni/dfo_event_4230/item_DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/metadata/DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7.json",
+           "destination_json_file_location":"/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI2/data/DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7.json",
+           "csv_file":"/home/jyoti.mikkilineni/dfo_event_4230/item_DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/flowfile/nwm_retrospective_flows_v3.csv",
+           "output_csv_file":"/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI2/data/nwm_retrospective_flows_v3.csv"
+
  
         }
  

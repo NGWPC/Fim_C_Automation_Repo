@@ -16,16 +16,16 @@ def test_extract_csv_data(csv_file,output_csv_file):
       
       assert os.path.exists(csv_file) == True , "Directory does not exist"
       if df_output.empty:
-         print("File is empty")
+         print("CSV File is empty")
       else:
          records = len(df_output)
-         print("Number of records in the file:"+str(records))
+         print("Number of records in the CSV file:"+str(records))
       is_equal = df_output.equals(df_refer)
       # print("Both files are same: " +str(is_equal))
-      logging.info(f"Both files are same: {csv_file} and {output_csv_file}")
+      logging.info(f"Both CSV files are same: {csv_file} and {output_csv_file}")
    except pd.errors.EmptyDataError:
    #   print("CSV file is empty")
      logging.error(f"CSV file is empty: {csv_file}")
    except FileNotFounderror:
    #   print("File was not found")
-     logging.error(f"File not found: {csv_file}")
+     logging.error(f"CSV File not found: {csv_file}")
