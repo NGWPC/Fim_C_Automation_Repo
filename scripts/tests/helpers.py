@@ -32,6 +32,7 @@ def validate_directories_files(directory_locations, directory_contents):
          dir_contents = sorted(os.listdir())
          print(dir_location)
          print(dir_contents)
+         print(directory_contents[i])        
          assert dir_contents == directory_contents[i], "Expected files not listed"
          logging.info("Expected files listed in %s", dir_location)
       except AssertionError as e:

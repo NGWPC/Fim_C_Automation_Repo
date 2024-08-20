@@ -4,18 +4,21 @@
         {
            "text_file_location":"/efs/demonstrations/rs_stac_test/dfo_event_list.txt",
            "total_records":"58",
-           "expected_record_value":"DFO-4230"
+           "expected_record_value":"DFO-4230",
+           "source_read_me_location":"/home/jyoti.mikkilineni/dfo_event_4230/README",
+           "destination_read_me_location":"/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI2/data/README"
  
         }
  
     ] ,
 
     "d_loc" : [
-               "/home/jyoti.mikkilineni/dfo_event_4230"
-
+                "/home/jyoti.mikkilineni/dfo_event_4230"
+               
                ],
     "d_files":[
-               ["README","item_DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7","item_DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235525_20150316T235550_005064_0065C2_6527","item_DFO-4230_tile-S1A_IW_GRDH_1SDV_20150318T233912_20150318T233937_005093_006675_9624"]         
+        ["README","item_DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7","item_DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235525_20150316T235550_005064_0065C2_6527","item_DFO-4230_tile-S1A_IW_GRDH_1SDV_20150318T233912_20150318T233937_005093_006675_9624"]
+                      
             ]
 
 

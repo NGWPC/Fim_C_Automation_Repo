@@ -84,3 +84,10 @@ def read_txt():
          scenario = scenarios(folder_name , data_file)
          return scenario['additional_data'][0].get('text_file_location'),scenario['additional_data'][0].get('total_records'),scenario['additional_data'][0].get('expected_record_value')
     return _read_txt 
+
+@pytest.fixture
+def read_me():
+    def _read_me(folder_name , data_file, scenarios):
+         scenario = scenarios(folder_name , data_file)
+         return scenario['additional_data'][0].get('source_read_me_location'),scenario['additional_data'][0].get('destination_read_me_location')
+    return _read_me 

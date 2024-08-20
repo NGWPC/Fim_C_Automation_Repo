@@ -1,0 +1,30 @@
+This readme provides a brief overview of the contents of this directory. 
+
+NOTE: THIS README ONLY DESCRIBES THE DIRECTORY CREATED BY "get_rs_stac_data.sh" WITH THE FLOOD EVENT DATA OBTAINED FROM THE UPSTREAM DATA PROVIDER. FOR A FULL ACCOUNTING OF THE METADATA PLEASE REFER TO THE ORIGINAL STAC ITEMS. Instructions for accessing the GFM STAC items can be found in the 2nd to last paragraph of the README.
+
+This directory is named for a Dartmouth Flood Observatory (DFO) flood event and contains Global Flood Monitoring (GFM) satellite data products associated with the DFO event which have been collected and cataloged using the Spatiotemporal Asset Catalog (STAC) specification. 
+Each DFO event can have one or more GFM STAC items associated with it. Each STAC item lists GFM data associated with the DFO event for a specific Sentinel-1 data-take/scene. Each subdirectory within the current DFO event directory contains the data "assets" of a specific STAC item associated with the event. 
+
+For a given DFO event there is a main event data directory with one or more subdirectories. Each subdirectory contains all the data associated with a STAC item that describes a GFM scene that was captured during the flood event. The subdirectories are named after the associated GFM STAC item that describes the data contained within the subdirectory.
+
+Within each GFM STAC item data directory there are 3 types of data, each contained in its own subdirectory. These subdirectories are as follows:
+
+- flowfile: This directory contains a two column csv. The 1st column of the csv is a feature_id obtained from the National Water Model (NWM) 3.0 hydrofabric. The 2nd column of the csv is a discharge reading in m^3/s obtained from the NWM 3.0 retrospective dataset which can be found at https://aws.amazon.com/marketplace/pp/prodview-g6lcchc7brshw
+- GFM_layers: This directory contains all the GFM raster layers associated with the flood monitoring. A full explanation of the layers can be found at: https://extwiki.eodc.eu/GFM/PUM/Products . The item data directory also contains a documentation file called "gfm_data_readme.pdf" that gives a brief overview of the layers and the naming convention they follow.
+- metadata: This directory contains:
+  - GeoJSON Sentinel-1 footprints of the sentinel 1 scene described by the GFM STAC item. Though the data layers raster ROIs are further subdivided into multiple equi7grid tiles per scene, the Sentinel-1 footprint for each tile shows the footprint of the entire Sentinel-1 scene. This means that within an item data directory there will be multiple identical Sentinel-1 geojson files provided in the metadata directory with each equi7grid subtile the footprint is associated with.   
+  - JSON files with metadata describing the underlying Sentinel-1 product used to create the GFM raster layers. Once again each equi7grid subtile inside of a Sentinel-1 scene will have a Sentinel-1 metadata file associated with it that will look identical to the other equi7grid subtiles Sentinel-1 metadata file. 
+  - A JSON file contained the STAC metadata that was used to copy data into the current GFM STAC item data directory being accessed. This JSON file will begin with DFO-XXXX_tile where XXXX is the unique DFO event ID. Here "tile" is referring to the Sentinel-1 data-take identifier _not_ an equi7grid subtile that is used to produce the GFM layers inside of a given Sentinel-1 scene.
+
+In short, the directory structure for a DFO_event data directory looks like:
+- DFO_event
+  - GFM_STAC_item_data_directory
+    - flowfile directory
+    - GFM_layers directory
+    - metadata directory
+    - pdf file called "gfm_data_readme.pdf" that describes the GFM data
+      products more fully along with their naming conventions.
+
+To look at the STAC items that describe these assets please navigate to the "/efs/fim-data/static_cat" folder of this parallelworks instance. It was automatically created in the process of downloading the event data. Within "static_cat" there is a directory called "gfm_collection" that contains subdirectories for each of the GFM STAC collection items. Each of these subdirectories contains a JSON file that conforms to the STAC spec and describes the data in the event data directory more fully.
+
+A vector layer containing footprints of all the DFO events for which GFM data has been collected can be found at "/efs/fim-data/rs/dfo_all_usa_events_post_2015.gpkg". This layer also contains an attribute table with more info on the events. The GFM scene footprints associated with a DFO event can be found in another layer at "/efs/fim-data/rs/final_gfm_products.gpkg". The attribute table of this gpkg has a column that lists which DFO event a given scene is associated with.
