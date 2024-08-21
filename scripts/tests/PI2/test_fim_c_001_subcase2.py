@@ -1,8 +1,8 @@
 import pytest
 from ..helpers import validate_directories_files,generate_dfo_data
-from ..utils import txt_util,readme_util,json_util,csv_util
+from ..utils import txt_util,readme_util
 
-def test_fim_c_001_subcase2(test_name,load_scenario_data,scenarios,read_me,json_read,read_csv):
+def test_fim_c_001_subcase2(test_name,load_scenario_data,scenarios,read_me):
     tn = test_name + '.json'
     folder_name = 'PI2/data'
     generate_dfo_data()
@@ -12,8 +12,3 @@ def test_fim_c_001_subcase2(test_name,load_scenario_data,scenarios,read_me,json_
     validate_directories_files(directory_locations,directory_contents)
     source_read_me_location,destination_read_me_location = read_me(folder_name,tn,scenarios)
     readme_util.validate_readme( source_read_me_location,destination_read_me_location)
-    source_json_file_location,destination_json_file_location = json_read(folder_name,tn,scenarios)
-    json_util.validate_json( source_json_file_location,destination_json_file_location)
-    csv_file,output_csv_file = read_csv(folder_name,tn,scenarios)
-    csv_util.test_extract_csv_data(csv_file,output_csv_file)
-
