@@ -6,6 +6,9 @@ job_build:
   stage: build
   script:
     - echo "Building the project"
+  except: 
+    - branches
+
 
 job_test:
   stage: test
@@ -32,6 +35,8 @@ job_test:
      ~/.local/bin/pytest ~/pw/auto/scripts/tests -s && 
      git add report.html && git commit -m 'Adding report to the repo' && git config --global push.default matching && git push"   
     - echo "FIMC deployed to TEST"
+  except: 
+    - branches
 
 
 
