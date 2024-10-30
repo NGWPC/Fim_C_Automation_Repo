@@ -1,0 +1,17 @@
+import pytest
+import os
+from ...helpers import validate_directories_files,validate_geo_data
+from ...utils import qgis_util,vrt_util
+
+# @pytest.mark.skip(reason="skipping this test for now")
+def test_fim_c_RAS_003_subcase1(test_name,load_scenario_data,scenarios,fetch_data_file_details,read_vrt):
+    tn = test_name + '.json'
+    folder_name = 'PI3/data'
+    directory_locations,directory_contents = load_scenario_data(folder_name,tn,scenarios)
+    validate_directories_files(directory_locations,directory_contents)
+    dir_path,output_file,expected_data_file,data_file_location = fetch_data_file_details(folder_name,tn,scenarios)
+    for out_file , data_file_loc in zip([os.path.expanduser(each_output_file) for each_output_file in output_file ],[os.path.expanduser(each_data_file_location) for each_data_file_location in data_file_location ]):
+       validate_geo_data(dir_path,out_file,os.path.expanduser(expected_data_file),data_file_loc)
+       qgis_util.test_run(dir_path,out_file)
+    source_vrt_file,destination_vrt_file,dir_paths = read_vrt(folder_name,tn,scenarios)
+    vrt_util.test_vrt_data(source_vrt_file,os.path.expanduser(destination_vrt_file))
