@@ -1,0 +1,22 @@
+{
+    "additional_data":[
+ 
+        {
+           "url":"http://0.0.0.0:7822/search",
+           "headers":{ "Content-Type": "application/json"},
+           "data":{
+               "datetime":"2016-01-01T00:00:00.000Z/2016-01-31T00:00:00.000Z",
+               "bbox":[-96.31636741983785,2.8113711933311403,9.152382580162195,58.81374171570782],
+               "limit":10,
+               "collections":["gfm-collection"]              
+           },
+           "destination_response_location":"~/pw/auto/scripts/tests/PI3/data/stac_api_response.json"
+
+          
+        }
+ 
+    ]
+
+
+
+}
