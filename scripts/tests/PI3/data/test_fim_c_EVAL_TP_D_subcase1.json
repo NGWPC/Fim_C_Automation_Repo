@@ -1,0 +1,32 @@
+{   
+    "additional_data" :[
+        {
+            "source_tif_file_location":["/efs/fim-data/ripple/prototype/2024_07_31/composite_maps/031300050306/fim_10year.tif",
+                                        "/efs/fim-data/ripple/prototype/2024_07_31/composite_maps/031300050306/fim_2year.tif",
+                                        "/efs/fim-data/ripple/prototype/2024_07_31/composite_maps/031300050306/fim_5year.tif",
+                                        "/efs/fim-data/ripple/prototype/2024_07_31/composite_maps/031300050306/fim_100year.tif",
+                                        "/efs/fim-data/ripple/prototype/2024_07_31/composite_maps/031300050306/fim_25year.tif",
+                                        "/efs/fim-data/ripple/prototype/2024_07_31/composite_maps/031300050306/fim_50year.tif"
+                                        ],
+            "destination_tif_file_location":["~/pw/auto/scripts/tests/PI3/data/fim_10year.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/fim_2year.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/fim_5year.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/fim_100year.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/fim_25year.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/fim_50year.tif"]
+  
+         }
+
+    ],
+   
+    "d_loc" : [
+               "/efs/fim-data/ripple/prototype/2024_07_31/composite_maps/031300050306"
+
+               ],
+    "d_files":[
+               ["controls_100year.csv", "controls_10year.csv", "controls_25year.csv", "controls_2year.csv", "controls_50year.csv", "controls_5year.csv", "fim_100year.tif", "fim_100year.tif.aux.xml", "fim_10year.tif", "fim_10year.tif.aux.xml", "fim_25year.tif", "fim_25year.tif.aux.xml", "fim_2year.tif", "fim_2year.tif.aux.xml", "fim_50year.tif", "fim_50year.tif.aux.xml", "fim_5year.tif", "fim_5year.tif.aux.xml", "lwoc_031300050306.zip"]
+            ]
+
+
+
+}
