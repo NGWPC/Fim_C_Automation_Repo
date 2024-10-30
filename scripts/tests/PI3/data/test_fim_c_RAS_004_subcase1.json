@@ -1,0 +1,32 @@
+{
+    "additional_data":[
+ 
+        {
+           "docker_commands":["docker --version ","sudo systemctl start docker", "sudo groupadd docker","sudo usermod -aG docker jyoti.mikkilineni","sudo docker run --rm -it --name flows2fim1 -v /efs/fim-data/ripple:/data ghcr.io/osgeo/gdal:alpine-normal-3.8.4 sh -c 'cd data && cp flows2fim /bin && flows2fim --help && flows2fim controls -db \"prototype/2024_07_31/library.sqlite\" -f \"prototype/2024_07_31/composite_maps/flow_files/flows_100year.csv\" -o \"controls_100year.csv\" -sids \"10434182,10434118\" -scs \"nd\" | grep -q \"Controls file created at controls_100year.csv\" && echo \"controls_100year.csv created successfully.\" || ( echo \"Not expected\";exit 1) && flows2fim fim -lib \"prototype/2024_07_31/library\" -c \"controls_100year.csv\" -o \"fim_100year.vrt\" | grep -q \"FIM created at /data/fim_100year.vrt\" && echo \"fim_100year.vrt created successfully\" || ( echo \"Not expected\";exit 1)'"],
+           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",
+           "base_directory":"/efs/fim-data/ripple/",
+           "source_vrt_file_location":"/efs/fim-data/ripple/fim_100year.vrt",
+           "destination_vrt_file_location":"~/pw/auto/scripts/tests/PI3/data/fim_100year.vrt",
+           "csv_file":"/efs/fim-data/ripple/controls_100year.csv",
+           "output_csv_file":"~/pw/auto/scripts/tests/PI3/data/controls_100year.csv",
+           "remove_files":["/efs/fim-data/ripple/controls_100year.csv","/efs/fim-data/ripple/fim_100year.vrt"]
+ 
+        }
+ 
+    ] ,
+
+    "d_loc" : [
+               "/efs/fim-data/ripple",
+               "/efs/fim-data/ripple/prototype",
+               "/efs/fim-data/ripple/prototype/2024_07_31"
+
+               ],
+    "d_files":[
+               ["collections","flows2fim","prototype"],
+               ["2024_06_13","2024_07_31"],
+               ["composite_maps","library","library.sqlite"]     
+            ]
+
+
+
+}
