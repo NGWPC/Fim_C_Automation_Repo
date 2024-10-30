@@ -1,0 +1,39 @@
+{
+    "additional_data":[
+ 
+        {
+           "docker_commands":["sudo docker run --rm -it --network host --name eval-scripts2 -v /efs/demonstrations/pi3/code/eval_demo/:/foss_fim -v /efs/fim-data/hand_fim/outputs/:/outputs -v ~/HANDTEMP/:/fim_temp -v /efs/fim-data/hand_fim/inputs/:/data --entrypoint /bin/bash eval_mvp:latest -c 'python -m cat_metrics -c DEV -m /hwm_metrics.csv -hu 03180004 -b hwm | grep -q \"eval metrics written to /hwm_metrics.csv\"|| ( echo \"Not expected\";exit 1)&& cd /fim_temp/test_cases/hwm/03180004/PI3_fim60_10m_wbt/2016_Mar_LA_Flood-item && cd /foss_fim/tools && python -m cat_metrics -c DEV -m /gfm_metrics.csv -hu 03180004 -b gfm | grep -q \"eval metrics written to /gfm_metrics.csv\"|| ( echo \"Not expected\";exit 1)'"],
+           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",
+           "directory":"~/HANDTEMP",
+           "source_tif_file_location":["~/HANDTEMP/test_cases/hwm/03180004/PI3_fim60_10m_wbt/2016_Mar_LA_Flood-item/agreement_raster.tif",
+                                       "~/HANDTEMP/test_cases/hwm/03180004/PI3_fim60_10m_wbt/2016_Mar_LA_Flood-item/inundated_extent.tif",
+                                       "~/HANDTEMP/test_cases/gfm/03180004/PI3_fim60_10m_wbt/4625/agreement_raster.tif",
+                                       "~/HANDTEMP/test_cases/gfm/03180004/PI3_fim60_10m_wbt/4625/gfm_mosaiced.tif",
+                                       "~/HANDTEMP/test_cases/gfm/03180004/PI3_fim60_10m_wbt/4625/inundated_extent.tif"],
+           "destination_tif_file_location":["~/pw/auto/scripts/tests/PI3/data/agreement_raster.tif",
+                                            "~/pw/auto/scripts/tests/PI3/data/inundated_extent.tif",
+                                            "~/pw/auto/scripts/tests/PI3/data/EVAL_gfm_data/agreement_raster.tif",
+                                            "~/pw/auto/scripts/tests/PI3/data/EVAL_gfm_data/gfm_mosaiced.tif",
+                                            "~/pw/auto/scripts/tests/PI3/data/EVAL_gfm_data/inundated_extent.tif"],
+            "source_json_file_location":["~/HANDTEMP/test_cases/hwm/03180004/PI3_fim60_10m_wbt/2016_Mar_LA_Flood-item/eval_metrics.json","~/HANDTEMP/test_cases/gfm/03180004/PI3_fim60_10m_wbt/4625/eval_metrics.json"],
+            "destination_json_file_location":["~/pw/auto/scripts/tests/PI3/data/eval_metrics.json","~/pw/auto/scripts/tests/PI3/data/EVAL_gfm_data/eval_metrics.json"]
+ 
+        }
+ 
+    ],
+    
+    "d_loc" : [
+               "~/HANDTEMP/test_cases/hwm/03180004/PI3_fim60_10m_wbt/2016_Mar_LA_Flood-item",
+               "~/HANDTEMP/test_cases/gfm/03180004/PI3_fim60_10m_wbt",
+               "~/HANDTEMP/test_cases/gfm/03180004/PI3_fim60_10m_wbt/4625"
+
+               ],
+    "d_files":[
+               ["agreement_raster.tif", "eval_metrics.json","inundated_extent.tif","read_me.txt"],
+               ["4314","4348","4388","4516","4625","4748","4771","4797","4876","4962","4964","5074","5081"],
+               ["agreement_raster.tif", "eval_metrics.json","gfm_mosaiced.tif","inundated_extent.tif","read_me.txt"]
+            ]
+
+
+
+}
