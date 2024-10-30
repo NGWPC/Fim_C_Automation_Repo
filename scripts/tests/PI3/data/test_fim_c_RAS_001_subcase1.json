@@ -1,0 +1,27 @@
+{
+    "additional_data":[
+ 
+        {
+           "base_directory":"/efs/fim-data/ripple/prototype/2024_07_31"
+ 
+        }
+ 
+    ] ,
+
+    "d_loc" : [
+               "/efs/fim-data/ripple",
+               "/efs/fim-data/ripple/prototype",
+               "/efs/fim-data/ripple/prototype/2024_07_31",
+               "/efs/fim-data/ripple/prototype/2024_07_31/library/10433500/z_501_5"
+
+               ],
+    "d_files":[
+               ["collections","flows2fim","prototype"],
+               ["2024_06_13","2024_07_31"],
+               ["composite_maps","library","library.sqlite"],
+               ["f_167.tif","f_242.tif"]   
+            ]
+
+
+
+}
