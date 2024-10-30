@@ -1,0 +1,39 @@
+{
+    "additional_data":[
+          {
+             "source_tif_file_location":["/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_10year.tif",
+                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_2year.tif",
+                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_5year.tif",
+                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_100year.tif",
+                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_25year.tif",
+                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_50year.tif"
+                                        ],
+            "destination_tif_file_location":["~/pw/auto/scripts/tests/PI3/data/qc_data/fim_10year.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/qc_data/fim_2year.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/qc_data/fim_5year.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/qc_data/fim_100year.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/qc_data/fim_25year.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/qc_data/fim_50year.tif"]
+  
+
+
+
+          }
+
+
+
+
+
+    ],
+   
+    "d_loc" : [
+               "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc"
+
+               ],
+    "d_files":[
+               ["controls_100year.csv", "controls_10year.csv", "controls_25year.csv", "controls_2year.csv", "controls_50year.csv", "controls_5year.csv", "fim_100year.tif", "fim_10year.tif", "fim_25year.tif", "fim_2year.tif", "fim_50year.tif", "fim_5year.tif", "qc_map.qgs", "qc_map.qgs~", "qc_map_attachments.zip", "qgis_startup.log"]
+            ]
+
+
+
+}
