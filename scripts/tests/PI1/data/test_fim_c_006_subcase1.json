@@ -14,9 +14,7 @@
                    "nwm_flows_bankfull_join.gpkg","nwm_route_link_geom_BED.csv"],
                ["gl_water_polygons.gpkg","input_mask_features.gpkg","readme_source_great_lakes.txt",
                    "readme_source_ocean.txt","water_polygons_us.gpkg"],
-               ["3d_nld_preprocessed_230314.gpkg", "Levee_protected_areas.gpkg", 
-               "LeveedArea.geojson","Leveed_Areas_NLDFS_5070_230314.gpkg", "System_Routes_NLDFS_5070_230314.gpkg", "huc2_levee_lines", 
-               "huc2_levee_poly", "readme.txt"]
+               ["3d_nld_preprocessed_230314.gpkg", "3d_nld_preprocessed_230314_3338.gpkg", "Levee_protected_areas.gpkg", "LeveedArea.geojson", "Leveed_Areas_NLDFS_3338_230314.gpkg", "Leveed_Areas_NLDFS_5070_230314.gpkg", "System_Routes_NLDFS_3338_230314.gpkg", "System_Routes_NLDFS_5070_230314.gpkg", "huc2_levee_lines", "huc2_levee_poly", "nwm_flows_alaska_nwmv3_ID_v2.gpkg", "readme.txt"]
             ]
 
 
