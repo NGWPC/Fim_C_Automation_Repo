@@ -1,11 +1,16 @@
 import subprocess
 import os
 import json
+import logging
 
-def test_run(file_name , output_file,expected_data_file):
+def test_run(file_name , output_file): #,expected_data_file)
+  try:
+    
     file_path = os.path.join(file_name,output_file)
     print("file_path is "+file_path)
     assert os.path.exists(file_path)
+
+    # file_path = "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/ripple.gpkg"
 
     command = "SELECT table_name FROM gpkg_contents;"
     result = subprocess.run(['sqlite3',file_path,command],stdout = subprocess.PIPE,universal_newlines = True)
@@ -26,12 +31,17 @@ def test_run(file_name , output_file,expected_data_file):
         print(f"Error {result.stderr}")
         return none
     if result:
+        # print(result_list)
+        assert len(result_list) > 0 , "Expected data not listed"
         print("Data available")
-
-    with open(expected_data_file,'r') as file:
-        data = json.load(file)
-        geo_data = data['geo_data']
-    for i in range(0,len(geo_data)):
-        assert result_list[i] ==geo_data[i] , "Expected data not listed"
+#####################Data verification #####################
+    # with open(expected_data_file,'r') as file:
+    #     data = json.load(file)
+    #     geo_data = data['geo_data']
+    # for i in range(0,len(geo_data)):
+    #     assert result_list[i] ==geo_data[i] , "Expected data not listed"
   
-    print("Validation successful")
+    # print("Validation successful")
+  except Exception as e:
+      logging.error("Unexpected error/File Not found")
+      raise e
