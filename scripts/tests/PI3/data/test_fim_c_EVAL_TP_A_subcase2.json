@@ -1,0 +1,28 @@
+{
+    "additional_data":[
+ 
+        {
+           "docker_commands":["sudo docker run --rm --network host --name eval-scripts2 -v /efs/demonstrations/pi3/code/eval_demo/:/foss_fim -v /efs/fim-data/hand_fim/outputs/:/outputs -v ~/HANDTEMP/:/fim_temp -v /efs/fim-data/hand_fim/inputs/:/data --entrypoint /bin/bash eval_mvp:latest -c 'cd /foss_fim/tools && python retro_flows.py --fim-version PI3_fim60_10m_wbt --huc 10140101 --date-range 2020-11-01 2020-12-31'"],
+           "remove_files":["~/HANDTEMP/10140101/10140101_flowfile.csv","~/HANDTEMP/10140101/10140101_retro_inundation.tif"],
+           "csv_file":"~/HANDTEMP/10140101/10140101_flowfile.csv",
+           "output_csv_file":"~/pw/auto/scripts/tests/PI3/data/10140101_flowfile.csv",
+           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",
+           "directory":"~/HANDTEMP",
+           "source_tif_file_location":"~/HANDTEMP/10140101/10140101_retro_inundation.tif",
+           "destination_tif_file_location":"~/pw/auto/scripts/tests/PI3/data/10140101_retro_inundation.tif"
+ 
+        }
+ 
+    ],
+   
+    "d_loc" : [
+               "~/HANDTEMP/10140101"
+
+               ],
+    "d_files":[
+               ["10140101_flowfile.csv","10140101_retro_inundation.tif"]
+            ]
+
+
+
+}
