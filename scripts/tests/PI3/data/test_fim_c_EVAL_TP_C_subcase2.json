@@ -1,0 +1,13 @@
+{
+    "additional_data":[
+ 
+        {
+           "docker_commands":["sudo docker exec $(docker ps -q --filter 'ancestor=eval_dashboard:latest') bash -c 'cd /scripts1 && apt-get update && apt-get install -y python3 python3-pip wget gnupg2 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt-get install -y ./google-chrome-stable_current_amd64.deb && cd /scripts1  && python3 -m venv /scripts1/venv && source /scripts1/venv/bin/activate && pip install --upgrade selenium webdriver-manager && pip install pytest && pip install pytest-html && pip show selenium && pip show webdriver-manager && pip show pytest && pip install geopandas && pip install DeepDiff && pip install pexpect && pip install jsondiff && pytest /scripts1/scripts/tests/PI3/EVAL/test_fim_c_EVAL_TP_C_subcase2_supplement.py -s -vv '"]
+          
+        }
+ 
+    ]
+
+
+
+}
