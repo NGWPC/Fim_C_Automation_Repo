@@ -1,0 +1,12 @@
+{
+
+    "d_loc" : [
+               "/efs/demonstrations/demo_data"
+               ],
+    "d_files":[
+               ["ble_benchmark_huc8s_classic.gpkg","ble_benchmark_huc8s_expanded.gpkg"]
+            ]
+
+
+
+}
