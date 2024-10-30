@@ -1,0 +1,43 @@
+{
+
+    "additional_data":[
+ 
+        {
+           "base_directory":"/efs/translated_ras_libraries/usgs/outputs/d40bbae/geocurve_polys",
+           "output_file":["10205115_HUC_051201080203_609_mm.gpkg","10205115_HUC_051201080203_579_mm.gpkg",
+                          "10205115_HUC_051201080203_548_mm.gpkg","10205115_HUC_051201080203_518_mm.gpkg",
+                          "10205115_HUC_051201080203_487_mm.gpkg","10205115_HUC_051201080203_457_mm.gpkg",
+                          "10205115_HUC_051201080203_426_mm.gpkg","10205115_HUC_051201080203_640_mm.gpkg",
+                          "10205115_HUC_051201080203_365_mm.gpkg","10205115_HUC_051201080203_335_mm.gpkg",
+                          "10205115_HUC_051201080203_304_mm.gpkg","10205115_HUC_051201080203_274_mm.gpkg",
+                          "10205115_HUC_051201080203_243_mm.gpkg","10205115_HUC_051201080203_213_mm.gpkg",
+                          "10205115_HUC_051201080203_883_mm.gpkg","10205115_HUC_051201080203_853_mm.gpkg",
+                          "10205115_HUC_051201080203_396_mm.gpkg"],
+           "expected_data_file" : "~/pw/auto/scripts/tests/PI1/data/test_fim_c_006_subcase2.json",
+           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",
+           "data_file_location":["~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_609_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_579_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_548_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_518_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_487_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_457_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_426_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_640_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_365_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_335_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_304_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_274_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_243_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_213_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_883_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_853_mm.gpkg",
+           "~/pw/auto/scripts/tests/PI1/data/10205115_HUC_051201080203_396_mm.gpkg"
+        ]
+ 
+        }
+ 
+    ]
+
+
+
+}
