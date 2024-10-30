@@ -1,0 +1,45 @@
+{
+    "additional_data":[
+ 
+        {
+           "text_file_location":"/efs/demonstrations/rs_stac_test/dfo_event_list.txt",
+           "total_records":"58",
+           "expected_record_value":"DFO-4230",
+           "base_directory":"/efs/translated_ras_libraries/temp/output_dir",
+           "output_file":"dfo_all_usa_events_post_2015.gpkg",
+           "expected_data_file" : "~/pw/auto/scripts/tests/PI2/data/test_fim_c_001_subcase3.json",
+           "data_file_location":"~/pw/auto/scripts/tests/PI2/data/dfo_all_usa_events_post_2015.gpkg"
+
+        }
+ 
+    ] ,
+
+    "d_loc" : [
+                "~/dfo_event_4230/item_DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/GFM_layers",
+                "/efs/fim-data/rs"
+               
+               ],
+    "d_files":[
+        ["NA_E087N030T3_ADVFLAG_20150316T235500__VV_A092_E087N030T3_EQUI7_NA020M_V0M2R1_S1_20150316.tif",
+         "NA_E087N030T3_CGLS-LC100____V301-2019_E087N030T3_NA020M_V01R01_PROBAV_c0e3c11bcd3d21f87fc41aef4c2333f2b07c5506c22a15625143c94af10f7055_20150316.tif",
+         "NA_E087N030T3_ENSEMBLE_EXCLAYER_20150316T235500_VV_NA020M_E087N030T3_20150316.tif",
+         "NA_E087N030T3_ENSEMBLE_FLOOD_20150316T235500_VV_NA020M_E087N030T3_20150316.tif",
+         "NA_E087N030T3_ENSEMBLE_OBSWATER_20150316T235500_VV_NA020M_E087N030T3_20150316.tif",
+         "NA_E087N030T3_ENSEMBLE_UNCERTAINTY_20150316T235500_VV_NA020M_E087N030T3_20150316.tif",
+         "NA_E087N030T3_GHS-POP_E2020_GLOBE_R2022A_E087N030T3_NA020M_100_V1_c0e3c11bcd3d21f87fc41aef4c2333f2b07c5506c22a15625143c94af10f7055_20150316.tif",
+         "NA_E087N030T3_REFERENCE_WATER_OUT_S1-_IW_GRDH_1S-V_20200301T235506_20210331T001226_MONTH-_------_----_V03_20150316.tif",
+         "NA_E090N030T3_ADVFLAG_20150316T235500__VV_A092_E090N030T3_EQUI7_NA020M_V0M2R1_S1_20150316.tif",
+         "NA_E090N030T3_CGLS-LC100____V301-2019_E090N030T3_NA020M_V01R01_PROBAV_ea997fb51b9e491ac4723163b8d762b8a92257eb92896f61cb41f126baeb3e1b_20150316.tif",
+         "NA_E090N030T3_ENSEMBLE_EXCLAYER_20150316T235500_VV_NA020M_E090N030T3_20150316.tif",
+         "NA_E090N030T3_ENSEMBLE_FLOOD_20150316T235500_VV_NA020M_E090N030T3_20150316.tif",
+         "NA_E090N030T3_ENSEMBLE_OBSWATER_20150316T235500_VV_NA020M_E090N030T3_20150316.tif",
+         "NA_E090N030T3_ENSEMBLE_UNCERTAINTY_20150316T235500_VV_NA020M_E090N030T3_20150316.tif",
+         "NA_E090N030T3_GHS-POP_E2020_GLOBE_R2022A_E090N030T3_NA020M_100_V1_ea997fb51b9e491ac4723163b8d762b8a92257eb92896f61cb41f126baeb3e1b_20150316.tif",
+         "NA_E090N030T3_REFERENCE_WATER_OUT_S1-_IW_GRDH_1S-V_20200301T235506_20210331T234742_MONTH-_------_----_V03_20150316.tif"],
+         ["coastal_zone.gpkg","dfo_all_usa_events_post_2015.gpkg","final_gfm_products.gpkg","gfm","gfm_products.gpkg"]
+                      
+        ]
+
+
+
+}
