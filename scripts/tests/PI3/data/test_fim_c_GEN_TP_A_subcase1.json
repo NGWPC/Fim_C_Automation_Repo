@@ -1,0 +1,30 @@
+{
+    "additional_data":[
+          {
+             "source_tif_file_location":["/efs/fim-data/hand_fim/inputs/3dep_dems/10m_5070/HUC6_080402_dem.tif",
+                                        "/efs/fim-data/hand_fim/outputs/PI3_fim60_10m_wbt/12070104/branches/0/rem_zeroed_masked_0.tif",
+                                        "/efs/fim-data/hand_fim/test_cases/ble_test_cases/11090203_ble/official_versions/fim_4_4_0_0/500yr/total_area_agreement.tif"
+                                        ],
+            "destination_tif_file_location":["~/pw/auto/scripts/tests/PI3/data/HUC6_080402_dem.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/rem_zeroed_masked_0.tif",
+                                             "~/pw/auto/scripts/tests/PI3/data/total_area_agreement.tif"
+                                             ]
+  
+
+
+
+          }
+
+    ],
+   
+    "d_loc" : [
+               "/efs/demonstrations/qgis_projects"
+
+               ],
+    "d_files":[
+               ["dataset_availability.qgz", "map.qgz", "qgis_demo_pi3.qgz"]
+            ]
+
+
+
+}
