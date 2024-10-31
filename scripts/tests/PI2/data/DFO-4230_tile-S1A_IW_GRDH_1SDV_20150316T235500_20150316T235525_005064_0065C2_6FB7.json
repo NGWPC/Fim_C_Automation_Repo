@@ -1,0 +1,405 @@
+{
+    "type": "Feature",
+    "stac_version": "1.0.0-beta.2",
+    "id": "DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7",
+    "properties": {
+        "title": "DFO-4230_tile-S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7",
+        "description": "This item lists some of assets associated with the GFM scene S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7.",
+        "main_cause": "Heavy Rain",
+        "sat:orbit_state": "ascending",
+        "sat:absolute_orbit": "005064",
+        "gfm_data_take_start_datetime": "2015-03-16T23:55:00+00:00",
+        "gfm_data_take_end_datetime": "2015-03-16T23:55:25+00:00",
+        "dfo_event_id": "4230",
+        "dfo_start_datetime": "2015-03-10T00:00:00+00:00",
+        "dfo_end_datetime": "2015-03-23T00:00:00+00:00",
+        "proj:epsg": 27705,
+        "proj:wkt2": "+proj=aeqd +lat_0=52 +lon_0=-97.5 +x_0=8264722.17686 +y_0=4867518.35323 +datum=WGS84 +units=m +no_defs",
+        "gsd": 20,
+        "gfm_version": "V0M2R1",
+        "flowfiles": {
+            "NWM_v3_flowfile": {
+                "Flowstats": {
+                    "discharge": {
+                        "Min": 0.0,
+                        "Max": 23391.949477149174,
+                        "Mean": 706.8805616647766
+                    }
+                },
+                "columns": {
+                    "feature_id": {
+                        "Column description": "feature id that identifies the stream segment being modeled or measured",
+                        "Column data source": "NWM 3.0 hydrofabric",
+                        "data_href": "https://water.noaa.gov/resources/downloads/nwm/NWM_channel_hydrofabric.tar.gz"
+                    },
+                    "discharge": {
+                        "Column description": "Discharge in m^3/s",
+                        "Column data source": "NWM 3.0 retrospective discharge data",
+                        "data_href": "https://registry.opendata.aws/nwm-archive/"
+                    }
+                }
+            }
+        },
+        "equi7tile_assets": {
+            "E087N030T3": [
+                "E087N030T3_Thumbnail",
+                "E087N030T3_Advisory_Flags",
+                "E087N030T3_Affected_Landcover",
+                "E087N030T3_Exclusion_Mask",
+                "E087N030T3_Observed_Flood_Extent",
+                "E087N030T3_Observed_Water_Extent",
+                "E087N030T3_Likelihood_Values",
+                "E087N030T3_Affected_population",
+                "E087N030T3_Reference_Water_Mask",
+                "E087N030T3_Footprint",
+                "E087N030T3_Metadata"
+            ],
+            "E090N030T3": [
+                "E090N030T3_Advisory_Flags",
+                "E090N030T3_Affected_Landcover",
+                "E090N030T3_Exclusion_Mask",
+                "E090N030T3_Observed_Flood_Extent",
+                "E090N030T3_Observed_Flood_Extent",
+                "E090N030T3_Observed_Water_Extent",
+                "E090N030T3_Likelihood_Values",
+                "E090N030T3_Affected_population",
+                "E090N030T3_Reference_Water_Mask",
+                "E090N030T3_Footprint",
+                "E090N030T3_Metadata"
+            ]
+        },
+        "datetime": "2015-03-16T23:55:00Z"
+    },
+    "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+            [
+                [
+                    [
+                        -88.064193,
+                        37.250515
+                    ],
+                    [
+                        -86.650633824928,
+                        37.88266439976655
+                    ],
+                    [
+                        -86.60010381354867,
+                        37.9052616259223
+                    ],
+                    [
+                        -86.56352426949549,
+                        37.92162014647435
+                    ],
+                    [
+                        -86.51109305205658,
+                        37.94506759969565
+                    ],
+                    [
+                        -86.26499359980708,
+                        38.05512427349176
+                    ],
+                    [
+                        -85.83807485120387,
+                        38.246044070439666
+                    ],
+                    [
+                        -85.76693098872208,
+                        38.277859894466026
+                    ],
+                    [
+                        -85.738304,
+                        38.290662
+                    ],
+                    [
+                        -85.71742348121714,
+                        38.27938554517631
+                    ],
+                    [
+                        -84.451643,
+                        37.595805
+                    ],
+                    [
+                        -84.352669,
+                        36.752785
+                    ],
+                    [
+                        -84.89845958219814,
+                        36.60914149454564
+                    ],
+                    [
+                        -88.11368,
+                        35.762946
+                    ],
+                    [
+                        -88.08922884657119,
+                        36.49794262244543
+                    ],
+                    [
+                        -88.064193,
+                        37.250515
+                    ]
+                ]
+            ],
+            [
+                [
+                    [
+                        -90.63588,
+                        36.443302
+                    ],
+                    [
+                        -87.777802,
+                        36.849236
+                    ],
+                    [
+                        -87.473068,
+                        35.346924
+                    ],
+                    [
+                        -90.277191,
+                        34.939114
+                    ],
+                    [
+                        -90.63588,
+                        36.443302
+                    ]
+                ]
+            ],
+            [
+                [
+                    [
+                        -90.63588,
+                        36.443302
+                    ],
+                    [
+                        -87.777802,
+                        36.849236
+                    ],
+                    [
+                        -87.473068,
+                        35.346924
+                    ],
+                    [
+                        -90.277191,
+                        34.939114
+                    ],
+                    [
+                        -90.63588,
+                        36.443302
+                    ]
+                ]
+            ]
+        ]
+    },
+    "links": [
+        {
+            "rel": "root",
+            "href": "../../catalog.json",
+            "type": "application/json"
+        },
+        {
+            "rel": "collection",
+            "href": "../collection.json",
+            "type": "application/json",
+            "title": "Global Flood Monitoring Collection"
+        },
+        {
+            "rel": "parent",
+            "href": "../collection.json",
+            "type": "application/json"
+        }
+    ],
+    "assets": {
+        "NWM_v3_flowfile": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/nwm_retrospective_flows_v3.csv",
+            "description": "NWM 3.0 flowfile see flowfiles key in properties for more information",
+            "roles": [
+                "data"
+            ]
+        },
+        "E087N030T3_Thumbnail": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/E087N030T3_extent_thumbnail.png",
+            "type": "image/png",
+            "title": "E087N030T3 Thumbnail",
+            "roles": [
+                "data"
+            ]
+        },
+        "E087N030T3_Advisory_Flags": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E087N030T3_ADVFLAG_20150316T235500__VV_A092_E087N030T3_EQUI7_NA020M_V0M2R1_S1_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E087N030T3 Advisory Flags",
+            "roles": [
+                "data"
+            ]
+        },
+        "E087N030T3_Affected_Landcover": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E087N030T3_CGLS-LC100____V301-2019_E087N030T3_NA020M_V01R01_PROBAV_c0e3c11bcd3d21f87fc41aef4c2333f2b07c5506c22a15625143c94af10f7055_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E087N030T3 Affected Landcover",
+            "roles": [
+                "data"
+            ]
+        },
+        "E087N030T3_Exclusion_Mask": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E087N030T3_ENSEMBLE_EXCLAYER_20150316T235500_VV_NA020M_E087N030T3_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E087N030T3 Exclusion Mask",
+            "roles": [
+                "data"
+            ]
+        },
+        "E087N030T3_Observed_Flood_Extent": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E087N030T3_ENSEMBLE_FLOOD_20150316T235500_VV_NA020M_E087N030T3_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E087N030T3 Observed Flood Extent",
+            "roles": [
+                "data"
+            ]
+        },
+        "E087N030T3_Observed_Water_Extent": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E087N030T3_ENSEMBLE_OBSWATER_20150316T235500_VV_NA020M_E087N030T3_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E087N030T3 Observed Water Extent",
+            "roles": [
+                "data"
+            ]
+        },
+        "E087N030T3_thumbnail": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/E087N030T3_extent_thumbnail.png",
+            "type": "image/png",
+            "title": "E087N030T3 thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "E087N030T3_Likelihood_Values": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E087N030T3_ENSEMBLE_UNCERTAINTY_20150316T235500_VV_NA020M_E087N030T3_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E087N030T3 Likelihood Values",
+            "roles": [
+                "data"
+            ]
+        },
+        "E087N030T3_Affected_population": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E087N030T3_GHS-POP_E2020_GLOBE_R2022A_E087N030T3_NA020M_100_V1_c0e3c11bcd3d21f87fc41aef4c2333f2b07c5506c22a15625143c94af10f7055_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E087N030T3 Affected population",
+            "roles": [
+                "data"
+            ]
+        },
+        "E087N030T3_Reference_Water_Mask": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E087N030T3_REFERENCE_WATER_OUT_S1-_IW_GRDH_1S-V_20200301T235506_20210331T001226_MONTH-_------_----_V03_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E087N030T3 Reference Water Mask",
+            "roles": [
+                "data"
+            ]
+        },
+        "E087N030T3_Footprint": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E087N030T3_sentinel-1_footprint_c0e3c11bcd3d21f87fc41aef4c2333f2b07c5506c22a15625143c94af10f7055_20150316.geojson",
+            "type": "application/geo+json",
+            "title": "E087N030T3 Footprint",
+            "roles": [
+                "metadata"
+            ]
+        },
+        "E087N030T3_Metadata": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E087N030T3_sentinel-1_metadata_c0e3c11bcd3d21f87fc41aef4c2333f2b07c5506c22a15625143c94af10f7055_20150316.json",
+            "type": "application/json",
+            "title": "E087N030T3 Metadata",
+            "roles": [
+                "metadata"
+            ]
+        },
+        "E090N030T3_Advisory_Flags": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E090N030T3_ADVFLAG_20150316T235500__VV_A092_E090N030T3_EQUI7_NA020M_V0M2R1_S1_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E090N030T3 Advisory Flags",
+            "roles": [
+                "data"
+            ]
+        },
+        "E090N030T3_Affected_Landcover": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E090N030T3_CGLS-LC100____V301-2019_E090N030T3_NA020M_V01R01_PROBAV_ea997fb51b9e491ac4723163b8d762b8a92257eb92896f61cb41f126baeb3e1b_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E090N030T3 Affected Landcover",
+            "roles": [
+                "data"
+            ]
+        },
+        "E090N030T3_Exclusion_Mask": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E090N030T3_ENSEMBLE_EXCLAYER_20150316T235500_VV_NA020M_E090N030T3_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E090N030T3 Exclusion Mask",
+            "roles": [
+                "data"
+            ]
+        },
+        "E090N030T3_Observed_Flood_Extent": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E090N030T3_ENSEMBLE_FLOOD_20150316T235500_VV_NA020M_E090N030T3_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E090N030T3 Observed Flood Extent",
+            "roles": [
+                "data"
+            ]
+        },
+        "E090N030T3_Observed_Water_Extent": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E090N030T3_ENSEMBLE_OBSWATER_20150316T235500_VV_NA020M_E090N030T3_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E090N030T3 Observed Water Extent",
+            "roles": [
+                "data"
+            ]
+        },
+        "E090N030T3_Likelihood_Values": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E090N030T3_ENSEMBLE_UNCERTAINTY_20150316T235500_VV_NA020M_E090N030T3_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E090N030T3 Likelihood Values",
+            "roles": [
+                "data"
+            ]
+        },
+        "E090N030T3_Affected_population": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E090N030T3_GHS-POP_E2020_GLOBE_R2022A_E090N030T3_NA020M_100_V1_ea997fb51b9e491ac4723163b8d762b8a92257eb92896f61cb41f126baeb3e1b_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E090N030T3 Affected population",
+            "roles": [
+                "data"
+            ]
+        },
+        "E090N030T3_Reference_Water_Mask": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E090N030T3_REFERENCE_WATER_OUT_S1-_IW_GRDH_1S-V_20200301T235506_20210331T234742_MONTH-_------_----_V03_20150316.tif",
+            "type": "image/tiff; application=geotiff",
+            "title": "E090N030T3 Reference Water Mask",
+            "roles": [
+                "data"
+            ]
+        },
+        "E090N030T3_Footprint": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E090N030T3_sentinel-1_footprint_ea997fb51b9e491ac4723163b8d762b8a92257eb92896f61cb41f126baeb3e1b_20150316.geojson",
+            "type": "application/geo+json",
+            "title": "E090N030T3 Footprint",
+            "roles": [
+                "metadata"
+            ]
+        },
+        "E090N030T3_Metadata": {
+            "href": "/efs/fim-data/rs/gfm/4230/S1A_IW_GRDH_1SDV_20150316T235500_20150316T235525_005064_0065C2_6FB7/NA_E090N030T3_sentinel-1_metadata_ea997fb51b9e491ac4723163b8d762b8a92257eb92896f61cb41f126baeb3e1b_20150316.json",
+            "type": "application/json",
+            "title": "E090N030T3 Metadata",
+            "roles": [
+                "metadata"
+            ]
+        }
+    },
+    "bbox": [
+        -90.63588,
+        34.939114,
+        -84.352669,
+        38.290662
+    ],
+    "stac_extensions": [],
+    "collection": "gfm-collection"
+}
