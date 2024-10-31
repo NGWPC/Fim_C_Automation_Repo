@@ -1,0 +1,272 @@
+<VRTDataset rasterXSize="3197" rasterYSize="6137">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / Conus Albers",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",23],PARAMETER["longitude_of_center",-96],PARAMETER["standard_parallel_1",29.5],PARAMETER["standard_parallel_2",45.5],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","5070"]]</SRS>
+  <GeoTransform>  6.6285207667040057e+05,  3.0000000000000000e+00,  0.0000000000000000e+00,  1.7899027181461658e+06,  0.0000000000000000e+00, -3.0000000000000000e+00</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <NoDataValue>-9999</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10434182/z_nd/f_8940.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="726" RasterYSize="494" DataType="Float32" BlockXSize="726" BlockYSize="494" />
+      <SrcRect xOff="0" yOff="0" xSize="726" ySize="494" />
+      <DstRect xOff="259.540814979584" yOff="5642.87653013978" xSize="726" ySize="494" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10434118/z_nd/f_6908.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1088" RasterYSize="1434" DataType="Float32" BlockXSize="1088" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="1088" ySize="1434" />
+      <DstRect xOff="0" yOff="3936.45937988123" xSize="1088" ySize="1434" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10434152/z_nd/f_8940.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="512" RasterYSize="551" DataType="Float32" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="512" ySize="551" />
+      <DstRect xOff="611.682310782683" yOff="5368.38690773607" xSize="512" ySize="551" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10435328/z_441_5/f_8120.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1216" RasterYSize="1492" DataType="Float32" BlockXSize="1216" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="1216" ySize="1492" />
+      <DstRect xOff="559.05896402748" yOff="2710.73223465037" xSize="1216" ySize="1492" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10435332/z_441_5/f_514.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="751" RasterYSize="482" DataType="Float32" BlockXSize="751" BlockYSize="482" />
+      <SrcRect xOff="0" yOff="0" xSize="751" ySize="482" />
+      <DstRect xOff="659.856284615584" yOff="3716.38565939059" xSize="751" ySize="482" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10435380/z_433_5/f_1010.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="985" RasterYSize="567" DataType="Float32" BlockXSize="985" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="985" ySize="567" />
+      <DstRect xOff="717.005344032776" yOff="5084.90901385496" xSize="985" ySize="567" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10435382/z_nd/f_8815.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="504" RasterYSize="449" DataType="Float32" BlockXSize="504" BlockYSize="449" />
+      <SrcRect xOff="0" yOff="0" xSize="504" ySize="449" />
+      <DstRect xOff="731.011814723917" yOff="5164.26353853429" xSize="504" ySize="449" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433802/z_nd/f_8649.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="401" RasterYSize="386" DataType="Float32" BlockXSize="401" BlockYSize="386" />
+      <SrcRect xOff="0" yOff="0" xSize="401" ySize="386" />
+      <DstRect xOff="1365.9034997238" yOff="2603.81756945226" xSize="401" ySize="386" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10434142/z_455_5/f_357.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="540" RasterYSize="313" DataType="Float32" BlockXSize="540" BlockYSize="313" />
+      <SrcRect xOff="0" yOff="0" xSize="540" ySize="313" />
+      <DstRect xOff="1463.20379913889" yOff="5246.22144143827" xSize="540" ySize="313" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10434156/z_455_5/f_79.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="405" RasterYSize="448" DataType="Float32" BlockXSize="405" BlockYSize="448" />
+      <SrcRect xOff="0" yOff="0" xSize="405" ySize="448" />
+      <DstRect xOff="1464.3463123464" yOff="5272.06988507253" xSize="405" ySize="448" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10435554/z_nd/f_8684.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="617" RasterYSize="628" DataType="Float32" BlockXSize="617" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="617" ySize="628" />
+      <DstRect xOff="812.131771505772" yOff="4778.08224682417" xSize="617" ySize="628" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433786/z_462_0/f_6998.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="444" RasterYSize="574" DataType="Float32" BlockXSize="444" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="444" ySize="574" />
+      <DstRect xOff="1450.55563333277" yOff="2334.27730136217" xSize="444" ySize="574" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433790/z_462_0/f_2348.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1134" RasterYSize="618" DataType="Float32" BlockXSize="1134" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="1134" ySize="618" />
+      <DstRect xOff="1454.71329519983" yOff="2329.21021278001" xSize="1134" ySize="618" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10434078/z_443_0/f_2031.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="503" RasterYSize="358" DataType="Float32" BlockXSize="503" BlockYSize="358" />
+      <SrcRect xOff="0" yOff="0" xSize="503" ySize="358" />
+      <DstRect xOff="1092.82576796587" yOff="4762.70456362019" xSize="503" ySize="358" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10435338/z_443_0/f_7390.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1005" RasterYSize="1392" DataType="Float32" BlockXSize="1005" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="1005" ySize="1392" />
+      <DstRect xOff="997.860299024886" yOff="3729.42783016906" xSize="1005" ySize="1392" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433740/z_463_0/f_2394.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="546" RasterYSize="944" DataType="Float32" BlockXSize="546" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="546" ySize="944" />
+      <DstRect xOff="1537.82198377959" yOff="1703.27276585903" xSize="546" ySize="944" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433748/z_463_0/f_6787.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="899" RasterYSize="824" DataType="Float32" BlockXSize="899" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="899" ySize="824" />
+      <DstRect xOff="1549.93054469198" yOff="1821.58845785369" xSize="899" ySize="824" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10434076/z_443_5/f_1143.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1184" RasterYSize="557" DataType="Float32" BlockXSize="1184" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="1184" ySize="557" />
+      <DstRect xOff="1242.83598314373" yOff="4521.94374197908" xSize="1184" ySize="557" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10434112/z_nd/f_845.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="576" RasterYSize="429" DataType="Float32" BlockXSize="576" BlockYSize="429" />
+      <SrcRect xOff="0" yOff="0" xSize="576" ySize="429" />
+      <DstRect xOff="1301.89854833348" yOff="4771.31641337827" xSize="576" ySize="429" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433946/z_459_0/f_4200.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="947" RasterYSize="747" DataType="Float32" BlockXSize="947" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="947" ySize="747" />
+      <DstRect xOff="1579.29083912959" yOff="3248.18774256979" xSize="947" ySize="747" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433968/z_459_0/f_1444.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="712" RasterYSize="411" DataType="Float32" BlockXSize="712" BlockYSize="411" />
+      <SrcRect xOff="0" yOff="0" xSize="712" ySize="411" />
+      <DstRect xOff="1613.67070515617" yOff="3717.36429237636" xSize="712" ySize="411" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433656/z_474_0/f_5328.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="1177" RasterYSize="1706" DataType="Float32" BlockXSize="1177" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="1176.80325762167" ySize="1706" />
+      <DstRect xOff="2020.19674237833" yOff="398.046193201716" xSize="1176.80325762167" ySize="1706" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433658/z_474_0/f_1395.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="482" RasterYSize="681" DataType="Float32" BlockXSize="482" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="482" ySize="681" />
+      <DstRect xOff="2100.45615427813" yOff="1424.54439351886" xSize="482" ySize="681" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10435368/z_456_0/f_544.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="652" RasterYSize="578" DataType="Float32" BlockXSize="652" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="652" ySize="578" />
+      <DstRect xOff="1612.58130747223" yOff="4914.11567476314" xSize="652" ySize="578" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433892/z_473_0/f_2103.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="811" RasterYSize="866" DataType="Float32" BlockXSize="811" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="811" ySize="866" />
+      <DstRect xOff="2168.09928131755" yOff="2708.50483281406" xSize="811" ySize="866" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433940/z_473_0/f_712.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="785" RasterYSize="373" DataType="Float32" BlockXSize="785" BlockYSize="373" />
+      <SrcRect xOff="0" yOff="0" xSize="785" ySize="373" />
+      <DstRect xOff="2262.09882803645" yOff="3202.92921828587" xSize="785" ySize="373" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433972/z_nd/f_969.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="276" RasterYSize="294" DataType="Float32" BlockXSize="276" BlockYSize="294" />
+      <SrcRect xOff="0" yOff="0" xSize="276" ySize="294" />
+      <DstRect xOff="2081.08258891044" yOff="3797.54928537932" xSize="276" ySize="294" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10434014/z_470_0/f_364.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="451" RasterYSize="592" DataType="Float32" BlockXSize="451" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="451" ySize="592" />
+      <DstRect xOff="2078.70108847017" yOff="3788.71867482093" xSize="451" ySize="592" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433500/z_504_5/f_2127.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="377" RasterYSize="629" DataType="Float32" BlockXSize="377" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="377" ySize="629" />
+      <DstRect xOff="2765.14553929796" yOff="0" xSize="377" ySize="629" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433502/z_504_5/f_2500.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="483" RasterYSize="483" DataType="Float32" BlockXSize="483" BlockYSize="483" />
+      <SrcRect xOff="0" yOff="0" xSize="483" ySize="483" />
+      <DstRect xOff="2587.59010534307" yOff="161.079729697124" xSize="483" ySize="483" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433926/z_494_5/f_1509.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="296" RasterYSize="304" DataType="Float32" BlockXSize="296" BlockYSize="304" />
+      <SrcRect xOff="0" yOff="0" xSize="296" ySize="304" />
+      <DstRect xOff="2707.65785935257" yOff="2699.5382412038" xSize="296" ySize="304" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433970/z_nd/f_500.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="414" RasterYSize="406" DataType="Float32" BlockXSize="414" BlockYSize="406" />
+      <SrcRect xOff="0" yOff="0" xSize="414" ySize="406" />
+      <DstRect xOff="2136.1021544146" yOff="3678.09515496739" xSize="414" ySize="406" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">prototype/2024_07_31/library/10433996/z_nd/f_266.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="321" RasterYSize="305" DataType="Float32" BlockXSize="321" BlockYSize="305" />
+      <SrcRect xOff="0" yOff="0" xSize="321" ySize="305" />
+      <DstRect xOff="2144.0399133487" yOff="3781.69904656739" xSize="321" ySize="305" />
+      <NODATA>-9999</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>
