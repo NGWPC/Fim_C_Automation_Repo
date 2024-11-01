@@ -12,4 +12,3 @@ def compare_gpkgs(source_file,destination_file):
         # print(f"\n {str(e)} \n")
         logging.error(f"Both gpkg files are not same: {source_file} and {destination_file}")
         raise e
-

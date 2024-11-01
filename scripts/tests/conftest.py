@@ -30,6 +30,7 @@ def run_shell_script():
         variable_value = result.stdout.strip()
         dir_path = scenario['additional_data'][0].get('base_directory')+ variable_value.split('\n',1)[0]
         return os.path.expanduser(dir_path),scenario['additional_data'][0].get('output_file'),scenario['additional_data'][0].get('expected_data_file'),scenario['additional_data'][0].get('data_file_location')
+
     return _run_shell_script
 
 @pytest.fixture

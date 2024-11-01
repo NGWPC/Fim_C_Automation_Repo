@@ -1,6 +1,7 @@
 {
+
      "additional_data":[
- 
+
         {
            "base_directory":"/efs/translated_ras_libraries/temp/output_dir",
            "output_file":"all_events.gpkg",
@@ -9,7 +10,6 @@
            "output_csv_file":"~/pw/auto/scripts/tests/PI1/data/FilteredHWMs.csv",
            "data_file_location":"~/pw/auto/scripts/tests/PI1/data/all_events.gpkg"
 
- 
         }
  
     ] ,

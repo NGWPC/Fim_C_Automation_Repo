@@ -4,6 +4,7 @@ import os
 import requests
 import json
 import jsondiff
+
 from .utils import qgis_util,gpkg_util
 import logging
 import pexpect
@@ -28,6 +29,7 @@ contingency_metric_xpath = '//select[@id="inputs-3a86ea-2"]'
 # dot_plot_type_xpath = '//*[@class="plot-d6a7b5"]//*[@aria-label="dot"][1]//*[@cx="475"][1]'
 box_plot_type_xpath = '//*[@class="plot-d6a7b5"]//*[@aria-label="bar"][1]//*[@cx="55"]'
 dot_plot_type_xpath = (By.XPATH,'//*[@class="plot-d6a7b5"]//*[@aria-label="dot"][1]//*[@cx="475"][1]')
+
 
 def validate_geo_data(dir_path,output_file,expected_data_file,data_file_location):
    try:
