@@ -1,0 +1,27 @@
+{
+
+     "additional_data":[
+
+        {
+           "source_file":"/fimopt/demonstrations/pi3/hand/supplementary_data/recommend_resolution.gpkg",
+           "base_directory":"/fimopt/demonstrations/pi3/hand/supplementary_data",
+           "output_file":"recommend_algorithm.gpkg",
+           "expected_data_file" : "~/pw/auto/scripts/tests/PI3/data/test_fim_c_HAND_TP_A_subcase1.json",
+           "fields":["HUC8","recommended_res","recommended_res_reason"],
+           "data_file_location":"~/pw/auto/scripts/tests/PI3/data/recommend_algorithm.gpkg"
+
+
+        }
+ 
+    ] ,
+    "d_loc" : [
+               "/fimopt/fim-data/hand_fim/outputs",
+               "/fimopt/fim-data/hand_fim/test_cases",
+               "/fimopt/fim-data/hand_fim/outputs/PI3_fim60_10m_wbt/rating_curve_compare"
+               ],
+    "d_files":[
+               ["10m_lidar_ngwpc_pI1", "10m_res_PI1_lidar_12090301", "3m_lidar_ngwpc_PI1", "5m_lidar_ngwpc_PI1", "5m_res_PI1_lidar_12090301", "PI3_TestProcedures", "PI3_fim60_10m_richdem", "PI3_fim60_10m_wbt", "PI3_fim60_5m_richdem", "PI3_fim60_5m_wbt", "PI3_uat_and_alpha_domain_3m_richdem", "PI3_uat_and_alpha_domain_3m_wbt", "carson_oe_test", "fim_demo_test_multiple", "fim_demo_test_single", "ryan_test_10m_2huc_bathy_20240319", "ryan_test_10m_lidar_12090301_20240315", "test_10m_lidar_12090301_1", "test_10m_lidar_12090301_2", "test_chad_wbt", "unit_test_data"],
+               ["ble_test_cases","ifc_test_cases","nws_test_cases","ras2fim_test_cases","usgs_test_cases"],
+               ["agg_nwm_recurr_flow_elev_stats_location_id.csv","agg_nwm_recurr_flow_elevations.csv","agg_usgs_elev_table.csv","plots","rating_curve_comparison.log"]
+            ]
+}
