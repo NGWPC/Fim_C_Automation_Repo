@@ -4,6 +4,7 @@ import os
 import requests
 import json
 import jsondiff
+from dotenv import dotenv_values
 
 from .utils import qgis_util,gpkg_util
 import logging
@@ -49,10 +50,16 @@ def validate_geo_data(dir_path,output_file,expected_data_file,data_file_location
       raise e
 
 
-def validate_directories_files(directory_locations, directory_contents):
+def validate_directories_files(directory_locations, directory_contents): #,flag
    for i,dir_location in enumerate(directory_locations):
       
       try:
+      #   if flag=="partly":
+      #      for file in directory_contents:
+      #       print(file)
+      #       file_path = os.path.join(dir_location,str(file))
+      #       assert  os.path.isfile(file_path), f"{file} is not present"
+      #   else:
          os.chdir(dir_location)
          assert os.getcwd() == dir_location, "Failed to load the directory" + dir_location
          dir_contents = sorted(os.listdir()) 
@@ -163,6 +170,19 @@ def validate_response(link,headers,data,destination_response_location):
       logging.error("source_response and destination_response responses do not match")
       raise e
    
+
+def verify_environment_variables(env_file,expected_content):
+   try:
+     env_values = dotenv_values(env_file)
+     for key,expected_value in expected_content.items():
+         actual_value = env_values.get(key)
+         assert actual_value is not None , f"Missing {key}"
+         assert str(actual_value) == str(expected_value),"Expected value not present"
+         logging.info(f"{actual_value} is present as {expected_value} in the {env_file}")
+   except AssertionError as e:
+      logging.error(f"Expected value not present due to {e}")
+      raise e
+    
    
 
 

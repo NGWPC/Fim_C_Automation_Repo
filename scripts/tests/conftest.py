@@ -34,6 +34,20 @@ def run_shell_script():
     return _run_shell_script
 
 @pytest.fixture
+def run_shell_script_from_directory():
+    def _run_shell_script_from_directory(folder_name,data_file, scenarios):
+     try:
+        scenario = scenarios(folder_name , data_file)
+        shell_script = scenario['additional_data'][0].get('shell_script')
+        location = scenario['additional_data'][0].get('base_directory')
+        result = subprocess.run(f"cd {location} && sudo bash {shell_script}",shell=True,check=True,stdout = subprocess.PIPE,stderr = subprocess.PIPE,universal_newlines = True)
+        print("Output:",result.stdout)
+     except subprocess.CalledProcessError as e:
+        print("Error:",e.stderr)
+        raise e
+    return _run_shell_script_from_directory    
+
+@pytest.fixture
 def change_dir(run_shell_script):
     dir_path , _  = run_shell_script
     os.chdir(dir_path)
@@ -46,6 +60,7 @@ def load_scenario_data():
             data = scenarios(folder_name , scenario_name)
             directory_locations = data['d_loc']
             directory_contents = data['d_files']
+            # flag = data['additional_data'][0].get("flag")
             return directory_locations,directory_contents
     return _load_scenario_data
 
@@ -175,3 +190,10 @@ def run_curl_command():
          scenario = scenarios(folder_name , data_file)
          return scenario['additional_data'][0].get('url') , scenario['additional_data'][0].get('headers') , scenario['additional_data'][0].get('data'),scenario['additional_data'][0].get('destination_response_location')
     return _run_curl_command
+
+@pytest.fixture
+def env_file_check():
+    def _env_file_check(folder_name,data_file,scenarios):
+        scenario = scenarios(folder_name , data_file)
+        return scenario['additional_data']
+    return _env_file_check

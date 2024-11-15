@@ -1,0 +1,33 @@
+{
+
+     "additional_data":[
+
+        {
+           "file_name":"/fimopt/fim-data/hand_fim/inputs/pi3_conf_files/params_template_10m.env",
+           "expected_content":{
+               "res":10,
+               "input_DEM_source":"tiles_1m",
+               "pit_fill_method":"wbt",
+               "ncores_gw":8,
+               "ncores_fd":8
+           }
+        },
+        {
+         "file_name":"/fimopt/fim-data/hand_fim/inputs/pi3_conf_files/params_template_5m.env",
+         "expected_content":{
+             "res":5,
+             "input_DEM_source":"tiles_1m",
+             "pit_fill_method":"wbt",
+             "ncores_gw":8,
+             "ncores_fd":8
+         }
+      }
+ 
+    ] ,
+    "d_loc" : [
+               "/fimopt/fim-data/hand_fim/inputs/pi3_conf_files"
+               ],
+    "d_files":[
+               ["PI3_TP_huclist.lst", "params_template_10m.env", "params_template_3m.env", "params_template_5m.env", "previous"]  
+            ]
+}

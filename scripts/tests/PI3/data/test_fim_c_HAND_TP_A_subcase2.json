@@ -1,0 +1,21 @@
+{
+
+     "additional_data":[
+
+        {
+           "shell_script":"slurm_10m_fim_pipeline_tp.sh RUN_NAME",
+           "base_directory":"/fimopt/demonstrations/pi3/code/TP_Slurm"
+        }
+ 
+    ] ,
+    "d_loc" : [
+               "/fimopt/fim-data/hand_fim/outputs/PI3_TestProcedures/RUN_NAME_10m/01090005",
+               "/fimopt/fim-data/hand_fim/outputs/PI3_TestProcedures/RUN_NAME_10m/03100204",
+               "/fimopt/fim-data/hand_fim/outputs/PI3_TestProcedures/RUN_NAME_10m/10240004"
+               ],
+    "d_files":[
+               ["3d_nld_subset_levees_burned.gpkg", "LandSea_subset.gpkg", "LeveeProtectedAreas_subset.gpkg", "branch_ids.csv", "branch_ids.lst", "branch_polygons.gpkg", "branches", "dem_burned_filled.tif", "levee_levelpaths.csv", "nld_subset_levees.gpkg", "nwm_catchments_proj_subset.gpkg", "nwm_catchments_proj_subset_levelPaths.gpkg", "nwm_headwater_points_subset.gpkg", "nwm_lakes_proj_subset.gpkg", "nwm_subset_streams.gpkg", "nwm_subset_streams_levelPaths.gpkg", "nwm_subset_streams_levelPaths_dissolved.gpkg", "nwm_subset_streams_levelPaths_dissolved_headwaters.gpkg", "osm_bridge_centroids.gpkg","osm_bridges_subset.gpkg", "usgs_subset_gages.gpkg", "usgs_subset_gages_0.gpkg", "wbd.gpkg", "wbd8_clp.gpkg"],
+               ["LandSea_subset.gpkg", "branch_ids.csv", "branch_ids.lst", "branch_polygons.gpkg", "branches", "dem_burned_filled.tif", "nwm_catchments_proj_subset.gpkg", "nwm_catchments_proj_subset_levelPaths.gpkg", "nwm_headwater_points_subset.gpkg", "nwm_lakes_proj_subset.gpkg", "nwm_subset_streams.gpkg", "nwm_subset_streams_levelPaths.gpkg", "nwm_subset_streams_levelPaths_dissolved.gpkg", "nwm_subset_streams_levelPaths_dissolved_headwaters.gpkg", "osm_bridges_subset.gpkg", "usgs_subset_gages.gpkg", "usgs_subset_gages_0.gpkg", "wbd.gpkg", "wbd8_clp.gpkg"],
+               ["agg_nwm_recurr_flow_elev_stats_location_id.csv","agg_nwm_recurr_flow_elevations.csv","agg_usgs_elev_table.csv","plots","rating_curve_comparison.log"]
+            ]
+}
