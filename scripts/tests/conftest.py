@@ -60,8 +60,8 @@ def load_scenario_data():
             data = scenarios(folder_name , scenario_name)
             directory_locations = data['d_loc']
             directory_contents = data['d_files']
-            # flag = data['additional_data'][0].get("flag")
-            return directory_locations,directory_contents
+            flag = data['additional_data'][0].get("flag")
+            return directory_locations,directory_contents,flag
     return _load_scenario_data
 
 @pytest.fixture

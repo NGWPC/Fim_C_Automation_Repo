@@ -50,22 +50,22 @@ def validate_geo_data(dir_path,output_file,expected_data_file,data_file_location
       raise e
 
 
-def validate_directories_files(directory_locations, directory_contents): #,flag
-   for i,dir_location in enumerate(directory_locations):
-      
+def validate_directories_files(directory_locations, directory_contents,flag): #,flag
+ 
       try:
-      #   if flag=="partly":
-      #      for file in directory_contents:
-      #       print(file)
-      #       file_path = os.path.join(dir_location,str(file))
-      #       assert  os.path.isfile(file_path), f"{file} is not present"
-      #   else:
-         os.chdir(dir_location)
-         assert os.getcwd() == dir_location, "Failed to load the directory" + dir_location
-         dir_contents = sorted(os.listdir()) 
-         print(dir_contents)    
-         assert dir_contents == directory_contents[i], "Expected files not listed"
-         logging.info("Expected files listed in %s", dir_location)
+        if flag=="partly":
+           for dir_location,file in zip(directory_locations,directory_contents):
+            for sub_file in file:
+               file_path = os.path.join(dir_location,str(sub_file))
+               assert  os.path.isfile(file_path), f"{file} is not present"
+        else:
+           for i,dir_location in enumerate(directory_locations):
+            os.chdir(dir_location)
+            assert os.getcwd() == dir_location, "Failed to load the directory" + dir_location
+            dir_contents = sorted(os.listdir()) 
+            print(dir_contents)    
+            assert dir_contents == directory_contents[i], "Expected files not listed"
+            logging.info("Expected files listed in %s", dir_location)
       except AssertionError as e:
          logging.error("Assertion failed for directory %s: %s", dir_location,e)
          raise e

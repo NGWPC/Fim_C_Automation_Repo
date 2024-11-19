@@ -12,5 +12,5 @@ def test_fim_c_HAND_TP_A_subcase2(test_name,load_scenario_data,scenarios,run_she
     print("Adding wait time")
     time.sleep(780)
     print("Wait time ended")
-    directory_locations,directory_contents = load_scenario_data(folder_name,tn,scenarios) #,flag
-    validate_directories_files(directory_locations,directory_contents) #,flag
+    directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios) #,flag
+    validate_directories_files(directory_locations,directory_contents,flag) #,flag
