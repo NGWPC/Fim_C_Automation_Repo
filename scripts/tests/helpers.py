@@ -56,6 +56,7 @@ def validate_directories_files(directory_locations, directory_contents,flag): #,
         if flag=="partly":
            for dir_location,file in zip(directory_locations,directory_contents):
             for sub_file in file:
+               print(sub_file)
                file_path = os.path.join(dir_location,str(sub_file))
                assert  os.path.isfile(file_path), f"{file} is not present"
         else:
@@ -177,6 +178,8 @@ def verify_environment_variables(env_file,expected_content):
      for key,expected_value in expected_content.items():
          actual_value = env_values.get(key)
          assert actual_value is not None , f"Missing {key}"
+         print(actual_value)
+         print(expected_value)
          assert str(actual_value) == str(expected_value),"Expected value not present"
          logging.info(f"{actual_value} is present as {expected_value} in the {env_file}")
    except AssertionError as e:

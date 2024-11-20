@@ -6,8 +6,8 @@ from ...helpers import validate_directories_files,verify_environment_variables
 def test_fim_c_HAND_TP_C_subcase1(test_name,load_scenario_data,scenarios,env_file_check):
     tn = test_name + '.json'
     folder_name = 'PI3/data'
-    directory_locations,directory_contents = load_scenario_data(folder_name,tn,scenarios) #,flag
-    validate_directories_files(directory_locations,directory_contents) #,flag
+    directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios) #,flag
+    validate_directories_files(directory_locations,directory_contents,flag) #,flag
 
     env_files = env_file_check(folder_name,tn,scenarios)
     for env_file_info in env_files:

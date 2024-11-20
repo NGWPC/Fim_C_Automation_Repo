@@ -8,7 +8,8 @@
            "output_file":"recommend_algorithm.gpkg",
            "expected_data_file" : "~/pw/auto/scripts/tests/PI3/data/test_fim_c_HAND_TP_A_subcase1.json",
            "fields":["HUC8","recommended_res","recommended_res_reason"],
-           "data_file_location":"~/pw/auto/scripts/tests/PI3/data/recommend_algorithm.gpkg"
+           "data_file_location":"~/pw/auto/scripts/tests/PI3/data/recommend_algorithm.gpkg",
+           "flag":"fully"
 
 
         }

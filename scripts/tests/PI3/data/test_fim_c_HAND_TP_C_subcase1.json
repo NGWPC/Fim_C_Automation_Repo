@@ -10,7 +10,8 @@
                "pit_fill_method":"wbt",
                "ncores_gw":8,
                "ncores_fd":8
-           }
+           },
+           "flag":"fully"
         },
         {
          "file_name":"/fimopt/fim-data/hand_fim/inputs/pi3_conf_files/params_template_5m.env",
@@ -20,8 +21,17 @@
              "pit_fill_method":"wbt",
              "ncores_gw":8,
              "ncores_fd":8
-         }
+         },
+           "flag":"fully"
+      },
+      {
+         "file_name":"/fimopt/demonstrations/pi3/code/inundation-mapping/src/bash_variables.env",
+         "expected_content":{
+            "input_DEM_tiles":"/3dep_dems/1m_5070_lidar_tiles_fim60/fim_seamless_3dep_dem_1m_5070.vrt"
+         },
+           "flag":"fully"
       }
+      
  
     ] ,
     "d_loc" : [
