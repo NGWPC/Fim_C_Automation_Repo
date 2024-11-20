@@ -7,8 +7,8 @@ from ...utils import qgis_util,vrt_util
 def test_fim_c_RAS_003_subcase1(test_name,load_scenario_data,scenarios,fetch_data_file_details,read_vrt):
     tn = test_name + '.json'
     folder_name = 'PI3/data'
-    directory_locations,directory_contents = load_scenario_data(folder_name,tn,scenarios)
-    validate_directories_files(directory_locations,directory_contents)
+    directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
+    validate_directories_files(directory_locations,directory_contents,flag)
     dir_path,output_file,expected_data_file,data_file_location = fetch_data_file_details(folder_name,tn,scenarios)
     for out_file , data_file_loc in zip([os.path.expanduser(each_output_file) for each_output_file in output_file ],[os.path.expanduser(each_data_file_location) for each_data_file_location in data_file_location ]):
        validate_geo_data(dir_path,out_file,os.path.expanduser(expected_data_file),data_file_loc)

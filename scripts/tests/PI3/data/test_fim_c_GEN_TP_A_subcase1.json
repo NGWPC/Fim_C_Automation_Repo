@@ -8,7 +8,8 @@
             "destination_tif_file_location":["~/pw/auto/scripts/tests/PI3/data/HUC6_080402_dem.tif",
                                              "~/pw/auto/scripts/tests/PI3/data/rem_zeroed_masked_0.tif",
                                              "~/pw/auto/scripts/tests/PI3/data/total_area_agreement.tif"
-                                             ]
+                                             ],
+            "flag":"fully"
   
 
 

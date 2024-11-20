@@ -9,7 +9,8 @@
            "destination_vrt_file_location":"~/pw/auto/scripts/tests/PI3/data/fim_100year.vrt",
            "csv_file":"/efs/fim-data/ripple/controls_100year.csv",
            "output_csv_file":"~/pw/auto/scripts/tests/PI3/data/controls_100year.csv",
-           "remove_files":["/efs/fim-data/ripple/controls_100year.csv","/efs/fim-data/ripple/fim_100year.vrt"]
+           "remove_files":["/efs/fim-data/ripple/controls_100year.csv","/efs/fim-data/ripple/fim_100year.vrt"],
+           "flag":"fully"
  
         }
  

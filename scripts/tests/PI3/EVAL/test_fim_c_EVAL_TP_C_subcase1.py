@@ -13,8 +13,8 @@ def test_fim_c_EVAL_TP_C_subcase1(test_name,load_scenario_data,scenarios,fetch_d
     for docker_command in docker_commands:
          run_docker_script(folder_name,tn,scenarios,docker_command)
          print("The command ran successfully.")
-    directory_locations,directory_contents = load_scenario_data(folder_name,tn,scenarios)
-    validate_directories_files([os.path.expanduser(each_directory_locations) for each_directory_locations in directory_locations ],directory_contents)
+    directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
+    validate_directories_files([os.path.expanduser(each_directory_locations) for each_directory_locations in directory_locations ],directory_contents,flag)
 
     tif_source_file,tif_destination_file = read_tif(folder_name,tn,scenarios)
     for source_file , destination_file in zip([os.path.expanduser(each_tif_source_file) for each_tif_source_file in tif_source_file],[os.path.expanduser(each_tif_destination_file) for each_tif_destination_file in tif_destination_file ]):

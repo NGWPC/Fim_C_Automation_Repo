@@ -2,7 +2,8 @@
     "additional_data":[
  
         {
-           "base_directory":"/efs/fim-data/ripple/prototype/2024_07_31"
+           "base_directory":"/efs/fim-data/ripple/prototype/2024_07_31",
+           "flag":"fully"
  
         }
  

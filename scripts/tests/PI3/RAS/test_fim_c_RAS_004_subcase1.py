@@ -7,8 +7,8 @@ from ...utils import csv_util,vrt_util
 def test_fim_c_RAS_004_subcase1(test_name,load_scenario_data,scenarios,fetch_docker_details,run_docker_script,read_csv,read_vrt,remove_file):
     tn = test_name + '.json'
     folder_name = 'PI3/data'
-    directory_locations,directory_contents = load_scenario_data(folder_name,tn,scenarios)
-    validate_directories_files(directory_locations,directory_contents)
+    directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
+    validate_directories_files(directory_locations,directory_contents,flag)
     docker_commands,dir_paths = fetch_docker_details(folder_name,tn,scenarios)
      
     for docker_command in docker_commands:

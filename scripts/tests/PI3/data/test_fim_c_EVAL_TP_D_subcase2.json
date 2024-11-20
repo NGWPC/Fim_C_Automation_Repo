@@ -13,7 +13,8 @@
                                              "~/pw/auto/scripts/tests/PI3/data/qc_data/fim_5year.tif",
                                              "~/pw/auto/scripts/tests/PI3/data/qc_data/fim_100year.tif",
                                              "~/pw/auto/scripts/tests/PI3/data/qc_data/fim_25year.tif",
-                                             "~/pw/auto/scripts/tests/PI3/data/qc_data/fim_50year.tif"]
+                                             "~/pw/auto/scripts/tests/PI3/data/qc_data/fim_50year.tif"],
+            "flag":"fully"
   
 
 
