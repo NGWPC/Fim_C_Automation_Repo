@@ -1,5 +1,12 @@
 {
-
+    "additional_data":[
+ 
+        {
+          "flag":"fully"
+ 
+        }
+ 
+    ] ,
     "d_loc" : [
                "/efs/fim-data/hand_fim/inputs/3dep_dems/10m_5070",
                "/efs/fim-data/hand_fim/inputs/nwm_hydrofabric",

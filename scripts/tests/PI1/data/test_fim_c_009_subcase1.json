@@ -1,5 +1,12 @@
 {
-
+    "additional_data":[
+ 
+        {
+          "flag":"fully"
+ 
+        }
+ 
+    ] ,
     "d_loc" : [
                "/efs/fim-data/hand_fim/outputs/10m_lidar_ngwpc_pI1/05090203/branches/0"
                ],

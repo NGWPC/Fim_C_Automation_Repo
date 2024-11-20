@@ -4,7 +4,8 @@
         {
            "text_file_location":"/efs/demonstrations/rs_stac_test/dfo_event_list.txt",
            "total_records":"58",
-           "expected_record_value":"DFO-4230"
+           "expected_record_value":"DFO-4230",
+           "flag":"fully"
  
         }
  

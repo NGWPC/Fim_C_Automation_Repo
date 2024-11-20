@@ -1,5 +1,12 @@
 {
-
+    "additional_data":[
+ 
+        {
+          "flag":"fully"
+ 
+        }
+ 
+    ] ,
     "d_loc" : [
                "/efs/demonstrations/demo_data"
                ],

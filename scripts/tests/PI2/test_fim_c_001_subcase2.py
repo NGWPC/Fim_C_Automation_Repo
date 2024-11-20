@@ -8,10 +8,10 @@ def test_fim_c_001_subcase2(test_name,load_scenario_data,scenarios,read_me,json_
     tn = test_name + '.json'
     folder_name = 'PI2/data'
     generate_dfo_data()
-    directory_locations,directory_contents = load_scenario_data(folder_name,tn,scenarios)
+    directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
     # print(str(directory_locations[0]))
     # remove_file(folder_name,'report.html',str(directory_locations[0]),scenarios)
-    validate_directories_files([os.path.expanduser(each_directory_locations) for each_directory_locations in directory_locations ],directory_contents)
+    validate_directories_files([os.path.expanduser(each_directory_locations) for each_directory_locations in directory_locations ],directory_contents,flag)
     source_read_me_location,destination_read_me_location = read_me(folder_name,tn,scenarios)
     readme_util.validate_readme( os.path.expanduser(source_read_me_location),os.path.expanduser(destination_read_me_location))
     source_json_file_location,destination_json_file_location = json_read(folder_name,tn,scenarios)

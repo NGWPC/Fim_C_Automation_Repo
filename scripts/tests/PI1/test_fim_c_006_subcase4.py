@@ -5,8 +5,8 @@ from ..helpers import validate_directories_files,validate_geo_data
 def test_fim_c_006_subcase4(test_name,load_scenario_data,scenarios,fetch_data_file_details):
     tn = test_name + '.json'
     folder_name = 'PI1/data'
-    directory_locations,directory_contents = load_scenario_data(folder_name,tn,scenarios)
-    validate_directories_files(directory_locations,directory_contents)
+    directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
+    validate_directories_files(directory_locations,directory_contents,flag)
     dir_path,output_file,expected_data_file,data_file_location = fetch_data_file_details(folder_name,tn,scenarios)
 
     for out_file , data_file_loc in zip(output_file,[os.path.expanduser(each_data_file_location) for each_data_file_location in data_file_location ]):

@@ -1,5 +1,12 @@
 {
-
+    "additional_data":[
+ 
+        {
+          "flag":"fully"
+ 
+        }
+ 
+    ] ,
     "d_loc" : [
                "/efs/benchmark/high_water_marks/usgs/outputs",
                "/efs/demonstrations/demo_data",
