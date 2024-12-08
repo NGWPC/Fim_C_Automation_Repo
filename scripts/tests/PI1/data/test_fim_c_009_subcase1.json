@@ -8,7 +8,7 @@
  
     ] ,
     "d_loc" : [
-               "/efs/fim-data/hand_fim/outputs/10m_lidar_ngwpc_pI1/05090203/branches/0"
+               "/fsxtestautomation/test_data/fimc-data/hand_fim/outputs/10m_lidar_ngwpc_pI1/05090203/branches/0"
                ],
     "d_files":[
                ["demDerived_reaches_split_filtered_addedAttributes_crosswalked_0.gpkg", "gw_catchments_reaches_filtered_addedAttributes_0.gpkg", "gw_catchments_reaches_filtered_addedAttributes_0.tif", "gw_catchments_reaches_filtered_addedAttributes_crosswalked_0.gpkg", "hydroTable_0.csv", "rem_zeroed_masked_0.tif", "small_segments_0.csv", "src_full_crosswalked_0.csv", "usgs_elev_table.csv"]
