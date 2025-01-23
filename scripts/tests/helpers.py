@@ -88,6 +88,19 @@ def fields_validation(driver,field_xpath,field_text):
    assert f"{field_text}" in webpage_field.text,f"{field_text} field validated"
    logging.info(f"{field_text} is displayed")
 
+def verfify_gfm_data():
+
+   chrome_options = Options()
+   chrome_options.add_argument("--headless")
+   chrome_options.add_argument("--no-sandbox")
+   chrome_options.add_argument("--disable-dev-shm-usage")
+  
+
+   driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
+   driver.get('localhost:8080')
+   page_url = driver.current_url
+   print(page_url)
+
 
 def verify_STAC_dashboard():
 

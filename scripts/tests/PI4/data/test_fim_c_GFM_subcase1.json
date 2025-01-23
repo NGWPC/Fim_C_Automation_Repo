@@ -1,0 +1,13 @@
+{
+    "additional_data":[
+ 
+        {
+           "docker_commands":["sudo docker exec f09029fa51e9  sh -c 'cd /scripts1 && pwd && apk update && apk add --no-cache python3 py3-pip wget gnupg chromium && cd /scripts1 && python3 -m venv /scripts1/venv && source /scripts1/venv/bin/activate  &&  pip install --upgrade pip && pip install selenium webdriver-manager pytest pytest-html DeepDiff pexpect jsondiff && pip show selenium && pip show webdriver-manager && pip show pytest && pytest /scripts1/scripts/tests/PI4/test_fim_c_GFM_subcase1_supplement.py -s -vv'"]
+          
+        }
+ 
+    ]
+
+
+
+}
