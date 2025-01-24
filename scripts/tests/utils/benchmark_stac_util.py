@@ -25,7 +25,7 @@ box_plot_type_xpath = '//*[@class="plot-d6a7b5"]//*[@aria-label="bar"][1]//*[@cx
 dot_plot_type_xpath = (By.XPATH,'//*[@class="plot-d6a7b5"]//*[@aria-label="dot"][1]//*[@cx="475"][1]')
 
 
-def verify_gfm_data():
+def  verify_gfm_data():
    print('I am here')
    
    chrome_options = webdriver.ChromeOptions()
@@ -35,8 +35,11 @@ def verify_gfm_data():
    chrome_options.add_argument("--disable-dev-shm-usage")
    print('I am here too')
    
-   service=Service(ChromeDriverManager().install())
+   service=Service("/usr/bin/chromedriver")
    driver =  webdriver.Chrome(service = service ,options=chrome_options)
+   print('I am here three')
    driver.get('localhost:8080')
    page_url = driver.current_url
    print(page_url)
+
+verify_gfm_data()
