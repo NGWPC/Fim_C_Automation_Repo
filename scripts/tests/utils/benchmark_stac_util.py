@@ -12,6 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
 metrics_page_title = (By.XPATH,'//h1[@id="cross-site-contingency-metrics"]')
+stac_api_browser_page_title = (By.XPATH,'//h1')
 metrics_page_link='http://127.0.0.1:3000'
 benchmark_category_field_xpath = '//label[@for="inputs-3a86ea-4"]//b'
 table_header_xpath = '//*[@id="inputs-3a86ea-8"]//table//tr//th[2]'
@@ -41,5 +42,6 @@ def  verify_gfm_data():
    driver.get('localhost:8080')
    page_url = driver.current_url
    print(page_url)
+   page_title = driver.find_element(*stac_api_browser_page_title)
+   assert "stac-fastapi" in page_title.text,"Page title is not found"
 
-verify_gfm_data()
