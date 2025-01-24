@@ -164,7 +164,8 @@ def run_docker_script():
             print(result.stderr)     
             return result.stdout.strip()
         except subprocess.CalledProcessError as e:
-            pytest.fail(f"Docker command failed : {e.stderr}")
+            pytest.fail(f"Docker command failed : {e}")
+            print(result.stderr)
             raise e
     return _run_docker_script
 

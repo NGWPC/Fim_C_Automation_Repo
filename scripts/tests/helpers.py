@@ -88,15 +88,17 @@ def fields_validation(driver,field_xpath,field_text):
    assert f"{field_text}" in webpage_field.text,f"{field_text} field validated"
    logging.info(f"{field_text} is displayed")
 
-def verfify_gfm_data():
-
-   chrome_options = Options()
+def verify_gfm_data():
+   print('I am here')
+   
+   chrome_options = webdriver.ChromeOptions()
+   chrome_options.binary_location = "/usr/bin/chromium-browser"
    chrome_options.add_argument("--headless")
    chrome_options.add_argument("--no-sandbox")
    chrome_options.add_argument("--disable-dev-shm-usage")
-  
+   print('I am here too')
 
-   driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
+   driver = webdriver.Chrome(executable_path = ChromeDriverManager().install(),options=chrome_options)
    driver.get('localhost:8080')
    page_url = driver.current_url
    print(page_url)
