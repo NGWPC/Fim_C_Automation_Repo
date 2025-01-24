@@ -34,8 +34,9 @@ def verify_gfm_data():
    chrome_options.add_argument("--no-sandbox")
    chrome_options.add_argument("--disable-dev-shm-usage")
    print('I am here too')
-
-   driver = webdriver.Chrome(executable_path = ChromeDriverManager().install(),options=chrome_options)
+   
+   service=Service(ChromeDriverManager().install())
+   driver =  webdriver.Chrome(service = service ,options=chrome_options)
    driver.get('localhost:8080')
    page_url = driver.current_url
    print(page_url)
