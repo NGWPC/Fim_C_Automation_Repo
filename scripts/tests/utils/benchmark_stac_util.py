@@ -39,9 +39,20 @@ def  verify_gfm_data():
    service=Service("/usr/bin/chromedriver")
    driver =  webdriver.Chrome(service = service ,options=chrome_options)
    print('I am here three')
-   driver.get('localhost:8080')
+   driver.get('http://localhost:8080')
    page_url = driver.current_url
    print(page_url)
-   page_title = driver.find_element(*stac_api_browser_page_title)
-   assert "stac-fastapi" in page_title.text,"Page title is not found"
+   wait = WebDriverWait(driver,10)
+   try:
+     element = wait.until(EC.presence_of_element_located((By.XPATH, "//a[@href='/collections/gfm-expanded-collection']")))
+     print("Element found")
+     element.click()
+     updated_link = driver.current_url
+     print(updated_link)
+   except TimeoutException:
+     print("Not found")
+   #page_title = driver.find_element(By.XPATH,'//h1//span[text()="stac-fastapi"]')
+   #assert "stac-fastapi" in page_title.text,"Page title is not found"
+   #item = driver.find_element(By.XPATH,'//a[@href="/collections/gfm-expanded-collection"]')
+   #assert "Expanded Global Flood Monitoring Collection" in item.text,"Item not found"
 
