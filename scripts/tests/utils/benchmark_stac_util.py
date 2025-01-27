@@ -9,7 +9,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support import expected_conditions as EC
+from selenium .common.exceptions import TimeoutException
 
 metrics_page_title = (By.XPATH,'//h1[@id="cross-site-contingency-metrics"]')
 stac_api_browser_page_title = (By.XPATH,'//h1')
@@ -42,7 +43,13 @@ def  verify_gfm_data():
    driver.get('http://localhost:8080')
    page_url = driver.current_url
    print(page_url)
-   wait = WebDriverWait(driver,10)
+   print(driver.title)
+   while True:
+      page_state = driver.execute_script("return document.readyState;")
+      if page_state == "complete":
+          break
+   print(driver.page_source)
+   wait = WebDriverWait(driver,20)
    try:
      element = wait.until(EC.presence_of_element_located((By.XPATH, "//a[@href='/collections/gfm-expanded-collection']")))
      print("Element found")
