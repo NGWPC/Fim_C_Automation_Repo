@@ -198,3 +198,19 @@ def env_file_check():
         scenario = scenarios(folder_name , data_file)
         return scenario['additional_data']
     return _env_file_check
+
+
+@pytest.fixture
+def env_file_check():
+    def _env_file_check(folder_name,data_file,scenarios):
+        scenario = scenarios(folder_name , data_file)
+        return scenario['additional_data']
+    return _env_file_check
+
+
+@pytest.fixture
+def fetch_stac_ui_details():
+    def _fetch_stac_ui_details(folder_name,data_file,scenarios):
+        scenario = scenarios(folder_name , data_file)
+        return scenario['additional_data'][0].get("stac_url") , scenario['additional_data'][0].get("gfm_item_name")
+    return _fetch_stac_ui_details

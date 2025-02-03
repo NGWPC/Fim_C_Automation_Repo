@@ -13,23 +13,45 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium .common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
 
-metrics_page_title = (By.XPATH,'//h1[@id="cross-site-contingency-metrics"]')
-stac_api_browser_page_title = (By.XPATH,'//h1')
-metrics_page_link='http://127.0.0.1:3000'
-benchmark_category_field_xpath = '//label[@for="inputs-3a86ea-4"]//b'
-table_header_xpath = '//*[@id="inputs-3a86ea-8"]//table//tr//th[2]'
-benchmark_category_xpath = '//select[@id="inputs-3a86ea-4"]'
-comp_version_xpath = '//select[@id="inputs-3a86ea-9"]'
-plot_type_xpath = '//select[@id="inputs-3a86ea-1"]'
-plot_type_label_xpath = '//*[@for="inputs-3a86ea-1"]/b'
-contingency_metric_xpath = '//select[@id="inputs-3a86ea-2"]'
-# dot_plot_type_xpath = '//*[@class="plot-d6a7b5"]//*[@aria-label="dot"][1]//*[@cx="475"][1]'
-box_plot_type_xpath = '//*[@class="plot-d6a7b5"]//*[@aria-label="bar"][1]//*[@cx="55"]'
-dot_plot_type_xpath = (By.XPATH,'//*[@class="plot-d6a7b5"]//*[@aria-label="dot"][1]//*[@cx="475"][1]')
-benchmark_stac_header = driver.find_element(By.TAG,'h1')
+# metrics_page_title = (By.XPATH,'//h1[@id="cross-site-contingency-metrics"]')
+# stac_api_browser_page_title = (By.XPATH,'//h1')
+# metrics_page_link='http://127.0.0.1:3000'
+# benchmark_category_field_xpath = '//label[@for="inputs-3a86ea-4"]//b'
+# table_header_xpath = '//*[@id="inputs-3a86ea-8"]//table//tr//th[2]'
+# benchmark_category_xpath = '//select[@id="inputs-3a86ea-4"]'
+# comp_version_xpath = '//select[@id="inputs-3a86ea-9"]'
+# plot_type_xpath = '//select[@id="inputs-3a86ea-1"]'
+# plot_type_label_xpath = '//*[@for="inputs-3a86ea-1"]/b'
+# contingency_metric_xpath = '//select[@id="inputs-3a86ea-2"]'
+# # dot_plot_type_xpath = '//*[@class="plot-d6a7b5"]//*[@aria-label="dot"][1]//*[@cx="475"][1]'
+# box_plot_type_xpath = '//*[@class="plot-d6a7b5"]//*[@aria-label="bar"][1]//*[@cx="55"]'
+# dot_plot_type_xpath = (By.XPATH,'//*[@class="plot-d6a7b5"]//*[@aria-label="dot"][1]//*[@cx="475"][1]')
+# benchmark_stac_header = driver.find_element(By.TAG,'h1')
 
+def validate_directories_files(directory_locations, directory_contents,flag): #,flag
+ 
+      try:
+        if flag=="partly":
+           for dir_location,file in zip(directory_locations,directory_contents):
+            for sub_file in file:
+               print(sub_file)
+               file_path = os.path.join(dir_location,str(sub_file))
+               assert  os.path.isfile(file_path), f"{file} is not present"
+        else:
+           for i,dir_location in enumerate(directory_locations):
+            print(directory_locations)
+            os.chdir(dir_location)
+            assert os.getcwd() == dir_location, "Failed to load the directory" + dir_location
+            dir_contents = sorted(os.listdir()) 
+            print(dir_contents)    
+            assert dir_contents == directory_contents[i], "Expected files not listed"
+            print(directory_contents[i])
+            logging.info("Expected files listed in %s", dir_location)
+      except AssertionError as e:
+         logging.error("Assertion failed for directory %s: %s", dir_location,e)
+         raise e
 
-def  verify_gfm_data():
+def  verify_gfm_data(stac_link, gfm_item_name):
    print('I am here')
    
    chrome_options = webdriver.ChromeOptions()
@@ -42,20 +64,20 @@ def  verify_gfm_data():
    service=Service("/usr/bin/chromedriver")
    driver =  webdriver.Chrome(service = service ,options=chrome_options)
    print('I am here three')
-  #  driver.get('http://localhost:8080')
-  #  page_url = driver.current_url
-  #  print(page_url)
-  #  print(driver.title)
-  #  while True:
-  #     page_state = driver.execute_script("return document.readyState;")
-  #     if page_state == "complete":
-  #         break
-  #  print(driver.page_source)
+   driver.get(stac_link)
+   page_url = driver.current_url
+   print(page_url)
+   print(driver.title)
+   while True:
+      page_state = driver.execute_script("return document.readyState;")
+      if page_state == "complete":
+          break
+   print(driver.page_source)
    wait = WebDriverWait(driver,20)
    try:
      element = wait.until(EC.presence_of_element_located((By.XPATH, "//a[@href='/collections/gfm-expanded-collection']")))
      print("Element found")
-    ############# Navigation to Expanded Global Flood Monitoring Collection listing page ##############
+     ############# Navigation to Expanded Global Flood Monitoring Collection listing page ##############
      element.click()
      updated_link = driver.current_url
      print(updated_link)
@@ -64,26 +86,27 @@ def  verify_gfm_data():
      search_button = driver.find_element(By.XPATH,"//a[@title='Search']")
      search_button.click()
      item_search_input = driver.find_element(By.ID,"ids3")
-     item_search_input.send_keys("GFM-expanded_S1A_IW_GRDH_1SDV_20241123T005232_20241123T005257_056675_06F41A_B97A")
+     item_search_input.send_keys(gfm_item_name)
      item_search_input.send_keys(Keys.ENTER)
      driver.find_element(By.XPATH, "//button[text()='Submit']")
      searched_item = driver.find_element(By.XPATH,"//a[@class='stac-link stretched-link]")
-     searched_tem.click()
-     ################Navigated to assets page##########################################
-     assert "GFM-expanded_S1A_IW_GRDH_1SDV_20241123T005232_20241123T005257_056675_06F41A_B97A" in benchmark_stac_header.text,"Item not found"
+     searched_item.click()
+  #    ################Navigated to assets page##########################################
+     assert gfm_item_name in benchmark_stac_header.text,"Item not found"
      asset_item = wait.until(EC.presence_of_element_located((By.XPATH,"//button[@aria-controls = 'asset-E078N024T3_Observed_Water_Extent']")))
      asset_item.click()
      asset_download_option = driver.find_element(By.XPATH,"//div[@id='asset-E078N024T3_Observed_Water_Extent']//a[text()='Download']")
      asset_copy_url_option = driver.find_element(By.XPATH,"//div[@id='asset-E078N024T3_Observed_Water_Extent']//button[text()=' Copy URL']")
      asset_copy_url_option = driver.find_element(By.XPATH,"//div[@id='asset-E078N024T3_Observed_Water_Extent']//button[text()=' Show on map ']")
 
-     ###########################Verify the downloaded file #################################################
+  #    ###########################Verify the downloaded file #################################################
      asset_download_option.click()
-     #Add directory verification code
+     driver.quit()
+    
    except TimeoutException:
      print("Not found")
 
-
+   
 
   #  #page_title = driver.find_element(By.XPATH,'//h1//span[text()="stac-fastapi"]')
   #  #assert "stac-fastapi" in page_title.text,"Page title is not found"
