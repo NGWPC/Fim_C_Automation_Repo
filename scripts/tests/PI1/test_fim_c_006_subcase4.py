@@ -1,6 +1,7 @@
 import pytest
 import os
-from ..helpers import validate_directories_files,validate_geo_data
+from ..helpers import validate_directories_files
+from ..utils import gpkg_util
 
 def test_fim_c_006_subcase4(test_name,load_scenario_data,scenarios,fetch_data_file_details):
     tn = test_name + '.json'
@@ -10,4 +11,4 @@ def test_fim_c_006_subcase4(test_name,load_scenario_data,scenarios,fetch_data_fi
     dir_path,output_file,expected_data_file,data_file_location = fetch_data_file_details(folder_name,tn,scenarios)
 
     for out_file , data_file_loc in zip(output_file,[os.path.expanduser(each_data_file_location) for each_data_file_location in data_file_location ]):
-             validate_geo_data(dir_path,out_file,os.path.expanduser(expected_data_file),data_file_loc)
+            gpkg_util.validate_geo_data(dir_path,out_file,os.path.expanduser(expected_data_file),data_file_loc)

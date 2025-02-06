@@ -6,7 +6,7 @@ import json
 import jsondiff
 from dotenv import dotenv_values
 
-from .utils import qgis_util,gpkg_util
+from .utils import qgis_util
 import logging
 import pexpect
 from selenium import webdriver
@@ -32,22 +32,22 @@ box_plot_type_xpath = '//*[@class="plot-d6a7b5"]//*[@aria-label="bar"][1]//*[@cx
 dot_plot_type_xpath = (By.XPATH,'//*[@class="plot-d6a7b5"]//*[@aria-label="dot"][1]//*[@cx="475"][1]')
 
 
-def validate_geo_data(dir_path,output_file,expected_data_file,data_file_location):
-   try:
-      assert os.path.isdir(dir_path) == True , "Directory1 does not exist"+dir_path
-      assert os.path.exists(dir_path) == True , "Directory does not exist"+dir_path
+# def validate_geo_data(dir_path,output_file,expected_data_file,data_file_location):
+#    try:
+#       assert os.path.isdir(dir_path) == True , "Directory1 does not exist"+dir_path
+#       assert os.path.exists(dir_path) == True , "Directory does not exist"+dir_path
 
-      # print(f"current working directory: {os.getcwd()}")
+#       # print(f"current working directory: {os.getcwd()}")
 
-      dir_contents = sorted(os.listdir())
-      file_path = os.path.join(dir_path,output_file)
-      assert os.path.isfile(file_path) == True , "File does not exist"
+#       dir_contents = sorted(os.listdir())
+#       file_path = os.path.join(dir_path,output_file)
+#       assert os.path.isfile(file_path) == True , "File does not exist"
    
-      # qgis_util.test_run(dir_path, output_file,expected_data_file)
-      gpkg_util.compare_gpkgs(file_path,data_file_location)
-   except AssertionError as e:
-      logging.error("Assertion failed for directory %s: %s",file_path,e)
-      raise e
+#       # qgis_util.test_run(dir_path, output_file,expected_data_file)
+#       gpkg_util.compare_gpkgs(file_path,data_file_location)
+#    except AssertionError as e:
+#       logging.error("Assertion failed for directory %s: %s",file_path,e)
+#       raise e
 
 
 def validate_directories_files(directory_locations, directory_contents,flag): #,flag

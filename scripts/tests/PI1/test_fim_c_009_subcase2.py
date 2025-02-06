@@ -1,6 +1,6 @@
 import pytest
 import os
-from ..helpers import validate_directories_files,validate_geo_data
+from ..helpers import validate_directories_files
 
 def test_fim_c_009_subcase2(test_name,load_scenario_data,scenarios,fetch_data_file_details):
     tn = test_name + '.json'
