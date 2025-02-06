@@ -3,7 +3,7 @@ import os
 from ..utils import benchmark_stac_util
 # @pytest.mark.skip(reason="skipping this test for now")
 def test_fim_c_GFM_subcase1_supplement(test_name,load_scenario_data,scenarios,fetch_stac_ui_details):
-    print("Main test")
+    print("Main test check")
     tn = test_name.rsplit("_",1)[0]
     tn = tn + '.json'
     folder_name = 'PI4/data'
