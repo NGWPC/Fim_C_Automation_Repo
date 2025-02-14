@@ -212,5 +212,5 @@ def env_file_check():
 def fetch_stac_ui_details():
     def _fetch_stac_ui_details(folder_name,data_file,scenarios):
         scenario = scenarios(folder_name , data_file)
-        return scenario['additional_data'][0].get("stac_url") , scenario['additional_data'][0].get("gfm_item_name")
+        return scenario['additional_data'][0].get("link") , scenario['additional_data'][0].get("item")
     return _fetch_stac_ui_details
