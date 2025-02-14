@@ -1,7 +1,7 @@
 import pytest
 import os
 import time
-from ...helpers import validate_directories_files,validate_geo_data
+from ...helpers import validate_directories_files
 from ...utils import gpkg_metadata_util
 
 @pytest.mark.skip(reason="skipping this test for now")
