@@ -8,7 +8,7 @@
            "expected_data_file" : "~/pw/auto/scripts/tests/PI1/data/test_fim_c_008_subcase1.json",
            "csv_file":"/efs/benchmark/high_water_marks/usgs/inputs/FilteredHWMs.csv",
            "output_csv_file":"~/pw/auto/scripts/tests/PI1/data/FilteredHWMs.csv",
-           "data_file_location":"~/pw/auto/scripts/tests/PI1/data/all_events.gpkg",
+           "data_file_location":"/fsxtestautomation/data_files/fimc-data/all_events.gpkg",
            "flag":"fully"
 
         }

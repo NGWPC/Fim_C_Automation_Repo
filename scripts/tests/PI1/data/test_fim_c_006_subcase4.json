@@ -5,7 +5,7 @@
            "base_directory":"/efs/demonstrations/demo_data",
            "output_file":["ble_benchmark_huc8s_classic.gpkg","ble_benchmark_huc8s_expanded.gpkg"],
            "expected_data_file" : "~/pw/auto/scripts/tests/PI1/data/test_fim_c_006_subcase4.json",
-           "data_file_location":["~/pw/auto/scripts/tests/PI1/data/ble_benchmark_huc8s_classic.gpkg","~/pw/auto/scripts/tests/PI1/data/ble_benchmark_huc8s_expanded.gpkg"],
+           "data_file_location":["/fsxtestautomation/data_files/fimc-data/ble_benchmark_huc8s_classic.gpkg","/fsxtestautomation/data_files/fimc-data/ble_benchmark_huc8s_expanded.gpkg"],
            "flag":"fully"
  
         }

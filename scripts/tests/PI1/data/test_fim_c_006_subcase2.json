@@ -7,7 +7,7 @@
            "output_file":"output_ras2inundation.gpkg",
            "expected_data_file" : "~/pw/auto/scripts/tests/PI1/data/test_fim_c_006_subcase2.json",
            "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",
-           "data_file_location":"~/pw/auto/scripts/tests/PI1/data/output_ras2inundation.gpkg"
+           "data_file_location":"/fsxtestautomation/data_files/fimc-data/output_ras2inundation.gpkg"
 
  
         }
