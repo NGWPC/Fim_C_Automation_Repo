@@ -5,7 +5,7 @@
            "base_directory":"/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto",
            "output_file":["ripple.gpkg","source_models/BEARCREEK/BEARCREEK.gpkg","submodels/1468416/1468416.gpkg"],
            "expected_data_file" : "~/pw/auto/scripts/tests/PI3/data/test_fim_c_RAS_003_subcase1.json",
-           "data_file_location":["~/pw/auto/scripts/tests/PI3/data/ripple.gpkg","~/pw/auto/scripts/tests/PI3/data/BEARCREEK.gpkg","~/pw/auto/scripts/tests/PI3/data/1468416.gpkg"],
+           "data_file_location":["/fsxtestautomation/data_files/fimc-data/ripple.gpkg","/fsxtestautomation/data_files/fimc-data/BEARCREEK.gpkg","/fsxtestautomation/data_files/fimc-data/1468416.gpkg"],
            "source_vrt_file_location":"/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/submodels/1468416/Terrain/1468416.vrt",
            "destination_vrt_file_location":"~/pw/auto/scripts/tests/PI3/data/1468416.vrt",
            "flag":"fully"
