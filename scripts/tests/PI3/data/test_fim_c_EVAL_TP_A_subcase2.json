@@ -9,7 +9,7 @@
            "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",
            "directory":"~/HANDTEMP",
            "source_tif_file_location":"~/HANDTEMP/10140101/10140101_retro_inundation.tif",
-           "destination_tif_file_location":"~/pw/auto/scripts/tests/PI3/data/10140101_retro_inundation.tif",
+           "destination_tif_file_location":"/fsxtestautomation/data_files/fimc-data/10140101_retro_inundation.tif",
            "flag":"fully"
  
         }
