@@ -1,0 +1,31 @@
+name: CI Pipeline 
+on: 
+   push: 
+     branches-ignore: 
+         - '*' 
+jobs: 
+    build: 
+        runs-on: ubuntu-latest 
+        steps: 
+            - name: Checkout code 
+              uses: actions/checkout@v3 
+            - name: Build the project 
+              run: echo "Building the project" 
+    test: 
+            runs-on: ubuntu-latest 
+            environment: test 
+            env: 
+                GIT_STRATEGY: none 
+                CLONE_DIR: "~/pw/auto" 
+                GITLAB_REPO_URL1: "https://gitlab.sh.xyz.com/<username>/<repo>.git" 
+                GITLAB_REPO_URL: "https://<username>:${{ secrets.GITLAB_TOKEN }}@gitlab.sh.xyz.com/<username>/<repo>.git" 
+            steps: 
+                - name: Setup SSH Key 
+                  run: | 
+                     echo "${{ secrets.SSH_KEY }}" > ssh_key chmod 400 ssh_key eval $(ssh-agent -s) 
+                - name: Deploy to TEST 
+                  run: | 
+                     echo "Deploying to TEST..." git remote set-url origin $GITLAB_REPO_URL ssh -o StrictHostKeyChecking=no -i ssh_key <username>@10.203.108.157 << 
+                     'EOF' pip install pytest pytest-html geopandas rm -rf $CLONE_DIR mkdir -p $CLONE_DIR git clone -b $GITHUB_REF_NAME --single-branch $GITLAB_REPO_URL $CLONE_DIR 
+                     cd $CLONE_DIR git checkout $GITHUB_REF_NAME ~/.local/bin/pytest ~/pw/auto/scripts/tests -s git add report.html git commit -m 'Adding report to the repo' 
+                     git config --global push.default matching git push EOF echo "Deployed to TEST"
