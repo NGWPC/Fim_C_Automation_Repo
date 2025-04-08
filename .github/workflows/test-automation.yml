@@ -35,8 +35,6 @@ jobs:
                   run: | 
                      echo "Deploying to TEST..." 
                      ssh -v -o StrictHostKeyChecking=no -o ConnectTimeout=30 -i ~/.ssh/democluster_key jyoti.mikkilineni@10.203.111.204 << 'EOF'
-                     pip install pytest pytest-html geopandas rm -rf $CLONE_DIR mkdir -p $CLONE_DIR git clone -b $GITHUB_REF_NAME --single-branch $GITLAB_REPO_URL $CLONE_DIR 
-                     cd $CLONE_DIR git checkout $GITHUB_REF_NAME ~/.local/bin/pytest ~/pw/auto/scripts/tests -s git add report.html git commit -m 'Adding report to the repo' 
-                     git config --global push.default matching git push 
+                     pwd 
                      EOF
                      echo "Deployed to TEST"
