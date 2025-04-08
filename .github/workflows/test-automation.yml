@@ -17,14 +17,14 @@ jobs:
             env: 
                 GIT_STRATEGY: none 
                 CLONE_DIR: "~/pw/auto" 
-                GITLAB_REPO_URL: "https://jyotipmikkilineni:${{ secrets.GITLAB_TOKEN }}@github.com/jyotipmikkilineni/Fim_C_Automation_Repo.git" 
+                GITLAB_REPO_URL: "https://jyotipmikkilineni:${{ secrets.PAT_TOKEN }}@github.com/jyotipmikkilineni/Fim_C_Automation_Repo.git" 
             steps: 
                 - name: Setup SSH Key 
                   run: | 
                      echo "${{ secrets.SSH_KEY }}" > ssh_key chmod 400 ssh_key eval $(ssh-agent -s) 
                 - name: Deploy to TEST 
                   run: | 
-                     echo "Deploying to TEST..." git remote set-url origin $GITLAB_REPO_URL ssh -o StrictHostKeyChecking=no -i ssh_key jyotipmikkilineni@10.203.108.157 << 
+                     echo "Deploying to TEST..." git remote set-url origin $GITLAB_REPO_URL ssh -o StrictHostKeyChecking=no -i ssh_key jyotipmikkilineni@10.203.111.204 << 
                      'EOF' pip install pytest pytest-html geopandas rm -rf $CLONE_DIR mkdir -p $CLONE_DIR git clone -b $GITHUB_REF_NAME --single-branch $GITLAB_REPO_URL $CLONE_DIR 
                      cd $CLONE_DIR git checkout $GITHUB_REF_NAME ~/.local/bin/pytest ~/pw/auto/scripts/tests -s git add report.html git commit -m 'Adding report to the repo' 
                      git config --global push.default matching git push EOF echo "Deployed to TEST"
