@@ -15,7 +15,7 @@ jobs:
             runs-on: ubuntu-latest 
             environment: test 
             env: 
-                GIT_STRATEGY: none 
+                GIT_STRATEGY: none
                 CLONE_DIR: "~/pw/auto" 
                 GITLAB_REPO_URL: "https://jyotipmikkilineni:${{ secrets.PAT_TOKEN }}@github.com/jyotipmikkilineni/Fim_C_Automation_Repo.git" 
             steps:
