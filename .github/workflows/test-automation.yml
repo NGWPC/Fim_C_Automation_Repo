@@ -10,7 +10,7 @@ jobs:
             - name: Checkout code 
               uses: actions/checkout@v3 
             - name: Build the project 
-              run: echo "Building the project"
+              run: echo "Building the project" 
     test: 
             runs-on: ubuntu-latest 
             environment: test 
