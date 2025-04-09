@@ -34,7 +34,8 @@ jobs:
                 - name: Deploy to TEST 
                   run: | 
                      echo "Deploying to TEST..." 
-                     ssh -v -o StrictHostKeyChecking=no -o ConnectTimeout=30 -i ~/.ssh/democluster_key jyoti.mikkilineni@10.203.111.204 << 'EOF'
+                     mv ssh_key ~/.ssh/democluster_key
+                     ssh -v -o StrictHostKeyChecking=no -o ConnectTimeout=30 -o PreferredAuthentications=publickey -i ~/.ssh/democluster_key jyoti.mikkilineni@10.203.111.204 << 'EOF'
                      pwd 
                      EOF
                      echo "Deployed to TEST"
