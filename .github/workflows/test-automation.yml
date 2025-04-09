@@ -31,7 +31,7 @@ jobs:
                 - name: Update Git remote URL 
                   run: | 
                       git remote set-url origin $GITLAB_REPO_URL 
-                - name: Deploy to TEST 
+                - name: Deploy to TEST
                   run: | 
                      echo "Deploying to TEST..."
                      ssh -v -o StrictHostKeyChecking=no -o ConnectTimeout=30 -o PreferredAuthentications=publickey -i ssh_key jyoti.mikkilineni@10.203.111.204 << 'EOF'
