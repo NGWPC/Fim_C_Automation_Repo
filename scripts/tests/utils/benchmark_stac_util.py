@@ -73,8 +73,11 @@ def  verify_gfm_data(stac_link, gfm_item_name):
    print(driver.page_source)
    wait = WebDriverWait(driver,20)
    benchmark_stac_header = driver.find_element(By.TAG_NAME,'h1')
+   print(benchmark_stac_header.text)
    try:
+     print("check1")
      element = wait.until(EC.presence_of_element_located((By.XPATH, "//a[@href='/collections/gfm-expanded-collection']")))
+     print("check2")
      print("Element found")
      ############# Navigation to Expanded Global Flood Monitoring Collection listing page ##############
      element.click()
@@ -103,6 +106,7 @@ def  verify_gfm_data(stac_link, gfm_item_name):
      driver.quit()
     
    except TimeoutException:
+     print("check3")
      print("Element not found")
 
    
