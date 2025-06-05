@@ -72,7 +72,8 @@ def  verify_gfm_data(stac_link, gfm_item_name):
           break
    print(driver.page_source)
    wait = WebDriverWait(driver,20)
-   benchmark_stac_header = driver.find_element(By.TAG_NAME,'h1')
+   # benchmark_stac_header = driver.find_element(By.TAG_NAME,'h1')
+   benchmark_stac_header = driver.find_element(By.XPATH,"//h1//span[text()='stac-fastapi']")
    print(benchmark_stac_header.text)
    try:
      print("check1")
