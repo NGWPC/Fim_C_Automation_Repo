@@ -61,7 +61,8 @@ def validate_response(link,headers,data,destination_response_location):
    try:
       source_response = None
       destination_response = None
-      response = requests.post(link,headers=headers , data =json.dumps(data))
+      response = None
+      response = requests.get(link,headers=headers , data =json.dumps(data))
       try:
          response.raise_for_status()
          if response.status_code == 200:
