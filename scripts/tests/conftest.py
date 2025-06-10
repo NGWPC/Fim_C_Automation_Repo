@@ -189,7 +189,7 @@ def fetch_directory_details():
 def run_curl_command():
     def _run_curl_command(folder_name,data_file,scenarios):
          scenario = scenarios(folder_name , data_file)
-         return scenario['additional_data'][0].get('url') , scenario['additional_data'][0].get('headers') , scenario['additional_data'][0].get('data'),scenario['additional_data'][0].get('destination_response_location')
+         return scenario['additional_data'][0].get('url') , scenario['additional_data'][0].get('headers') , scenario['additional_data'][0].get('data'),scenario['additional_data'][0].get('destination_response_location'),scenario['additional_data'][0].get('content_link'),scenario['additional_data'][0].get('downloaded_content_location')
     return _run_curl_command
 
 @pytest.fixture

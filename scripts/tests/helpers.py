@@ -56,6 +56,31 @@ def verify_gfm_data():
    page_url = driver.current_url
    print(page_url)
 
+def validate_downloaded_content(link,output_file):
+   try:
+      source_response = None
+      destination_response = None
+      response = None
+      response = requests.get(link, stream = True)
+      try:
+         # output_file = "/home/jyoti.mikkilineni/Downloads/NA_E066N042T3_ENSEMBLE_OBSWATER_20250315T135747_VV_NA020M_E066N042T3_20250315.tif"
+         response.raise_for_status()
+         print(str(response.status_code))
+         print(response.headers.get("Content-Type"))
+         if response.status_code == 200:
+            print('Success')
+            with open(output_file, "wb") as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                  f.write(chunk)
+      except requests.exceptions.HTTPError as errh:
+         print(f"Bad response: {response.status_code}")
+         raise errh
+      except requests.exceptions.ConnectionError as errc:
+         print("Conection error: " ,errc)
+         raise errc
+   except AssertionError as e:
+      logging.error("source_response and destination_response responses do not match")
+      raise e
 
 def validate_response(link,headers,data,destination_response_location):
    try:
