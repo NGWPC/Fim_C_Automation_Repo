@@ -9,7 +9,11 @@
                "bbox":[-119.052422,44.287823,-115.444092,46.183262]             
            },
            "destination_response_location":"~/pw/auto/scripts/tests/PI4/data/stac_api_expanded_gfm_response.json",
-           "downloaded_content_location":"~/Downloads/NA_E066N042T3_ENSEMBLE_OBSWATER_20250315T135747_VV_NA020M_E066N042T3_20250315.tif"
+           "downloaded_content_location":"~/Downloads/NA_E066N042T3_ENSEMBLE_OBSWATER_20250315T135747_VV_NA020M_E066N042T3_20250315.tif",
+           "docker_commands":["sudo docker exec $(sudo docker ps -q --filter 'ancestor=stac-browser:latest')  sh -c 'cd /scripts1 && pwd && apk update && apk add --no-cache python3 py3-pip wget gnupg chromium chromium-chromedriver && cd /scripts1 && python3 -m venv /scripts1/venv && source /scripts1/venv/bin/activate  &&  pip install --upgrade pip && pip install --upgrade selenium webdriver-manager && pip install pytest pytest-html DeepDiff pexpect jsondiff && pytest --ignore=/scripts1/scripts/tests/utils/gpkg_metadata_util.py --ignore=/scripts1/scripts/tests/utils/gpkg_util.py  --ignore=/scripts1/scripts/tests/PI1 --ignore=/scripts1/scripts/tests/PI2 --ignore=/scripts1/scripts/tests/PI3  /scripts1/scripts/tests/PI4/test_fim_c_GFM_subcase1_supplement.py -s -vv'"],
+           "flag":"fully",
+           "link":"http://localhost:8080",
+           "item":"GFM-expanded_S1A_IW_GRDH_1SDV_20241123T005232_20241123T005257_056675_06F41A_B97A"
 
 
             

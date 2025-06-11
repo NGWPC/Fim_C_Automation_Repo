@@ -54,7 +54,8 @@ def validate_directories_files(directory_locations, directory_contents,flag): #,
          raise e
 
 def  verify_gfm_data(stac_link, gfm_item_name):
- 
+   # stac_link = 'http://localhost:8080'
+   # print(stac_link)
    chrome_options = webdriver.ChromeOptions()
    chrome_options.binary_location = "/usr/bin/chromium-browser"
    chrome_options.add_argument("--headless")
@@ -62,7 +63,7 @@ def  verify_gfm_data(stac_link, gfm_item_name):
    chrome_options.add_argument("--disable-dev-shm-usage")
    service=Service("/usr/bin/chromedriver")
    driver =  webdriver.Chrome(service = service ,options=chrome_options)
-   driver.get(stac_link)
+   driver.get('http://localhost:8080')
    page_url = driver.current_url
    print(page_url)
    print(driver.title)
