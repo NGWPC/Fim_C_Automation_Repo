@@ -104,9 +104,9 @@ def validate_response(link,headers,data,destination_response_location):
       # with open('diff_response.txt','w') as diff_file:
       #    diff_file.write(str(diff))
       assert source_response == destination_response , "source_response and destination_response rdoes not esponses match"
-      logging.info("source_response and destination_response responses match")
+      logging.info(f"{source_response} and {destination_response} responses match")
    except AssertionError as e:
-      logging.error("source_response and destination_response responses do not match")
+      logging.error(f"{source_response} and {destination_response} responses do not match")
       raise e
    
 

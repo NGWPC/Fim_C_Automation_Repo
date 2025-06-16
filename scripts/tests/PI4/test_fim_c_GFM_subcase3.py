@@ -10,10 +10,13 @@ def test_fim_c_GFM_subcase3(test_name,load_scenario_data,scenarios,run_curl_comm
     directory = fetch_directory_details(folder_name,tn,scenarios)
     directory_util.create_directory(os.path.expanduser(directory))
     url,headers,data, destination_response_location,content_link, output_file_location = run_curl_command(folder_name,tn,scenarios)
-    validate_response(url,headers,data,os.path.expanduser(destination_response_location))
-    # validate_downloaded_content(content_link,os.path.expanduser(output_file_location))
-    # directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
-    # validate_directories_files([os.path.expanduser(each_directory_locations) for each_directory_locations in directory_locations ],directory_contents,flag)
-    # tif_source_file,tif_destination_file = read_tif(folder_name,tn,scenarios)
-    # tif_util.test_tif_data(os.path.expanduser(tif_source_file),os.path.expanduser(tif_destination_file))
+    for single_url , response_location in zip(url,[os.path.expanduser(each_response_file_location) for each_response_file_location in destination_response_location ]):
+        validate_response(single_url,headers,data,response_location)
+    for c_link,out_file in zip(content_link,[os.path.expanduser(each_out_file) for each_out_file in output_file_location]):
+        validate_downloaded_content(c_link,out_file)
+    directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
+    validate_directories_files([os.path.expanduser(each_directory_locations) for each_directory_locations in directory_locations ],directory_contents,flag)
+    tif_source_file,tif_destination_file = read_tif(folder_name,tn,scenarios)
+    for tsf,tdf in zip([os.path.expanduser(each_tif_source_file) for each_tif_source_file in tif_source_file],tif_destination_file):
+      tif_util.test_tif_data(tsf,tdf)
     # remove_file(folder_name,tn,os.path.expanduser(tif_source_file),scenarios)
