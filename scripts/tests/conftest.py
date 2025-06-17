@@ -214,3 +214,10 @@ def fetch_stac_ui_details():
         scenario = scenarios(folder_name , data_file)
         return scenario['additional_data'][0].get("link") , scenario['additional_data'][0].get("item")
     return _fetch_stac_ui_details
+
+@pytest.fixture
+def fetch_source_destination_details():
+    def _fetch_source_destination_details(folder_name,data_file,scenarios):
+        scenario = scenarios(folder_name , data_file)
+        return scenario['additional_data'][0].get("base_directory") , scenario['additional_data'][0].get("destination_directory")
+    return _fetch_source_destination_details

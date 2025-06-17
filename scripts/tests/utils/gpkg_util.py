@@ -3,6 +3,7 @@ import logging
 import os
 
 def compare_gpkgs(source_file,destination_file):
+    print(source_file)
     source_gdf = geopandas.read_file(source_file)
     destination_gdf = geopandas.read_file(destination_file)
 

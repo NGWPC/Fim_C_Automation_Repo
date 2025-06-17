@@ -46,6 +46,7 @@
            "link":"http://localhost:8080",
            "item":"GFM-expanded_S1A_IW_GRDH_1SDV_20241123T005232_20241123T005257_056675_06F41A_B97A",
            "source_tif_file_location": [
+          
                 "~/Downloads/2yr_extent_f2f_ver_0_3_0.tif",
                 "~/Downloads/5yr_extent_f2f_ver_0_3_0.tif",
                 "~/Downloads/10yr_extent_f2f_ver_0_3_0.tif",
@@ -57,10 +58,14 @@
                 "~/Downloads/10yr_Pulaski_extent_f2f_ver_0_3_0.tif",
                 "~/Downloads/25yr_Pulaski_extent_f2f_ver_0_3_0.tif",
                 "~/Downloads/50yr_Pulaski_extent_f2f_ver_0_3_0.tif",
-                "~/Downloads/100yr_Pulaski_extent_f2f_ver_0_3_0.tif"
+                "~/Downloads/100yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/model_domain.gpkg",
+                "~/Downloads/model_domain(1).gpkg"
 
             ],
            "destination_tif_file_location": [
+       
+            
                 "/fsxtestautomation/data_files/fimc-data/2yr_extent_f2f_ver_0_3_0.tif",
                 "/fsxtestautomation/data_files/fimc-data/5yr_extent_f2f_ver_0_3_0.tif",
                 "/fsxtestautomation/data_files/fimc-data/10yr_extent_f2f_ver_0_3_0.tif",
@@ -72,7 +77,9 @@
                 "/fsxtestautomation/data_files/fimc-data/10yr_Pulaski_extent_f2f_ver_0_3_0.tif",
                 "/fsxtestautomation/data_files/fimc-data/25yr_Pulaski_extent_f2f_ver_0_3_0.tif",
                 "/fsxtestautomation/data_files/fimc-data/50yr_Pulaski_extent_f2f_ver_0_3_0.tif",
-                "/fsxtestautomation/data_files/fimc-data/100yr_Pulaski_extent_f2f_ver_0_3_0.tif"
+                "/fsxtestautomation/data_files/fimc-data/100yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                 "/fsxtestautomation/data_files/fimc-data/model_domain.gpkg",
+                "/fsxtestautomation/data_files/fimc-data/model_domain(1).gpkg"
         ],
            "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",
            "directory": "~/Downloads/"
