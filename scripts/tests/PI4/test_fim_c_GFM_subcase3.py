@@ -30,4 +30,4 @@ def test_fim_c_GFM_subcase3(test_name,load_scenario_data,scenarios,run_curl_comm
 
     # for out_file , data_file_loc in zip(output_file,[os.path.expanduser(each_data_file_location) for each_data_file_location in data_file_location ]):
     #         gpkg_util.validate_geo_data(os.path.expanduser(dir_path),out_file,os.path.expanduser(expected_data_file),data_file_loc)  
-    # remove_file(folder_name,tn,os.path.expanduser(tif_source_file),scenarios)
+    remove_file(folder_name,tn,os.path.expanduser(directory),scenarios)
