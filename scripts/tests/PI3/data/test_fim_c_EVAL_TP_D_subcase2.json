@@ -1,38 +1,116 @@
 {
     "additional_data":[
-          {
-             "source_tif_file_location":["/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_10year.tif",
-                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_2year.tif",
-                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_5year.tif",
-                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_100year.tif",
-                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_25year.tif",
-                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_50year.tif"
-                                        ],
-            "destination_tif_file_location":["/fsxtestautomation/data_files/fimc-data/qc/fim_10year.tif",
-                                             "/fsxtestautomation/data_files/fimc-data/qc/fim_2year.tif",
-                                             "/fsxtestautomation/data_files/fimc-data/qc/fim_5year.tif",
-                                             "/fsxtestautomation/data_files/fimc-data/qc/fim_100year.tif",
-                                             "/fsxtestautomation/data_files/fimc-data/qc/fim_25year.tif",
-                                             "/fsxtestautomation/data_files/fimc-data/qc/fim_50year.tif"],
-            "flag":"fully"
-  
+ 
+        {
+           "url": ["http://localhost:8082/collections/ripple-fim-collection/items/mip_18070104_ripple_0_10_3_f2fim_0_3_0","http://localhost:8082/collections/ripple-fim-collection/items/ble_05119_Pulaski_ripple_0_10_3_f2fim_0_3_0"],
+           "content_link":[
+                        "http://0.0.0.0:8000/ripple-fim-collection/mip_18070104_ripple_0_10_3_f2fim_0_3_0/2yr_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/mip_18070104_ripple_0_10_3_f2fim_0_3_0/5yr_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/mip_18070104_ripple_0_10_3_f2fim_0_3_0/10yr_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/mip_18070104_ripple_0_10_3_f2fim_0_3_0/25yr_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/mip_18070104_ripple_0_10_3_f2fim_0_3_0/50yr_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/mip_18070104_ripple_0_10_3_f2fim_0_3_0/100yr_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/mip_18070104_ripple_0_10_3_f2fim_0_3_0/model_domain.gpkg",
+                        "http://0.0.0.0:8000/ripple-fim-collection/ble_05119_Pulaski_ripple_0_10_3_f2fim_0_3_0/2yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/ble_05119_Pulaski_ripple_0_10_3_f2fim_0_3_0/5yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/ble_05119_Pulaski_ripple_0_10_3_f2fim_0_3_0/10yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/ble_05119_Pulaski_ripple_0_10_3_f2fim_0_3_0/25yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/ble_05119_Pulaski_ripple_0_10_3_f2fim_0_3_0/50yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/ble_05119_Pulaski_ripple_0_10_3_f2fim_0_3_0/100yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                        "http://0.0.0.0:8000/ripple-fim-collection/ble_05119_Pulaski_ripple_0_10_3_f2fim_0_3_0/model_domain.gpkg"
+                    ],
+           "headers":{ "Content-Type": "application/json"},
+           "data":{
+               "bbox":[-119.052422,44.287823,-115.444092,46.183262]             
+           },
+           "destination_response_location":["~/pw/auto/scripts/tests/PI3/data/stac_api_ripple_mip_response.json","~/pw/auto/scripts/tests/PI3/data/stac_api_ripple_ble_response.json"],
+           "downloaded_content_location":[
+            "~/Downloads/2yr_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/5yr_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/10yr_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/25yr_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/50yr_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/100yr_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/2yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/5yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/10yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/25yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/50yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/100yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+            "~/Downloads/model_domain.gpkg",
+            "~/Downloads/model_domain(1).gpkg"
+           ]
+        ,
+           "docker_commands":["sudo docker exec $(sudo docker ps -q --filter 'ancestor=stac-browser:latest')  sh -c 'cd /scripts1 && pwd && apk update && apk add --no-cache python3 py3-pip wget gnupg chromium chromium-chromedriver && cd /scripts1 && python3 -m venv /scripts1/venv && source /scripts1/venv/bin/activate  &&  pip install --upgrade pip && pip install --upgrade selenium webdriver-manager && pip install pytest pytest-html DeepDiff pexpect jsondiff && pytest --ignore=/scripts1/scripts/tests/utils/gpkg_metadata_util.py --ignore=/scripts1/scripts/tests/utils/gpkg_util.py  --ignore=/scripts1/scripts/tests/PI1 --ignore=/scripts1/scripts/tests/PI2 --ignore=/scripts1/scripts/tests/PI3  /scripts1/scripts/tests/PI4/test_fim_c_GFM_subcase1_supplement.py -s -vv'"],
+           "flag":"fully",
+           "link":"http://localhost:8080",
+           "item":"GFM-expanded_S1A_IW_GRDH_1SDV_20241123T005232_20241123T005257_056675_06F41A_B97A",
+           "source_tif_file_location": [
+          
+                "~/Downloads/2yr_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/5yr_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/10yr_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/25yr_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/50yr_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/100yr_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/2yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/5yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/10yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/25yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/50yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/100yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "~/Downloads/model_domain.gpkg",
+                "~/Downloads/model_domain(1).gpkg"
 
+            ],
+           "destination_tif_file_location": [
+       
+            
+                "/fsxtestautomation/data_files/fimc-data/2yr_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/5yr_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/10yr_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/25yr_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/50yr_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/100yr_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/2yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/5yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/10yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/25yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/50yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                "/fsxtestautomation/data_files/fimc-data/100yr_Pulaski_extent_f2f_ver_0_3_0.tif",
+                 "/fsxtestautomation/data_files/fimc-data/model_domain.gpkg",
+                "/fsxtestautomation/data_files/fimc-data/model_domain(1).gpkg"
+        ],
+           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",
+           "directory": "~/Downloads/"
 
-
-          }
-
-
-
-
-
+            
+          
+        }
+ 
     ],
-   
     "d_loc" : [
-               "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc"
-
+               "~/Downloads"
                ],
     "d_files":[
-               ["controls_100year.csv", "controls_10year.csv", "controls_25year.csv", "controls_2year.csv", "controls_50year.csv", "controls_5year.csv", "fim_100year.tif", "fim_10year.tif", "fim_25year.tif", "fim_2year.tif", "fim_50year.tif", "fim_5year.tif", "qc_map.qgs", "qc_map.qgs~", "qc_map_attachments.zip", "qgis_startup.log"]
+        [
+            "100yr_Pulaski_extent_f2f_ver_0_3_0.tif", 
+            "100yr_extent_f2f_ver_0_3_0.tif", 
+            "10yr_Pulaski_extent_f2f_ver_0_3_0.tif", 
+            "10yr_extent_f2f_ver_0_3_0.tif", 
+            "25yr_Pulaski_extent_f2f_ver_0_3_0.tif", 
+            "25yr_extent_f2f_ver_0_3_0.tif", 
+            "2yr_Pulaski_extent_f2f_ver_0_3_0.tif", 
+            "2yr_extent_f2f_ver_0_3_0.tif", 
+            "50yr_Pulaski_extent_f2f_ver_0_3_0.tif", 
+            "50yr_extent_f2f_ver_0_3_0.tif",
+            "5yr_Pulaski_extent_f2f_ver_0_3_0.tif", 
+            "5yr_extent_f2f_ver_0_3_0.tif", 
+            "model_domain(1).gpkg", 
+            "model_domain.gpkg"
+            
+        ]
+               
             ]
 
 

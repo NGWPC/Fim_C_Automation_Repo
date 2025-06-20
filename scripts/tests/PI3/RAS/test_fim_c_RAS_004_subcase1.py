@@ -3,7 +3,7 @@ import os
 from ...helpers import validate_directories_files
 from ...utils import csv_util,vrt_util
 
-# @pytest.mark.skip(reason="skipping this test for now")
+@pytest.mark.skip(reason="This is no longer a valid scenario")
 def test_fim_c_RAS_004_subcase1(test_name,load_scenario_data,scenarios,fetch_docker_details,run_docker_script,read_csv,read_vrt,remove_file):
     tn = test_name + '.json'
     folder_name = 'PI3/data'

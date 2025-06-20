@@ -1,0 +1,40 @@
+{
+    "additional_data":[
+          {
+             "source_tif_file_location":["/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_10year.tif",
+                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_2year.tif",
+                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_5year.tif",
+                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_100year.tif",
+                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_25year.tif",
+                                        "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc/fim_50year.tif"
+                                        ],
+            "destination_tif_file_location":["/fsxtestautomation/data_files/fimc-data/qc/fim_10year.tif",
+                                             "/fsxtestautomation/data_files/fimc-data/qc/fim_2year.tif",
+                                             "/fsxtestautomation/data_files/fimc-data/qc/fim_5year.tif",
+                                             "/fsxtestautomation/data_files/fimc-data/qc/fim_100year.tif",
+                                             "/fsxtestautomation/data_files/fimc-data/qc/fim_25year.tif",
+                                             "/fsxtestautomation/data_files/fimc-data/qc/fim_50year.tif"],
+            "flag":"fully"
+  
+
+
+
+          }
+
+
+
+
+
+    ],
+   
+    "d_loc" : [
+               "/efs/fim-data/ripple/collections/ble_12040103_EastForkSanJacinto/qc"
+
+               ],
+    "d_files":[
+               ["controls_100year.csv", "controls_10year.csv", "controls_25year.csv", "controls_2year.csv", "controls_50year.csv", "controls_5year.csv", "fim_100year.tif", "fim_10year.tif", "fim_25year.tif", "fim_2year.tif", "fim_50year.tif", "fim_5year.tif", "qc_map.qgs", "qc_map.qgs~", "qc_map_attachments.zip", "qgis_startup.log"]
+            ]
+
+
+
+}
