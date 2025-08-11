@@ -2,7 +2,7 @@
     "additional_data":[
  
         {
-           "url": "http://http://localhost:8082/collections/gfm-expanded-collection/items/GFM-expanded_S1A_IW_GRDH_1SDV_20250313T141445_20250313T141510_058287_073467_C419",
+           "url": "http://localhost:8082/collections/gfm-expanded-collection/items/GFM-expanded_S1A_IW_GRDH_1SDV_20250313T141445_20250313T141510_058287_073467_C419",
            "content_link":"http://0.0.0.0:8000/gfm-expanded-collection/GFM-expanded_S1A_IW_GRDH_1SDV_20250313T141445_20250313T141510_058287_073467_C419/NA_E063N042T3_ENSEMBLE_OBSWATER_20250313T141445_VV_NA020M_E063N042T3_20250313.tif",
            "headers":{ "Content-Type": "application/json"},
            "data":{
