@@ -122,6 +122,10 @@ def verify_environment_variables(env_file,expected_content):
    except AssertionError as e:
       logging.error(f"Expected value not present due to {e}")
       raise e
+
+def file_exists_and_not_empty(file_path,file_type):
+   assert os.path.exists(file_path) , f"{file_type.upper()} file missing : {file_path}"
+   assert os.path.getsize(file_path)>0 , f"{file_type.upper()} file is empty : {file_path}"
     
    
 

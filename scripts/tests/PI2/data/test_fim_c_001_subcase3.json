@@ -5,7 +5,7 @@
            "text_file_location":"/efs/demonstrations/rs_stac_test/dfo_event_list.txt",
            "total_records":"58",
            "expected_record_value":"DFO-4230",
-           "base_directory":"/efs/translated_ras_libraries/temp/output_dir",
+           "base_directory":"/efs/fim-data/rs/",
            "output_file":"dfo_all_usa_events_post_2015.gpkg",
            "expected_data_file" : "~/pw/auto/scripts/tests/PI2/data/test_fim_c_001_subcase3.json",
            "data_file_location":"/fsxtestautomation/data_files/fimc-data/dfo_all_usa_events_post_2015.gpkg",
