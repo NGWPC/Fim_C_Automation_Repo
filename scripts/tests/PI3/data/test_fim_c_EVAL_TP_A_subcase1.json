@@ -2,7 +2,7 @@
     "additional_data":[
  
         {
-          "flag":"fully"
+          "flag":"partly_dir"
  
         }
  
@@ -13,7 +13,7 @@
 
                ],
     "d_files":[
-               [".Trash-40686", ".Trash-40708",".Trash-40718", "benchmark", "demonstrations","eds", "fim-data", "fim2d", "fims", "hydro", "miniconda", "ngwpc-coastal", "nwm_ngen", "owp_prototype_hydrofabric", "projects", "reference", "translated_ras_libraries", "zhengtao"],
+               ["benchmark", "demonstrations","eds", "fim-data", "fim2d", "fims", "hydro", "miniconda", "ngwpc-coastal", "nwm_ngen", "owp_prototype_hydrofabric", "projects", "reference", "translated_ras_libraries", "zhengtao"],
                ["hand_fim","ripple","rs","static_cat"] 
             ]
 

@@ -10,7 +10,9 @@
                "limit":10,
                "collections":["gfm-collection"]              
            },
-           "destination_response_location":"~/pw/auto/scripts/tests/PI3/data/stac_api_response.json"
+           "destination_response_location":"~/pw/auto/scripts/tests/PI3/data/stac_api_response.json",
+           "content_link":"",
+           "downloaded_content_location":""
 
           
         }

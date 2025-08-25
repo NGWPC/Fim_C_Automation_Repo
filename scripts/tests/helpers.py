@@ -20,13 +20,22 @@ def validate_directories_files(directory_locations, directory_contents,flag): #,
             for sub_file in file:
                print(sub_file)
                file_path = os.path.join(dir_location,str(sub_file))
+               print(file_path)
                assert  os.path.isfile(file_path), f"{file} is not present"
+        elif flag=="partly_dir":
+            for dir_location,file in zip(directory_locations,directory_contents):
+             for sub_file in file:
+               print(sub_file)
+               file_path = os.path.join(dir_location,str(sub_file))
+               print(file_path)
+               assert  os.path.isdir(file_path), f"{file} is not present"
         else:
            for i,dir_location in enumerate(directory_locations):
             os.chdir(dir_location)
             assert os.getcwd() == dir_location, "Failed to load the directory" + dir_location
             dir_contents = sorted(os.listdir()) 
-            print(dir_contents)    
+            print(dir_contents)  
+            print(directory_contents[i])  
             assert dir_contents == directory_contents[i], "Expected files not listed"
             logging.info("Expected files listed in %s", dir_location)
       except AssertionError as e:
@@ -91,6 +100,10 @@ def validate_response(link,headers,data,destination_response_location):
          response.raise_for_status()
          if response.status_code == 200:
             source_response = response.json()
+         downloads_folder = os.path.join(os.getcwd(),"Downloads")
+         file_path1 = os.path.join(downloads_folder,"response.json")
+         with open(file_path1, "w", encoding = "utf-8") as f:
+            json.dump(source_response, f, indent=4 , ensure_ascii=False)
       except requests.exceptions.HTTPError as errh:
          print(f"Bad response: {response.status_code}")
          raise errh
@@ -105,7 +118,7 @@ def validate_response(link,headers,data,destination_response_location):
       assert source_response == destination_response , "source_response and destination_response rdoes not esponses match"
       logging.info(f"{source_response} and {destination_response} responses match")
    except AssertionError as e:
-      logging.error(f"{source_response} and {destination_response} responses do not match")
+      logging.error(f"{source_response}  responses do not match")
       raise e
    
 
