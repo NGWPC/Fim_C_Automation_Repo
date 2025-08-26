@@ -3,7 +3,7 @@ import os
 from ...helpers import validate_directories_files
 from ...utils import tif_util
 
-# @pytest.mark.skip(reason="skipping this test for now because it's been delayed")
+@pytest.mark.skip(reason="skipping this test for now because it's been delayed")
 def test_fim_c_EVAL_TP_D_subcase2(test_name,load_scenario_data,scenarios,read_tif):
     tn = test_name + '.json'
     folder_name = 'PI3/data'

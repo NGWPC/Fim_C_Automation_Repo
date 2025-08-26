@@ -100,10 +100,10 @@ def validate_post_response(link,headers,data,destination_response_location):
          response.raise_for_status()
          if response.status_code == 200:
             source_response = response.json()
-         downloads_folder = os.path.join(os.getcwd(),"Downloads")
-         file_path1 = os.path.join(downloads_folder,"response1.json")
-         with open(file_path1, "w", encoding = "utf-8") as f:
-            json.dump(source_response, f, indent=4 , ensure_ascii=False)
+         # downloads_folder = os.path.join(os.getcwd(),"Downloads")
+         # file_path1 = os.path.join(downloads_folder,"response1.json")
+         # with open(file_path1, "w", encoding = "utf-8") as f:
+         #    json.dump(source_response, f, indent=4 , ensure_ascii=False)
       except requests.exceptions.HTTPError as errh:
          print(f"Bad response: {response.status_code}")
          raise errh
