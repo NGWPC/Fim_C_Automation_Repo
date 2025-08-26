@@ -90,12 +90,45 @@ def validate_downloaded_content(link,output_file):
       logging.error("source_response and destination_response responses do not match")
       raise e
 
+def validate_post_response(link,headers,data,destination_response_location):
+   try:
+      source_response = None
+      destination_response = None
+      response = None
+      response = requests.post(link,headers=headers , json=data )
+      try:
+         response.raise_for_status()
+         if response.status_code == 200:
+            source_response = response.json()
+         downloads_folder = os.path.join(os.getcwd(),"Downloads")
+         file_path1 = os.path.join(downloads_folder,"response1.json")
+         with open(file_path1, "w", encoding = "utf-8") as f:
+            json.dump(source_response, f, indent=4 , ensure_ascii=False)
+      except requests.exceptions.HTTPError as errh:
+         print(f"Bad response: {response.status_code}")
+         raise errh
+      except requests.exceptions.ConnectionError as errc:
+         print("Conection error: " ,errc)
+         raise errc
+      with open(destination_response_location, "r") as file:
+         destination_response = json.load(file)
+      # diff = jsondiff.diff(source_response,destination_response)
+      # with open('diff_response.txt','w') as diff_file:
+      #    diff_file.write(str(diff))
+      assert source_response == destination_response , "source_response and destination_response rdoes not esponses match"
+      logging.info(f"{source_response} and {destination_response} responses match")
+   except AssertionError as e:
+      logging.error(f"{source_response}  responses do not match")
+      raise e
+
+
 def validate_response(link,headers,data,destination_response_location):
    try:
       source_response = None
       destination_response = None
       response = None
-      response = requests.get(link,headers=headers , data =json.dumps(data))
+      response = requests.get(link,headers=headers , data =json.dumps(data) ) 
+      print(response.text)
       try:
          response.raise_for_status()
          if response.status_code == 200:
