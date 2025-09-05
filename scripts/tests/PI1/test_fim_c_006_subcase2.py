@@ -1,6 +1,5 @@
 import pytest
 import os
-# from ..helpers import validate_geo_data
 from ..utils import gpkg_util
 
 # @pytest.mark.skip(reason="skipping this test for now")
