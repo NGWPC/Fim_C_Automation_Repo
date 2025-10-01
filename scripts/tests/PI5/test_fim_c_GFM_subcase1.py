@@ -16,4 +16,5 @@ def test_fim_c_GFM_subcase1(test_name,load_scenario_data,scenarios,run_curl_comm
     validate_directories_files([os.path.expanduser(each_directory_locations) for each_directory_locations in directory_locations ],directory_contents,flag)
     tif_source_file,tif_destination_file = read_tif(folder_name,tn,scenarios)
     tif_util.test_tif_data(os.path.expanduser(tif_source_file),os.path.expanduser(tif_destination_file))
-    remove_file(folder_name,tn,os.path.expanduser(tif_source_file),scenarios)
+    # remove_file(folder_name,tn,os.path.expanduser(tif_source_file),scenarios)
+    remove_file(folder_name,tn,os.path.expanduser(directory),scenarios)

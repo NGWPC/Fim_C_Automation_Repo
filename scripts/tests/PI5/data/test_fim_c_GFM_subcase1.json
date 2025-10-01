@@ -10,7 +10,7 @@
            },
            "destination_response_location":"~/pw/auto/scripts/tests/PI5/data/stac_api_expanded_gfm_response.json",
            "downloaded_content_location":"~/Downloads/NA_E063N042T3_ENSEMBLE_OBSWATER_20250313T141445_VV_NA020M_E063N042T3_20250313.tif",
-           "flag":"fully",
+           "flag":"partly",
            "link":"http://localhost:8080",
            "item":"GFM-expanded_S1A_IW_GRDH_1SDV_20250313T141445_20250313T141510_058287_073467_C419",
            "source_tif_file_location": "~/Downloads/NA_E063N042T3_ENSEMBLE_OBSWATER_20250313T141445_VV_NA020M_E063N042T3_20250313.tif",

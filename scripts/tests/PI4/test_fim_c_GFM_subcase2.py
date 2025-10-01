@@ -24,4 +24,5 @@ def test_fim_c_GFM_subcase2(test_name,load_scenario_data,scenarios,run_curl_comm
       counter= counter+1
       print(counter)
    
+    # remove_file(folder_name,tn,os.path.expanduser(directory),scenarios)
     remove_file(folder_name,tn,os.path.expanduser(directory),scenarios)
