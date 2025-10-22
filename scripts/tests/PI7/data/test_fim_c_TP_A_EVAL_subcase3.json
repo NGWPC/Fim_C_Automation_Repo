@@ -7,7 +7,7 @@
            "flag":"partly",
            "source_tif_file_location": "~/Downloads/NA_E081N030T3_ENSEMBLE_FLOOD_20250914T124607_VV_NA020M_E081N030T3_20250914.tif",
            "destination_tif_file_location": "/fsxtestautomation/data_files/fimc-data/NA_E081N030T3_ENSEMBLE_FLOOD_20250914T124607_VV_NA020M_E081N030T3_20250914.tif",
-           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",       
+           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh"       
           
         }
  
