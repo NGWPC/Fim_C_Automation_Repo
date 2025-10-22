@@ -1,0 +1,25 @@
+{
+    "additional_data":[
+ 
+        {
+          
+           "docker_commands":["sudo docker exec $(sudo docker ps -q --filter 'ancestor=stac-browser:latest')  sh -c 'cd /scripts1 && pwd && apk update && apk add --no-cache python3 py3-pip wget gnupg chromium chromium-chromedriver && cd /scripts1 && python3 -m venv /scripts1/venv && source /scripts1/venv/bin/activate  &&  pip install --upgrade pip && pip install --upgrade selenium webdriver-manager && pip install pytest pytest-html DeepDiff pexpect jsondiff && pytest --ignore=/scripts1/scripts/tests/utils/gpkg_metadata_util.py --ignore=/scripts1/scripts/tests/utils/gpkg_util.py  --ignore=/scripts1/scripts/tests/PI1 --ignore=/scripts1/scripts/tests/PI2 --ignore=/scripts1/scripts/tests/PI3  /scripts1/scripts/tests/PI4/test_fim_c_GFM_subcase1_supplement.py -s -vv'"],
+           "flag":"partly",
+           "source_tif_file_location": "~/Downloads/NA_E081N030T3_ENSEMBLE_FLOOD_20250914T124607_VV_NA020M_E081N030T3_20250914.tif",
+           "destination_tif_file_location": "/fsxtestautomation/data_files/fimc-data/NA_E081N030T3_ENSEMBLE_FLOOD_20250914T124607_VV_NA020M_E081N030T3_20250914.tif",
+           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",       
+          
+        }
+ 
+    ],
+    "d_loc" : [
+               "~/Downloads"
+               ],
+    "d_files":[
+               [""]
+               
+            ]
+
+
+
+}
