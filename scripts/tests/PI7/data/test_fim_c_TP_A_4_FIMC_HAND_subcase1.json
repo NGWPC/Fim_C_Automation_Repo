@@ -3,28 +3,23 @@
  
         {
           
-           "docker_commands":["docker run --rm -it --name hand4 -v /efs/demonstrations/pi7/inundation-mapping-owp/:/foss_fim -v /efs/fim-data/hand_fim/inputs/:/data/inputs -v /efs/fim-data/hand_fim/outputs/:/outputs -v /fsx/outputs_temp/:/fim_temp --entrypoint /bin/bash fim:latest_hlp -c './foss_fim/fim_pipeline.sh -n test_huc10 -u /data/inputs/huc_lists/test_inputs_PI7_HUC10.lst -jb 4 -jh 2'"
+           "docker_commands":["docker run --rm -it --name hand5 -v /efs/demonstrations/pi7/inundation-mapping-owp/:/foss_fim -v /efs/fim-data/hand_fim/inputs/:/data/inputs -v /efs/fim-data/hand_fim/outputs/:/outputs -v /fsx/outputs_temp/:/fim_temp --entrypoint /bin/bash fim:latest_hlp -c './foss_fim/fim_pipeline.sh -n test_huc10_1 -o -u /data/inputs/huc_lists/test_inputs_PI7_HUC10.lst -jb 4 -jh 2&& ./foss_fim/fim_pipeline.sh -n test_huc12_1 -o -u /data/inputs/huc_lists/test_inputs_PI7_HUC12.lst -jb 2 -jh 5'"
         
         
             ],
-           "remove_files":["/efs/demonstrations/pi7/autoeval-jobs/hwm_evaluator/test/test_output_4.csv","/efs/demonstrations/pi7/autoeval-jobs/hwm_evaluator/test/test_output_4.gpkg"],
+           "remove_files":["/efs/fim-data/hand_fim/outputs/test_huc10_1","/efs/fim-data/hand_fim/outputs/test_huc12_1"],
            "flag":"partly",
-           "base_directory":"/efs/demonstrations/pi7/autoeval-jobs/hwm_evaluator/test/",
-           "output_file":"test_output_4.gpkg",
-           "expected_data_file" : "~/pw/auto/scripts/tests/PI7/data/test_fim_c_TP_A_EVAL_subcase3.json",
-           "csv_file":"/efs/demonstrations/pi7/autoeval-jobs/hwm_evaluator/test/test_output_4.csv",
-           "output_csv_file":"/fsxtestautomation/data_files/fimc-data/test_output.csv",
-           "data_file_location":"/fsxtestautomation/data_files/fimc-data/test_output.gpkg",
+           "expected_data_file" : "~/pw/auto/scripts/tests/PI7/data/test_fim_c_TP_A_4_FIMC_HAND_subcase1.json",
            "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh"       
           
         }
  
     ],
     "d_loc" : [
-               "/efs/demonstrations/pi7/autoeval-jobs/hwm_evaluator/test/"
+               "/efs/fim-data/hand_fim/outputs"
                ],
     "d_files":[
-               ["test_output_4.csv","test_output_4.gpkg"]
+               ["test_huc10_1","test_huc12_1"]
                
             ]
 
