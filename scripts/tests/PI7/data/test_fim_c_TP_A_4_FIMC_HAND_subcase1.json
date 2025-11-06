@@ -8,7 +8,7 @@
         
             ],
            "remove_files":["/efs/fim-data/hand_fim/outputs/test_huc10_1","/efs/fim-data/hand_fim/outputs/test_huc12_1"],
-           "flag":"partly",
+           "flag":"partly_dir",
            "expected_data_file" : "~/pw/auto/scripts/tests/PI7/data/test_fim_c_TP_A_4_FIMC_HAND_subcase1.json",
            "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh"       
           
