@@ -8,7 +8,7 @@
         
         
             ],
-           "shell_script":"slurm_pipeline.sh -u /data/inputs/huc_lists/test_inputs_PI7_HUC8.lst -n TEST_slurm_scripts_huc8_10m_Auto1 -jb 4 -p 4 -o",
+           "shell_script":"slurm_pipeline.sh -u /data/inputs/huc_lists/test_inputs_PI7_HUC8.lst -n TEST_slurm_scripts_huc8_10m_Auto1 -jb 4 -p 1 -o",
            "base_directory":"/efs/demonstrations/pi7/inundation-mapping-owp/slurm",
            "remove_files":"/efs/demonstrations/pi7/inundation-mapping-owp/slurm/slurm_outputs/TEST_slurm_scripts_huc8_10m_Auto1",
            "flag":"partly_dir",
