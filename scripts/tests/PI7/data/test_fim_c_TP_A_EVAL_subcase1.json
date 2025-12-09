@@ -4,7 +4,7 @@
         {
           
            "docker_commands":["aws s3 ls>/home/jyoti.mikkilineni/pw/auto/scripts/tests/PI7/data/abc.txt 2>&1",
-                              "cd /efs/demonstrations/pi7/hand-index/",
+                              "cd /efs/demonstrations/pi7/hand-index-archive/",
                               "docker run --rm -v $(pwd)/data:/data -v $(pwd)/schema:/schema -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_SESSION_TOKEN hand-index:latest python load.py  --db-path /data/abc.ddb --schema-path /schema/hand-index-ver-fim100.sql --hand-dir s3://fimc-data/hand_fim/outputs/hlp_list_10_20250219_huc12/ --hand-version fim100 --h3-resolution 1 --output-dir s3://ngwpc-data/autoeval/hand_output_indices/trials/test_outputs --batch-size 20"
         
         ],
