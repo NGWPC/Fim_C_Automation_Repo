@@ -5,15 +5,17 @@
           
            "docker_commands":[
                               "cd /efs/demonstrations/pi7/hand-index/",
-                              "sudo  /usr/bin/docker run --rm -v $(pwd)/data:/data -v $(pwd)/schema:/schema -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_SESSION_TOKEN hand-index:latest python load.py --db-path /data/abc18.ddb --schema-path /schema/hand-index-ver-fim100.sql --hand-dir s3://fimc-data/hand_fim/outputs/hlp_list_10_20250219_huc12/ --hand-version fim100 --h3-resolution 1 --output-dir s3://ngwpc-data/autoeval/hand_output_indices/trials/test_outputs18 --batch-size 20 > /home/jyoti.mikkilineni/pw/auto/scripts/tests/PI7/data/mno.txt"
-        
-        ],
-           "remove_files":"/efs/demonstrations/pi7/autoeval-jobs/hwm_evaluator/test/test_output_4.csv",
-           "flag":"partly",
-           "base_directory":"/efs/demonstrations/pi7/autoeval-jobs/hwm_evaluator/test/",
-           "output_file":"test_output_4.gpkg",
-           "expected_data_file" : "~/pw/auto/scripts/tests/PI7/data/test_fim_c_TP_A_EVAL_subcase3.json",
-           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh"       
+                              "sudo cp /efs/demonstrations/pi7/hand-index/schema/hand-index-ver-fim100.sql ~/schema/",
+                              "sudo  /usr/bin/docker run --rm -v $(pwd)/data:/data -v $(pwd)/schema:/schema -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_SESSION_TOKEN hand-index:latest python load.py --db-path /data/abc1.ddb --schema-path /schema/hand-index-ver-fim100.sql --hand-dir s3://fimc-data/hand_fim/outputs/hlp_list_10_20250219_huc12/ --hand-version fim100 --h3-resolution 1 --output-dir s3://ngwpc-data/autoeval/hand_output_indices/trials/test_outputs1 --batch-size 20 > /home/jyoti.mikkilineni/pw/auto/scripts/tests/PI7/data/mno.txt",
+                              "aws s3://ngwpc-data/autoeval/hand_output_indices ls > /home/jyoti.mikkilineni/pw/auto/scripts/tests/PI7/data/xyz.txt",
+                              "aws s3 rm  s3://ngwpc-data/autoeval/hand_output_indices/trials/test_outputs23/ --recursive"],
+            "text" : ["hand_catchment_rasters.parquet","hand_rem_rasters.parquet","hydrotables.parquet","catchments/"],
+            "remove_files":"~/data/abc1.ddb",
+            "flag":"partly",
+            "base_directory":"/efs/demonstrations/pi7/autoeval-jobs/hwm_evaluator/test/",
+            "output_file":"test_output_4.gpkg",
+            "expected_data_file" : "~/pw/auto/scripts/tests/PI7/data/test_fim_c_TP_A_EVAL_subcase3.json",
+            "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh"       
           
         }
  
