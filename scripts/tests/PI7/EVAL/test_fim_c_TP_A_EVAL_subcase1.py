@@ -1,6 +1,6 @@
 import pytest
 import os
-from ...helpers import validate_directories_files,validate_response,validate_downloaded_content
+from ...helpers import validate_directories_files,validate_response,validate_downloaded_content,update_aws_credentials
 from ...utils import csv_util,gpkg_util
 
 # @pytest.mark.skip(reason="skipping this test for now")
@@ -13,9 +13,10 @@ def test_fim_c_TP_A_EVAL_subcase1(test_name,load_scenario_data,scenarios,fetch_d
 
     docker_commands,dir_paths = fetch_docker_details(folder_name,tn,scenarios)
      
-    for docker_command in docker_commands:
-         out=run_docker_script(folder_name,tn,scenarios,docker_command)
-         print(out)
+    for i,docker_command in enumerate(docker_commands):
+         if i==1:
+           docker_command=update_aws_credentials(docker_command)
+         run_docker_script(folder_name,tn,scenarios,docker_command)
          print("The command ran successfully.")
     # directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
     # validate_directories_files(directory_locations,directory_contents,flag)

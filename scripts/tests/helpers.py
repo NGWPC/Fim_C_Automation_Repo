@@ -173,7 +173,18 @@ def file_exists_and_not_empty(file_path,file_type):
    assert os.path.exists(file_path) , f"{file_type.upper()} file missing : {file_path}"
    assert os.path.getsize(file_path)>0 , f"{file_type.upper()} file is empty : {file_path}"
     
+def update_aws_credentials(docker_command):
+   print(os.getcwd())
+   docker_command=(
+      docker_command
+                    .replace("$(pwd)", os.getcwd())
+                    .replace("-e AWS_ACCESS_KEY_ID", f"-e AWS_ACCESS_KEY_ID={os.environ['AWS_ACCESS_KEY_ID']}")
+                    .replace("-e AWS_SECRET_ACCESS_KEY", f"-e AWS_SECRET_ACCESS_KEY={os.environ['AWS_SECRET_ACCESS_KEY']}")
+                    .replace("-e AWS_SESSION_TOKEN", f"-e AWS_SESSION_TOKEN={os.environ['AWS_SESSION_TOKEN']}")
    
-
+   
+   
+   ) 
+   return docker_command
 
    
