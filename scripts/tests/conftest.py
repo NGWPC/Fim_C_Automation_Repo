@@ -221,3 +221,11 @@ def fetch_source_destination_details():
         scenario = scenarios(folder_name , data_file)
         return scenario['additional_data'][0].get("base_directory") , scenario['additional_data'][0].get("destination_directory")
     return _fetch_source_destination_details
+
+
+@pytest.fixture
+def fetch_txt_details():
+    def _fetch_txt_details(folder_name , data_file, scenarios):
+         scenario = scenarios(folder_name , data_file)
+         return scenario['additional_data'][0].get('text'),scenario['additional_data'][0].get('remove_files')
+    return _fetch_txt_details

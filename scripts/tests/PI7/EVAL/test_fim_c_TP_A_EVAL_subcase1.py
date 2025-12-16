@@ -4,30 +4,20 @@ from ...helpers import validate_directories_files,validate_response,validate_dow
 from ...utils import csv_util,gpkg_util,txt_file_validation_util
 
 # @pytest.mark.skip(reason="skipping this test for now")
-def test_fim_c_TP_A_EVAL_subcase1(test_name,load_scenario_data,scenarios,fetch_docker_details,run_docker_script,read_csv,fetch_data_file_details,fetch_txt_details,remove_file):
+
+def test_fim_c_TP_A_EVAL_subcase1(test_name,load_scenario_data,scenarios,fetch_docker_details,run_docker_script,read_csv,fetch_data_file_details,fetch_txt_details,fetch_directory_details,remove_file):
     tn = test_name + '.json'
     folder_name = 'PI7/data'
-    # docker_command,dir_paths = fetch_docker_details(folder_name,tn,scenarios)
-    # out=run_docker_script(folder_name,tn,scenarios,docker_command)
-    # print(out)
-
+    
+    directory = fetch_directory_details(folder_name,tn,scenarios)
     docker_commands,dir_paths = fetch_docker_details(folder_name,tn,scenarios)
      
     for i,docker_command in enumerate(docker_commands):
-         if i==2:
+         if i==3:
            docker_command=update_aws_credentials(docker_command)
          run_docker_script(folder_name,tn,scenarios,docker_command)
          print("The command ran successfully.")
     text,dir_paths = fetch_txt_details(folder_name,tn,scenarios)
     for txt, dir_path in zip(text,[os.path.expanduser(each_dir_path_file) for each_dir_path_file in dir_paths ]):
           txt_file_validation_util.txt_file_validation(txt,dir_path)
-    # directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
-    # validate_directories_files(directory_locations,directory_contents,flag)
-    # csv_file,output_csv_file = read_csv(folder_name,tn,scenarios)
-    # csv_util.test_extract_csv_data(csv_file,output_csv_file)
-    # dir_path,output_file,expected_data_file,data_file_location = fetch_data_file_details(folder_name,tn,scenarios)
-    # gpkg_util.validate_geo_data(dir_path,output_file,expected_data_file,data_file_location)
-    # for dir_path in dir_paths:
-    #     remove_file(folder_name,tn,dir_path,scenarios)
-    #     print("File removed")
-    #     print(dir_path)
+    remove_file(folder_name,tn,os.path.expanduser(directory),scenarios)
