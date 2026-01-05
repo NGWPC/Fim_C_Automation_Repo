@@ -13,7 +13,7 @@ def test_fim_c_TP_A_EVAL_subcase1(test_name,load_scenario_data,scenarios,fetch_d
     docker_commands,dir_paths = fetch_docker_details(folder_name,tn,scenarios)
      
     for i,docker_command in enumerate(docker_commands):
-         if i==3:
+         if i==4:
            docker_command=update_aws_credentials(docker_command)
          run_docker_script(folder_name,tn,scenarios,docker_command)
          print("The command ran successfully.")
