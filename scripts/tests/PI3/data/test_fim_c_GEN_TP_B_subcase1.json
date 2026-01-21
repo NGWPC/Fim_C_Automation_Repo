@@ -1,0 +1,24 @@
+{
+    "additional_data":[
+          {
+           
+            "flag":"fully"
+  
+
+
+
+          }
+
+    ],
+   
+    "d_loc" : [
+               "/efs/fim-data/hand_fim/inputs/ahps_sites"
+
+               ],
+    "d_files":[
+               ["evaluated_ahps_sites.csv", "ms_segs.csv", "nws_lid.gpkg","nws_lid_gpkg_edits.txt"]
+            ]
+
+
+
+}
