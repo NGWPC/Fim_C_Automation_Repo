@@ -2,7 +2,7 @@ import pytest
 import os
 from ...helpers import validate_directories_files,verify_environment_variables
 
-# @pytest.mark.skip(reason="skipping this test for now")
+@pytest.mark.skip(reason="No longer valid")
 def test_fim_c_HAND_TP_C_subcase1(test_name,load_scenario_data,scenarios,env_file_check):
     tn = test_name + '.json'
     folder_name = 'PI3/data'

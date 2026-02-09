@@ -1,0 +1,31 @@
+{
+    "additional_data":[
+ 
+        {
+          
+           "docker_commands":["cd /efs/demonstrations/pi7/inundation-mapping-owp/config&& sudo chmod 777 params_template.env&& sudo sed -i -e 's/^export res=.*/export res=10/' -e 's/^export input_DEM_source=.*/export input_DEM_source=seamless_10m/' params_template.env"
+          
+        
+        
+            ],
+           "shell_script":"slurm_pipeline.sh -u /data/inputs/huc_lists/test_inputs_PI7_HUC8.lst -n TEST_slurm_scripts_huc8_10m_Auto1 -jb 4 -p 1 -o",
+           "base_directory":"/efs/demonstrations/pi7/inundation-mapping-owp/slurm",
+           "remove_files":"/efs/demonstrations/pi7/inundation-mapping-owp/slurm/slurm_outputs/TEST_slurm_scripts_huc8_10m_Auto1",
+           "flag":"partly_dir",
+           "expected_data_file" : "~/pw/auto/scripts/tests/PI7/data/test_fim_c_TP_B_4_FIMC_HAND_subcase4.json",
+           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh"       
+          
+        }
+ 
+    ],
+    "d_loc" : [
+               "/efs/demonstrations/pi7/inundation-mapping-owp/slurm/slurm_outputs"
+               ],
+    "d_files":[
+               ["TEST_slurm_scripts_huc8_10m_Auto1"]
+               
+            ]
+
+
+
+}
