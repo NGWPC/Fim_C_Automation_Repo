@@ -3,7 +3,7 @@ import os
 from ...helpers import validate_directories_files
 from ...utils import tif_util
 
-# @pytest.mark.skip(reason="skipping this test for now")
+#@pytest.mark.skip(reason="skipping this test for now")
 def test_fim_c_GEN_TP_A_subcase1(test_name,load_scenario_data,scenarios,read_tif):
     tn = test_name + '.json'
     folder_name = 'PI3/data'
