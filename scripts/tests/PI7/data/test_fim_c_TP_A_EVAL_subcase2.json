@@ -4,18 +4,29 @@
         {
           
            "docker_commands":[
+                               "cd /efs/demonstrations/pi7/autoeval-coordinator/local-logs/pw_test_run&& sudo mkdir -p sample",
+                               "cd /efs/demonstrations/pi7/autoeval-coordinator/local-reports/pw_test_run&& sudo mkdir -p sample",
                                "cd /efs/demonstrations/pi7/autoeval-coordinator",
-                               "export NOMAD_ADDR=http://localhost:4646",
-                               "cd /efs/demonstrations/pi7/autoeval-coordinator",
-                               "sudo /usr/bin/docker run --rm --entrypoint= -v $(pwd)/src:/app/src -v $(pwd)/inputs:/app/inputs -v $(pwd)/tools:/app/tools -v $(pwd)/data:/data -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_SESSION_TOKEN --network host autoeval-coordinator:local python tools/submit_stac_batch.py --batch_name pw_test_run --output_root s3://ngwpc-data/autoeval/batches/trials/pw_test_run --hand_index_path s3://fimc-data/autoeval/hand_output_indices/fim100_huc12_10m_index/ --benchmark_sources \"nws-fim-collection\" --item_list ./inputs/test-run.txt --wait_seconds 10 --stop_threshold 2 --resume_threshold 0 --use-local-creds --stac_api_url http://localhost:8082/> /home/jyoti.mikkilineni/pw/auto/scripts/tests/PI7/data/mno.txt",
+                               "export NOMAD_ADDR=http://localhost:4646&& cd /efs/demonstrations/pi7/autoeval-coordinator&& sudo /usr/bin/docker run --rm --entrypoint= -v $(pwd)/src:/app/src -v $(pwd)/inputs:/app/inputs -v $(pwd)/tools:/app/tools -v $(pwd)/data:/data -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_SESSION_TOKEN --network host autoeval-coordinator:local python tools/submit_stac_batch.py --batch_name pw_test_run --output_root s3://ngwpc-data/autoeval/batches/trials/pw_test_run/sample --hand_index_path s3://fimc-data/autoeval/hand_output_indices/fim100_huc12_10m_index/ --benchmark_sources \"nws-fim-collection\" --item_list ./inputs/test-run.txt --wait_seconds 10 --stop_threshold 2 --resume_threshold 0 --use-local-creds --stac_api_url http://localhost:8082/> /home/jyoti.mikkilineni/pw/auto/scripts/tests/PI7/data/mno.txt",
                                "cd /efs/demonstrations/pi7/autoeval-coordinator",
                              
-                            "docker run --rm --entrypoint= -v $(pwd)/tools:/app/tools -v $(pwd)/inputs:/app/inputs -v $(pwd)/local-logs:/app/local-logs -v $(pwd)/local-reports:/app/local-reports autoeval-coordinator:local python tools/local_reports.py --run_list inputs/test-run.txt --log_dir local-logs/pw_test_run --report_dir local-reports/pw_test_run"],
-            "text" : ["hand_catchment_rasters.parquet","hand_rem_rasters.parquet","hydrotables.parquet","catchments/"],
-            "remove_files":["~/pw/auto/scripts/tests/PI7/data/xyz.txt","~/pw/auto/scripts/tests/PI7/data/xyz.txt"],
+                            "docker run --rm --entrypoint= -v $(pwd)/tools:/app/tools -v $(pwd)/inputs:/app/inputs -v $(pwd)/local-logs:/app/local-logs -v $(pwd)/local-reports:/app/local-reports autoeval-coordinator:local python tools/local_reports.py --run_list inputs/test-run.txt --log_dir local-logs/pw_test_run/sample --report_dir local-reports/pw_test_run/sample",
+                            "aws s3 ls s3://ngwpc-data/autoeval/batches/trials/pw_test_run/sample/AOIs/> /home/jyoti.mikkilineni/pw/auto/scripts/tests/PI7/data/aoi.txt",
+                            "aws s3 ls s3://ngwpc-data/autoeval/batches/trials/pw_test_run/sample/17100103-cenw1-nws/> /home/jyoti.mikkilineni/pw/auto/scripts/tests/PI7/data/cen_data.txt",
+                            "aws s3 ls s3://ngwpc-data/autoeval/batches/trials/pw_test_run/sample/17090012-syco3-usgs/> /home/jyoti.mikkilineni/pw/auto/scripts/tests/PI7/data/syco3_data.txt",
+                            "aws s3 rm  s3://ngwpc-data/autoeval/batches/trials/pw_test_run/sample/ --recursive"
+                        
+                        ],
+            "text" : [
+                ["stac_17090012-syco3-usgs.gpkg","stac_17100103-cenw1-nws.gpkg"],
+                ["17100103-cenw1-nws__agg_metrics.csv","17100103-cenw1-nws__logs.txt","17100103-cenw1-nws__results.json","catchment-data-indices/","nws-fim-collection/"],
+                ["17090012-syco3-usgs__agg_metrics.csv","17090012-syco3-usgs__logs.txt","17090012-syco3-usgs__results.json","catchment-data-indices/","usgs-fim-collection/"]
+        ],
+            "remove_files":["~/pw/auto/scripts/tests/PI7/data/aoi.txt","~/pw/auto/scripts/tests/PI7/data/cen_data.txt","~/pw/auto/scripts/tests/PI7/data/syco3_data.txt"],
             "directory":"~/data/",
             "expected_data_file" : "~/pw/auto/scripts/tests/PI7/data/test_fim_c_TP_A_EVAL_subcase3.json",
-            "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh"       
+            "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh"
+
           
         }
  

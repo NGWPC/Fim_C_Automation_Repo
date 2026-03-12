@@ -20,7 +20,9 @@ def test_fim_c_TP_A_EVAL_subcase2(test_name,load_scenario_data,scenarios,fetch_d
            docker_command=update_aws_credentials(docker_command)
          run_docker_script(folder_name,tn,scenarios,docker_command)
          print("The command ran successfully.")
-    # text,dir_paths = fetch_txt_details(folder_name,tn,scenarios)
-    # for txt, dir_path in zip(text,[os.path.expanduser(each_dir_path_file) for each_dir_path_file in dir_paths ]):
-    #       txt_file_validation_util.txt_file_validation(txt,dir_path)
-    # remove_file(folder_name,tn,os.path.expanduser(directory),scenarios)
+    text,dir_paths = fetch_txt_details(folder_name,tn,scenarios)
+    for txt, dir_path in zip([each_text for each_text in text],[os.path.expanduser(each_dir_path_file) for each_dir_path_file in dir_paths]):
+           txt_file_validation_util.txt_file_validation(txt,dir_path)
+          #  remove_file(folder_name,tn,os.path.expanduser(directory),scenarios)
+    directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
+    validate_directories_files(directory_locations,directory_contents,flag)
