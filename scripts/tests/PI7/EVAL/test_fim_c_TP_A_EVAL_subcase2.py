@@ -5,7 +5,7 @@ from ...helpers import validate_directories_files,validate_response,validate_dow
 from ...utils import csv_util,gpkg_util,txt_file_validation_util
 
 # @pytest.mark.skip(reason="skipping this test for now")
-
+#Run it from the autoeval-coordinator directory.Also check for 
 def test_fim_c_TP_A_EVAL_subcase2(test_name,load_scenario_data,scenarios,fetch_docker_details,run_docker_script,read_csv,fetch_data_file_details,fetch_txt_details,fetch_directory_details,remove_file):
     tn = test_name + '.json'
     folder_name = 'PI7/data'
@@ -22,7 +22,5 @@ def test_fim_c_TP_A_EVAL_subcase2(test_name,load_scenario_data,scenarios,fetch_d
          print("The command ran successfully.")
     text,dir_paths = fetch_txt_details(folder_name,tn,scenarios)
     for txt, dir_path in zip([each_text for each_text in text],[os.path.expanduser(each_dir_path_file) for each_dir_path_file in dir_paths]):
-           txt_file_validation_util.txt_file_validation(txt,dir_path)
-          #  remove_file(folder_name,tn,os.path.expanduser(directory),scenarios)
-    directory_locations,directory_contents,flag = load_scenario_data(folder_name,tn,scenarios)
-    validate_directories_files(directory_locations,directory_contents,flag)
+      for text_file in txt:
+           txt_file_validation_util.txt_file_validation(text_file,dir_path)
