@@ -1,0 +1,23 @@
+{
+    "additional_data":[
+ 
+        {
+           "url": "http://localhost:8082/collections/gfm-expanded-collection/items/GFM-expanded_S1A_IW_GRDH_1SDV_20250914T124632_20250914T124657_060984_079909_1978",
+           "content_link":"http://0.0.0.0:8000/gfm-expanded-collection/GFM-expanded_S1A_IW_GRDH_1SDV_20250914T124632_20250914T124657_060984_079909_1978/NA_E081N039T3_ENSEMBLE_OBSWATER_20250605T003858_VV_NA020M_E081N039T3_20250605.tif",
+           "headers":{ "Content-Type": "application/json"},
+           "data":{
+               "bbox":[-102.831902,42.41967,-99.28318,44.32156]             
+           },
+           "destination_response_location":"~/pw/auto/scripts/tests/PI9/data/stac_api_expanded_gfm_response_subcase1a.json",
+           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",
+           "directory": "~/Downloads/"
+
+            
+          
+        }
+ 
+    ]
+
+
+
+}
