@@ -1,0 +1,23 @@
+{
+    "additional_data":[
+ 
+        {
+           "url": "http://localhost:8082/collections/iceye-collection/items/ICEYE_FSD-2252_flood_insights_usa_hurricane_milton_florida_R11_imperial",
+           "content_link":"http://0.0.0.0:8000/iceye-collection/ICEYE_FSD-2252_flood_insights_usa_hurricane_milton_florida_R11_imperial/ICEYE_FSD-2252_flood_depth_usa_hurricane_milton_florida_in_R11.tif",
+           "headers":{ "Content-Type": "application/json"},
+           "data":{
+               "bbox":[-102.831902,42.41967,-99.28318,44.32156]             
+           },
+           "destination_response_location":"~/pw/auto/scripts/tests/PI9/data/stac_api_expanded_iceye_response_subcase1.json",
+           "remove_file_shell_script": "~/pw/auto/scripts/tests/utils/remove_file.sh",
+           "directory": "~/Downloads/"
+
+            
+          
+        }
+ 
+    ]
+
+
+
+}
